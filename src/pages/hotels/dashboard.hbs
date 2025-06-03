@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  {{#> head }}
+  {{> hotelsBranding }}
+  {{/head}}
+  <body onload="bxi.pageLoad()" class="bxi hotels dashboard">
+    {{> variables}}
+    <header class="bxi-bg-secondary">
+      <nav class="navbar py-2 navbar-expand-lg navbar-dark">
+        <div class="container">
+          <div class="bxi-nav">
+            <a class="bxi-nav-toggle" role="button">
+              {{> hamburgerIcon }}
+            </a>
+            <ul class="bxi-nav-links bxi-bg-secondary">
+              {{#each settings.header.links}}
+              <li>
+                <a class="bxi-link bxi-link-light--primary">{{this}}</a>
+              </li>
+              {{/each}}
+            </ul>
+            <a id="bxi-logo" class="navbar-brand py-0 ms-3">
+              <img src="{{settings.images.logo}}" alt="Logo" />
+            </a>
+          </div>
+          <div class="d-flex flex-row position-relative">
+            <p id="username-container"
+              class="me-3 d-none d-sm-flex m-0 align-items-center">{{settings.dashboard.username}}</p>
+            <div
+              class="bxi-user-icon d-flex bxi-bg-primary me-0 me-lg-3 pe-lg-none">
+              {{> userIcon }}
+            </div>
+            <div
+              class="bxi-auth-buttons bxi-auth-buttons--link bxi-bg-secondary bxi-bg-lg-transparent p-2 p-lg-0">
+              <button id="oidc-logout" onclick="bxi.logout()"
+                class="bxi-button">Log Out</button>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <section class="container">
+      <div class="d-flex flex-column flex-md-row justify-content-end mt-4">
+        {{!-- See src/dashboard-buttons.hbs to update dashboard buttons --}}
+        {{> dashboardButtons}}
+      </div>
+      <h1
+        class="bxi-ff-secondary fw-bold mt-2 pt-3 mb-4 dashboard-header">{{settings.dashboard.header}}</h1>
+      <div class="row">
+        <div class="col-lg-8 mb-5">
+          <div class="bxi-dashboard-portal">
+            <div
+              class="bxi-dashboard-portal-tabs cursor-pointer d-flex justify-content-between">
+              {{#each settings.dashboard.portal.tabs}}
+              <div class="w-100 py-4 text-center">{{this}}</div>
+              {{/each}}
+            </div>
+            <div class="bxi-dashboard-portal-content">
+              <div class="row p-4 pt-5">
+                <div class="col-md-4"><img class="w-100 h-auto mb-4"
+                    src="{{settings.dashboard.portal.image}}" /></div>
+                <div class="col-md-5">
+                  <h5 class="mb-3">{{settings.dashboard.portal.title}}</h5>
+                  {{#each settings.dashboard.portal.reservation_info}}
+                  <div
+                    class="bxi-dashboard-portal-details mb-3 d-flex align-items-center">
+                    <span class="icon-container me-2 bxi-icon-color-primary">{{>
+                      (lookup . 'icon' )}}</span>
+                    <span class="text-nowrap">{{details}}</span>
+                  </div>
+                  {{/each}}
+                </div>
+                <div
+                  class="col-md-3 d-flex justify-content-center justify-content-md-end align-items-start">
+                  <button
+                    class="bxi-button bxi-button--lg bxi-button--outline">{{settings.dashboard.portal.button}}</button>
+                </div>
+              </div>
+              <div class="p-4 d-flex align-items-center">
+                {{> alertIcon class='bxi-alert-icon' }}<span
+                  class="ps-2 fs-7">{{settings.dashboard.portal.alert}}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 mb-5">
+          <div
+            class="bxi-dashboard-sidebar p-4 d-flex flex-column justify-content-center align-items-center">
+            <h5
+              class="text-center mb-4">{{settings.dashboard.sidebar.title}}</h5>
+            <div
+              class="bxi-dashboard-sidebar-card w-100 d-flex flex-column align-items-center p-4 pb-3 mb-5">
+              <div
+                class="fs-7 mb-1 bxi-dashboard-sidebar-card-color text-center sidebar-card-description">{{settings.dashboard.sidebar.card.title}}</div>
+              <h1
+                class="bxi-main-header bxi-dashboard-sidebar-card-color">{{settings.dashboard.sidebar.card.points}}</h1>
+              <div class="star-container bxi-icon-color-primary">
+                {{> starIcon }}
+                {{> starIcon }}
+                {{> starIcon }}
+                {{> starIcon }}
+                {{> starIcon }}
+              </div>
+            </div>
+            <a
+              class="bxi-button bxi-button--link text-center text-uppercase">{{settings.dashboard.sidebar.link}}</a>
+          </div>
+        </div>
+      </div>
+      {{#if env.BXI_DASHBOARD_POLICY_ID}}
+      <div class="mb-5" data-dv-flow="static"
+        data-policy-id="{{env.BXI_DASHBOARD_POLICY_ID}}"></div>
+      {{/if}}
+    </section>
+    <section class="bxi-banner position-relative mb-5">
+      <div
+        class="bxi-banner__image d-flex align-items-center justify-content-center flex-column"
+        style="background-image: url('{{settings.dashboard.offer.image}}')">
+        <h1
+          class="bxi-main-header bxi-banner-color bxi-ff-secondary mb-4 bxi-zi-2">{{settings.dashboard.offer.title}}</h1>
+        <button
+          class="bxi-button bxi-button--lg bxi-button--white bxi-zi-2">{{settings.dashboard.offer.button}}</button>
+      </div>
+    </section>
+    <footer class="bxi-footer py-4">
+      <div class="container">
+        <div
+          class="d-block d-lg-flex align-items-center justify-content-between mb-sm-3 mb-4">
+          <ul class="d-none d-md-flex mb-4 mb-md-3 mb-lg-0 p-0 ls-none">
+            {{#each settings.footer.links }}
+            <li class="fs-6 me-4"><a
+                class="bxi-link bxi-link-light--primary fs-6">{{this}}</a></li>
+            {{/each}}
+          </ul>
+          <div
+            class="footer-contacts d-flex mt-4 flex-column-reverse flex-md-row justify-content-start align-items-center align-items-md-start justify-content-md-between justify-content-lg-end">
+            <div class="footer-support">
+              <button
+                class="bxi-button bxi-button--outline bxi-button--lg">Online
+                support</button>
+            </div>
+            <div class="ms-0 ms-md-3 mb-4 mb-lg-0">
+              <ul
+                class="d-flex align-items-center ls-none ps-0 bxi-social-buttons">
+                <li>
+                  <button
+                    class="bxi-button bxi-button--lg bxi-button--outline bxi-button--icon me-md-3 me-5">
+                    {{> facebookIcon }}
+                  </button>
+                </li>
+                <li>
+                  <button
+                    class="bxi-button bxi-button--lg bxi-button--outline bxi-button--icon me-md-3 me-5">
+                    {{> twitterIcon }}
+                  </button>
+                </li>
+                <li>
+                  <button
+                    class="bxi-button bxi-button--lg bxi-button--outline bxi-button--icon">
+                    {{> instagramIcon }}
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section class="container">
+        <p
+          class="mb-3 mb-md-0 fs-8 bxi-copyright-color">{{settings.footer.copyright}}</p>
+        {{> remix }}
+      </section>
+    </footer>
+    {{> modal}}
+  </body>
+</html>

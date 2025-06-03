@@ -1,0 +1,169 @@
+{
+  "theme": {
+    "primaryFont": "'capitolium-2', serif",
+    "secondaryFont": "'filson-soft', sans-serif",
+    "primaryColor": "#163657",
+    "secondaryColor": "#1d1d1d",
+    "buttonColor": "#ffffff",
+    "buttonBgColor": "#332842",
+    "buttonBgHoverColor": "var(--bxi-primary-color)",
+    "linkButtonColor": "var(--bxi-primary-color)",
+    "linkButtonHoverColor": "#332842",
+    "navLinkColorInverse": "#ffffff",
+    "dashboardBgColor": "#f3f3f3",
+    "componentBgColor": "#ffffff",
+    "footerColor": "#ffffff",
+    "footerBgColor": "var(--bxi-secondary-color)",
+    "copyrightColor": "#ffffff",
+    "headerDropdownColor": "#8c8f8f",
+    "headerDropdownBorderColor": "#c6cdcf",
+    "headerColor": "var(--bxi-primary-color)",
+    "heroColor": "#000000",
+    "heroBgColor": "#ffffff",
+    "bannerColor": "#ffffff",
+    "bannerBgColor": "var(--bxi-primary-color)",
+    "eventsHeaderColor": "#ffffff"
+  },
+  "settings": {
+    "title": "BXHealth",
+    "images": {
+      "favicon": "/health/favicon.png",
+      "apple_touch_icon": "/health/apple-touch-icon-192.png",
+      "logo": "/health/logo.svg",
+      "dialog_logo": "/health/logo.svg",
+      "dashboard_logo": "/health/logo-white.svg"
+    },
+    "header": {
+      "links": [
+        "Patient Care",
+        "Health Plans",
+        "Education",
+        "Tools & Resources",
+        "Learning"
+      ]
+    },
+    "home_page": {
+      "banner": {
+        "background_image": "/health/banner.jpg",
+        "title": "Advanced medicine. Personal care.",
+        "button": "Learn More"
+      },
+      "app_hero": {
+        "title": "Anywhere, any time.",
+        "sub_title": "Try the new BXHealth online/telemed. 24/7 access for patients.",
+        "image": "/health/home-hero-card.jpg"
+      },
+      "alert_banner": {
+        "message": "Ready to get started? I'm a:",
+        "patient_link": "Patient",
+        "caregiver_link": "Caregiver"
+      },
+      "programs": [
+        {
+          "title": "Your account, our app.",
+          "description": "Access your acccount with myBXHealth app for your mobile or tablet device.",
+          "link": "Get the App"
+        },
+        {
+          "title": "Incredible people.",
+          "description": "BXHealth's 8,000 professionals are working hard for you.",
+          "link": "Meet Our People"
+        },
+        {
+          "title": "Innovation at work.",
+          "description": "Pacing the industry with advances in healthcare and technology.",
+          "link": "Learn More"
+        }
+      ]
+    },
+    "dashboard": {
+      "username": "",
+      "welcome": "Welcome",
+      "sidebar": {
+        "links": [
+          "Coverage & Benefits",
+          "Claims & Accounts",
+          "Prescriptions & Pharmacies",
+          "Health Resources",
+          "My Settings",
+          "Messages"
+        ]
+      },
+      "events_hero": {
+        "banner_image": "/health/classes-events.png",
+        "title": "Classes & Events",
+        "description": "See and sign up for patient only opportunities",
+        "link": "Learn More"
+      },
+      "portal": {
+        "title": "Your BXHealth Homebase",
+        "dropdown_placeholder": "Things I Can Do",
+        "component_header": "My Account Info",
+        "patient_number_label": "My BXHealth Patient Number:",
+        "patient_number": "123456",
+        "patient_links": [
+          "Coverage Details",
+          "Provider Info"
+        ],
+        "actions": [
+          {
+            "icon": "/health/icon-virtual-visit.svg",
+            "header": "Schedule a Virtual Visit",
+            "description": "With AnyVirtualHealth, visit online or by phone.",
+            "button_text": "Book Appointment"
+          },
+          {
+            "icon": "/health/icon-rx.svg",
+            "header": "RX Delivery",
+            "description": "Get your prescriptions filled or renewed via home delivery, for BXHealth patients.",
+            "button_text": "Learn More"
+          },
+          {
+            "icon": "/health/icon-document.svg",
+            "header": "Symptom Checker",
+            "description": "Our online tools help you check common symptoms for everyday ailments.",
+            "button_text": "Try It"
+          }
+        ],
+        "links_header": "Quick Links",
+        "quick_links": [
+          {
+            "icon": "/health/icon-sthescope.svg",
+            "text": "Find a Physician"
+          },
+          {
+            "icon": "/health/icon-person.svg",
+            "text": "Family Records"
+          },
+          {
+            "icon": "/health/icon-brief-case.svg",
+            "text": "Manage Your Claims"
+          },
+          {
+            "icon": "/health/icon-gear.svg",
+            "text": "More Resources"
+          }
+        ]
+      }
+    },
+    "footer": {
+      "links_left": [
+        "Our Company",
+        "Investor Relations",
+        "Corporate Citizenship",
+        "News",
+        "Locations"
+      ],
+      "links_right": [
+        "Privacy & Security",
+        "Terms of Use",
+        "Disclosures",
+        "Accessibility"
+      ],
+      "phone_number": "800.543.2276",
+      "email": "help@bxfinance.com",
+      "chat": "Chat with Us",
+      "copyright": "© BXHealth, {{currentYear}}"
+    }
+  }
+}

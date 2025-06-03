@@ -1,0 +1,14 @@
+{{#if env.BXI_SHOW_REMIX_BUTTON}}
+<span class="floating-button glitch-button">
+  <img src="/remix-on-glitch.svg" alt="Remix on glitch"
+    data-dv-flow="modal" data-hide-logo="true" 
+    data-policy-id="{{env.BXI_REMIX_POLICY_ID}}"
+    data-dv-param-glitch-project="{{env.BXI_GLITCH_REMIX_PROJECT}}" 
+    data-parameter-factory="remixParameters"  />
+</span>
+{{/if}}
+<span class="floating-button verticals-link">
+  <a class="d-flex w-100 h-100 justify-content-center align-items-center" href="/shortcuts">
+    {{> gearIcon }}
+  </a>
+</span>

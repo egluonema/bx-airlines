@@ -1,0 +1,25 @@
+{
+  "theme": {
+    "primaryFont": "'Montserrat', sans-serif",
+    "secondaryFont": "'Poppins', serif",
+    "primaryColor": "#afb2ba",
+    "secondaryColor": "#19191f",
+    "buttonColor": "#ffffff",
+    "buttonBgColor": "var(--bxi-primary-color)",
+    "buttonBgHoverColor": "#67686b",
+    "linkButtonColor": "var(--bxi-primary-color)",
+    "linkButtonHoverColor": "var(--bxi-secondary-color)",
+    "bannerColor": "#ffffff"
+  },
+  "settings": {
+    "title": "BXGeneric",
+    "images": {
+      "favicon": "/generic/favicon.png",
+      "apple_touch_icon": "/generic/apple-touch-icon-192.png",
+      "logo": "/generic/logo.svg",
+      "dialog_logo": "/generic/logo.svg"
+    },
+    "heading": "BXGeneric",
+    "sub_heading": "A Starter App for your Demos"
+  }
+}

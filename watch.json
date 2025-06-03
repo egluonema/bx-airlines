@@ -1,0 +1,19 @@
+{
+  "install": {
+    "include": [
+      "^package\\.json$"
+    ]
+  },
+  "restart": {
+    "exclude": [
+      "^public/",
+      "^assets/",
+      "^src/"
+    ],
+    "include": [
+      "^resources/",
+      "server.js",
+      ".env"
+    ]
+  }
+}

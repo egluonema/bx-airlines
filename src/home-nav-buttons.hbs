@@ -1,0 +1,19 @@
+{{#if env.BXI_USE_REDIRECT}}
+<button class="bxi-button" id="oidc-login" disabled>Log In</button>
+{{else}}
+{{#if env.BXI_LOGIN_POLICY_ID}}
+<button class="bxi-button" data-success-callback="defaultAuthnSuccess"
+  data-dv-flow="modal" data-policy-id="{{env.BXI_LOGIN_POLICY_ID}}">Log
+  In</button>
+{{/if}}
+{{#if env.BXI_EXT_LOGIN_POLICY_ID}}
+<button class="bxi-button" data-success-callback="defaultAuthnSuccess"
+  data-dv-flow="modal" data-policy-id="{{env.BXI_EXT_LOGIN_POLICY_ID}}">Log
+  In</button>
+{{/if}}
+{{#if env.BXI_REGISTRATION_POLICY_ID}}
+<button class="bxi-button" data-success-callback="defaultAuthnSuccess"
+  data-dv-flow="modal" data-policy-id="{{env.BXI_REGISTRATION_POLICY_ID}}">Sign
+  Up</button>
+{{/if}}
+{{/if}}

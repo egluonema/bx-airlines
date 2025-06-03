@@ -1,0 +1,120 @@
+{
+  "theme": {
+    "primaryFont": "'Noto Sans', sans-serif",
+    "secondaryFont": "'Mohave', sans-serif",
+    "primaryColor": "#0E264C",
+    "secondaryColor": "#F1CA00",
+    "buttonColor": "var(--bxi-primary-color)",
+    "buttonBgColor": "var(--bxi-secondary-color)",
+    "buttonBgHoverColor": "#D1B210",
+    "linkButtonColor": "var(--bxi-primary-color)",
+    "linkButtonHoverColor": "var(--bxi-secondary-color)",
+    "dashboardBgColor": "#f3f3f3",
+    "footerBgColor": "#2C3741",
+    "footerColor": "#ffffff",
+    "copyrightColor": "#ffffff",
+    "componentBgColor": "#ffffff",
+    "bannerColor": "#ffffff",
+    "bannerBgColor": "#081426",
+    "serviceColor": "#ffffff",
+    "serviceLinkColor": "var(--bxi-secondary-color)",
+    "serviceLinkHoverColor": "var(--bxi-primary-color)",
+    "serviceLinkBgHoverColor": "var(--bxi-secondary-color)",
+    "dashboardNavBgColor": "#ffffff"
+  },
+  "settings": {
+    "title": "BXManufacturing",
+    "images": {
+      "favicon": "/manufacturing/favicon.png",
+      "apple_touch_icon": "/manufacturing/apple-touch-icon-192.png",
+      "logo": "/manufacturing/logo.svg",
+      "dialog_logo": "/manufacturing/logo.svg"
+    },
+    "home_page": {
+      "header": {
+        "links": [
+          "Who We Are",
+          "Products",
+          "Services",
+          "Capabilities",
+          "Solutions",
+          "Resources",
+          "Press & News",
+          "Contacts"
+        ]
+      },
+      "banner": {
+        "background_image": "/manufacturing/banner.jpg",
+        "title": "Full-Cycle Manufacturing",
+        "subtitle": "Unmatched quality and efficiency at a low cost for all industries",
+        "button": "Book a Consultation"
+      },
+      "services_header": "Professional Services",
+      "services": [
+        {
+          "title": "Manufacturing",
+          "description": "Experience the next level of operational excellence. Our diverse team of talented employees in 15 countries is driven by a commitment to innovation and customer-driven service.",
+          "link": "More"
+        },
+        {
+          "title": "Product Sales",
+          "description": "Times are changing. Change with them. Ensure a supply line that’s on time and quality guaranteed.",
+          "link": "More"
+        },
+        {
+          "title": "Consulting",
+          "description": "The best always look to get better. Let our operational experts help improve your workflow. We specialize in optimizing complex fabrication and supply line processes.",
+          "link": "More"
+        }
+      ]
+    },
+    "dashboard": {
+      "username": "",
+      "header": {
+        "links": [
+          "Main Page",
+          "Products",
+          "Settings",
+          "Accesses",
+          "Security"
+        ]
+      },
+      "portal_header": "My Services",
+      "buttons": [
+        "Factory Information",
+        "Industry Benchmarks"
+      ],
+      "services": [
+        {
+          "image": "/manufacturing/dashboard-block-1.jpg",
+          "title": "Quality Control Systems",
+          "description": "Ensure top quality for the products that are manufactured in your production line.",
+          "button": "Go to Service"
+        },
+        {
+          "image": "/manufacturing/dashboard-block-2.jpg",
+          "title": "Operational Set Up of Manufacturing",
+          "description": "Get set up with the ability to manufacture products quickly.",
+          "button": "Go to Service"
+        },
+        {
+          "image": "/manufacturing/dashboard-block-3.jpg",
+          "title": "Production Line Audit",
+          "description": "Get consulting and advice on how to make your production line more efficient and safer.",
+          "button": "Go to Service"
+        }
+      ]
+    },
+    "footer": {
+      "links": [
+        "About",
+        "Products",
+        "Services",
+        "Terms of Use",
+        "Contacts"
+      ],
+      "phone_number": "800 568 9678",
+      "copyright": "© BXManufacturing, {{currentYear}}. All rights reserved."
+    }
+  }
+}

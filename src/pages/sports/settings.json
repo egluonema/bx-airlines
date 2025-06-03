@@ -1,0 +1,140 @@
+{
+  "theme": {
+    "primaryFont": "'Arimo', sans-serif",
+    "secondaryFont": "'Fira Sans Condensed', sans-serif",
+    "primaryColor": "#E12F17",
+    "secondaryColor": "#040F28",
+    "buttonColor": "#ffffff",
+    "buttonBgColorGradient1": "#EE271A",
+    "buttonBgColorGradient2": "#932209",
+    "linkButtonColor": "#0E2742",
+    "linkButtonHoverColor": "var(--bxi-primary-color)",
+    "dashboardBgColor": "#f3f3f3",
+    "footerBgColor": "var(--bxi-secondary-color)",
+    "footerColor": "#ffffff",
+    "copyrightColor": "#ffffff",
+    "dashboardNavbarBgColor": "#ffffff",
+    "basicGradient1": "#50b7f9",
+    "basicGradient2": "#3476bf",
+    "standardGradient1": "#ee281a",
+    "standardGradient2": "#932209",
+    "premiumGradient1": "#edcd23",
+    "premiumGradient2": "#db901f",
+    "premiumGradient3": "#f11522",
+    "dotColor": "#ff0000"
+  },
+  "settings": {
+    "title": "BXSports",
+    "images": {
+      "favicon": "/sports/favicon.png",
+      "apple_touch_icon": "/sports/apple-touch-icon-192.png",
+      "logo": "/sports/logo.svg",
+      "dialog_logo": "/sports/logo.svg"
+    },
+    "header": {
+      "links": [
+        "Watch Live",
+        "Schedule",
+        "Originals",
+        "News"
+      ]
+    },
+    "home_page": {
+      "banner": {
+        "background_image": "/sports/banner.jpg",
+        "title": "Watch sports whenever, wherever",
+        "subtitle": "Enjoy real-time highlights and watch events from the top leagues and biggest tournaments around the world",
+        "button": "Try for free"
+      },
+      "news_section": {
+        "title": "Sports News",
+        "button": "View all",
+        "articles": [
+          {
+            "background_image": "/sports/cyclist.jpg",
+            "title": "Tour de Romandie: Ethan Hayter wins prologue"
+          },
+          {
+            "background_image": "/sports/sprinter.jpg",
+            "title": "Meet the British sprinter who won gold"
+          },
+          {
+            "background_image": "/sports/hockey.jpg",
+            "title": "The Puck Podcast: Chatting with the Cup Contenders"
+          }
+        ]
+      }
+    },
+    "dashboard": {
+      "banner": {
+        "background_image": "/sports/olympics.png",
+        "title": "What's on this Week",
+        "subtitle": "Watch the best of The Masters, NASCAR, and find out who will compete in the NBA and NHL finals",
+        "button": "Watch Now"
+      },
+      "streaming_section": {
+        "title": "Streaming Now",
+        "shows": [
+          {
+            "background_image": "/sports/boxing.png",
+            "title": "Watch Live: Boxing Championship {{currentYear}}"
+          },
+          {
+            "background_image": "/sports/american-football.png",
+            "title": "Watch Live: NFL Draft {{currentYear}}"
+          },
+          {
+            "background_image": "/sports/horse-racing.png",
+            "title": "Replay: Champion of Champions {{lastYear}}"
+          }
+        ]
+      },
+      "subscriptions_section": {
+        "title": "Upgrade your subscription to access exclusive BXSports content",
+        "subscriptions": [
+          {
+            "name": "BXSports Basic",
+            "style": "basic",
+            "button": "Subscribed",
+            "price_interval": "Price per month",
+            "price": "$0.00",
+            "stars": 1,
+            "state": "active",
+            "learn": "Learn More"
+          },
+          {
+            "name": "BXSports Standard",
+            "style": "standard",
+            "button": "Subscribe",
+            "price_interval": "Price per month",
+            "price": "$7.99",
+            "stars": 3,
+            "state": "",
+            "learn": "Learn More"
+          },
+          {
+            "name": "BXSports Premium",
+            "style": "premium",
+            "button": "Subscribe",
+            "price_interval": "Price per month",
+            "price": "$12.99",
+            "stars": 5,
+            "state": "",
+            "learn": "Learn More"
+          }
+        ]
+      }
+    },
+    "footer": {
+      "links": [
+        "Sports",
+        "Subscriber Agreement",
+        "How to Stream",
+        "Privacy Policy",
+        "Help"
+      ],
+      "phone_number": "800 568 9678",
+      "copyright": "© BXSports, {{currentYear}}. All rights reserved."
+    }
+  }
+}

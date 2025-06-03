@@ -1,0 +1,265 @@
+{
+  "theme": {
+    "primaryFont": "'Noto Sans', sans-serif",
+    "secondaryFont": "'Fira Sans Condensed', sans-serif",
+    "primaryColor": "#f35811",
+    "secondaryColor": "#1c3445",
+    "buttonColor": "#ffffff",
+    "buttonBgColor": "var(--bxi-primary-color)",
+    "buttonBgHoverColor": "#c24f1b",
+    "linkButtonColor": "var(--bxi-primary-color)",
+    "linkButtonHoverColor": "var(--bxi-secondary-color)",
+    "dashboardBgColor": "#ff40ff",
+    "footerBgColor": "var(--bxi-secondary-color)",
+    "footerColor": "#ffffff",
+    "copyrightColor": "#ffffff",
+    "componentBgColor": "#ffffff",
+    "pageBgColor": "#eeeeee",
+    "navbarBgColor": "#ffffff",
+    "serviceColor": "#666c70",
+    "claimsShieldColor": "#4e27a9"
+  },
+  "settings": {
+    "title": "BXInsurance",
+    "images": {
+      "favicon": "/insurance/favicon.png",
+      "apple_touch_icon": "/insurance/apple-touch-icon-192.png",
+      "logo": "/insurance/logo.svg",
+      "dialog_logo": "/insurance/logo.svg"
+    },
+    "header": {
+      "links": [
+        "Find An Agent",
+        "Claims",
+        "Policies",
+        "Billing",
+        "Get A Quote",
+        "Customer Support",
+        "My Documents"
+      ],
+      "button": "SOS. Insured Event"
+    },
+    "home_page": {
+      "banner": {
+        "background_image": "/insurance/banner.jpg",
+        "title": "You are protected",
+        "subtitle": "Complex solutions for your insurance needs."
+      },
+      "services": [
+        {
+          "icon": "/insurance/home.svg",
+          "title": "Home",
+          "description": "Apartments, houses and condos"
+        },
+        {
+          "icon": "/insurance/car.svg",
+          "title": "Car",
+          "description": "All types of auto insurance"
+        },
+        {
+          "icon": "/insurance/travel.svg",
+          "title": "Travel",
+          "description": "Trip insurance"
+        },
+        {
+          "icon": "/insurance/health.svg",
+          "title": "Health",
+          "description": "Your health, family protection"
+        },
+        {
+          "icon": "/insurance/property.svg",
+          "title": "Property",
+          "description": "Personal property, purchase protection"
+        },
+        {
+          "icon": "/insurance/investments.svg",
+          "title": "Investments",
+          "description": "Insurance for a comfortable retirement"
+        }
+      ]
+    },
+    "dashboard": {
+      "header": "Hello!",
+      "username": "",
+      "advertisement": {
+        "title": "Have you looked into Identity Insurance?",
+        "description": "In 2022, the US Federal Trade Commission reported that Americans lost $8.8 Billion to identity theft and fraud (+49% increast from 2021). Protect yourself now for a fraction of the cost.",
+        "alert": "Save up to 68% today!",
+        "button": "Get Protection Now"
+      },
+      "portal": {
+        "header": "Your Policies",
+        "services": [
+          {
+            "logo": "/insurance/vehicle-icon.svg",
+            "description": "Add or Replace Vehicle"
+          },
+          {
+            "logo": "/insurance/edit-policy-icon.svg",
+            "description": "Edit Policy Coverages"
+          },
+          {
+            "logo": "/insurance/remove-coverage-icon.svg",
+            "description": "Remove Coverage"
+          }
+        ]
+      },
+      "policies": {
+        "header": "My Products",
+        "insurance": {
+          "header": "Insurance Policies",
+          "policies": [
+            {
+              "name": "Auto Policy",
+              "description": "You are saving $9.55 per month with Safe Driver Rewards"
+            },
+            {
+              "name": "Home Policy",
+              "description": "Homeowners insurance helps provide financial protection for your home and personal belongings. Learn the basics of what homeowners insurance is and what it covers."
+            },
+            {
+              "name": "Condo Policy",
+              "description": "Learn tips & tricks for landlords. Get answers to common questions."
+            }
+          ]
+        },
+        "agent": {
+          "header": "My Agent",
+          "photo": "/insurance/agent-pic.png",
+          "name": "Kevin Nelson",
+          "title": "ChFC, CLU",
+          "agency": "Kevin Nelson Insurance Agency",
+          "license": "LIC: C0-111111",
+          "button": "Contact"
+        },
+        "advertisement": {
+          "header": "Have you planned for everything?",
+          "description": "Learn to set financial goals and invest in your future. Explore your options below or talk with your agent!",
+          "link": "Explore WhatIfs"
+        },
+        "bxfinance": {
+          "logo": "/finance/logo.svg",
+          "description": "Are you in the home buying process? Our team can help navigate your mortgage journey!",
+          "button": "Learn More"
+        }
+      },
+      "claims": {
+        "header": "My Claims",
+        "history": {
+          "header": "My Claims History",
+          "column1": "Status",
+          "column2": "Claims",
+          "claims": [
+            {
+              "status": "success",
+              "id": "#RVD-4343455",
+              "date": "10/01/2019",
+              "link": "More Detail"
+            },
+            {
+              "status": "warning",
+              "id": "#YXX-098364",
+              "date": "04/16/2017",
+              "link": "More Detail"
+            },
+            {
+              "status": "success",
+              "id": "#ZQT-120776",
+              "date": "07/03/2003",
+              "link": "More Detail"
+            }
+          ]
+        },
+        "advertisement": {
+          "header": "Should I File?",
+          "description": "Involved in an accident? When it's time to file an insurance claim, it can help to know what information you need to provide and to understand how your insurance coverage works.",
+          "button": "Learn More"
+        },
+        "coverage": {
+          "header": "Coverage Summary",
+          "included": [
+            {
+              "name": "24-Hour assistance",
+              "tag": "Coverage Included",
+              "link": "More Info"
+            },
+            {
+              "name": "Comprehensive",
+              "tag": "Coverage Included",
+              "link": "More Info"
+            },
+            {
+              "name": "Reimbursement",
+              "tag": "Coverage Included",
+              "link": "More Info"
+            }
+          ]
+        }
+      },
+      "coverage": [
+        {
+          "icon": "/insurance/vehicle-icon.svg",
+          "title": "Auto",
+          "bullets": [
+            {
+              "text": "ID: X5459-95GH77H5"
+            },
+            {
+              "text": "2021 Nissan Altima",
+              "subtext": "VIN: XXX8847557"
+            },
+            {
+              "text": "2018 Chrysler Pacifica",
+              "subtext": "VIN: XXX2334122"
+            }
+          ]
+        },
+        {
+          "icon": "/insurance/house-icon.svg",
+          "title": "Home",
+          "bullets": [
+            {
+              "text": "ID: HO-96452838"
+            },
+            {
+              "text": "988 E 73rd Ave, Denver, CO 80014"
+            }
+          ]
+        },
+        {
+          "icon": "/insurance/condo-icon.svg",
+          "title": "Condo",
+          "bullets": [
+            {
+              "text": "ID: HO-96452838"
+            },
+            {
+              "text": "111 Briar Lane, Tampa, FL 33592"
+            }
+          ]
+        },
+        {
+          "icon": "/insurance/document-icon.svg",
+          "title": "Documents",
+          "links": [
+            "ID Cards",
+            "Policy Documents",
+            "Statements"
+          ]
+        }
+      ]
+    },
+    "footer": {
+      "links": [
+        "About",
+        "Site Map",
+        "Terms of Use",
+        "Insurance Rules",
+        "Q&A",
+        "Privacy"
+      ],
+      "phone_number": "800 568 9678",
+      "copyright": "© BXInsurance, {{currentYear}}. All rights reserved."
+    }
+  }
+}

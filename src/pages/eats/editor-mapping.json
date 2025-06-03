@@ -1,0 +1,288 @@
+{
+  "theme": {
+    "global": [
+      {
+        "type": "font",
+        "friendlyName": "Primary Font",
+        "jsonPath": "theme.primaryFont",
+        "cssVariable": "--bxi-primary-font"
+      },
+      {
+        "type": "font", 
+        "friendlyName": "Secondary Font",
+        "jsonPath": "theme.secondaryFont",
+        "cssVariable": "--bxi-secondary-font"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Primary Color",
+        "jsonPath": "theme.primaryColor",
+        "cssVariable": "--bxi-primary-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Secondary Color",
+        "jsonPath": "theme.secondaryColor",
+        "cssVariable": "--bxi-secondary-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Button Color",
+        "jsonPath": "theme.buttonColor",
+        "cssVariable": "--bxi-button-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Button Background Color",
+        "jsonPath": "theme.buttonBgColor",
+        "cssVariable": "--bxi-button-bg-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Button Background Hover Color",
+        "jsonPath": "theme.buttonBgHoverColor",
+        "cssVariable": "--bxi-button-bg-hover-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Link Button Color",
+        "jsonPath": "theme.linkButtonColor",
+        "cssVariable": "--bxi-link-button-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Link Button Hover Color",
+        "jsonPath": "theme.linkButtonHoverColor",
+        "cssVariable": "--bxi-link-button-hover-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Copyright Color",
+        "jsonPath": "theme.footerColor",
+        "cssVariable": "--bxi-footer-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Footer Background Color",
+        "jsonPath": "theme.footerBgColor",
+        "cssVariable": "--bxi-footer-bg-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Program Color",
+        "jsonPath": "theme.programColor",
+        "cssVariable": "--bxi-eats-program-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Page Background Color",
+        "jsonPath": "theme.dashboardBgColor",
+        "cssVariable": "--bxi-dashboard-bg-color"
+      }
+    ],
+    "home": [
+      {
+        "type": "color",
+        "friendlyName": "Banner Color",
+        "jsonPath": "theme.bannerColor",
+        "cssVariable": "--bxi-eats-banner-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Order Background Color",
+        "jsonPath": "theme.orderBgColor",
+        "cssVariable": "--bxi-eats-order-bg-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Order Form Background Color",
+        "jsonPath": "theme.orderFormBgColor",
+        "cssVariable": "--bxi-eats-order-form-bg-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Amounts Color",
+        "jsonPath": "theme.amountColor",
+        "cssVariable": "--bxi-eats-amount-color"
+      }
+    ],
+    "dashboard": [
+      {
+        "type": "color",
+        "friendlyName": "Category Color",
+        "jsonPath": "theme.portalCategoryColor",
+        "cssVariable": "--bxi-eats-portal-category-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Card Color",
+        "jsonPath": "theme.portalCardColor",
+        "cssVariable": "--bxi-eats-portal-card-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Checklist Border Color",
+        "jsonPath": "theme.portalChecklistItemBorderColor",
+        "cssVariable": "--bxi-eats-portal-checklist-item-border-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Checklist Date Color",
+        "jsonPath": "theme.checklistDateColor",
+        "cssVariable": "--bxi-eats-portal-checklist-date-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Checklist Item Color",
+        "jsonPath": "theme.portalChecklistItemColor",
+        "cssVariable": "--bxi-eats-portal-checklist-item-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Checkmark Background Color",
+        "jsonPath": "theme.portalCheckmarkBgColor",
+        "cssVariable": "--bxi-eats-portal-checkmark-bg-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Card First Gradient",
+        "jsonPath": "theme.cardFirstGradient",
+        "cssVariable": "--bxi-eats-finance-card-first-gradient"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Card Second Gradient",
+        "jsonPath": "theme.cardSecondGradient",
+        "cssVariable": "--bxi-eats-finance-card-second-gradient"
+      }
+    ]
+  },
+  "content": {
+    "global": [
+      {
+        "type": "string",
+        "friendlyName": "Title",
+        "jsonPath": "settings.title",
+        "elementSelector": "head > title"
+      }, 
+      {
+        "type": "image",
+        "friendlyName": "Favicon",
+        "jsonPath": "settings.images.favicon",
+        "elementSelector": "#favicon"
+      },
+      {
+        "type": "image",
+        "friendlyName": "Apple Touch Icon",
+        "jsonPath": "settings.images.apple_touch_icon",
+        "elementSelector": "#apple-touch-icon"
+      },
+      {
+        "type": "image",
+        "friendlyName": "Logo",
+        "jsonPath": "settings.images.logo",
+        "elementSelector": "#bxi-logo img"
+      },
+      {
+        "type": "image",
+        "friendlyName": "Dialog Logo",
+        "jsonPath": "settings.images.dialog_logo",
+        "elementSelector": "#dialog-logo"
+      },
+      {
+        "type": "string",
+        "friendlyName": "Header Main Link",
+        "jsonPath": "settings.header.main_link",
+        "elementSelector": ".bxi-eats-main-link"
+      }
+    ],
+    "home": [
+      {
+        "type": "image",
+        "friendlyName": "Banner Background",
+        "jsonPath": "settings.home_page.banner.image",
+        "elementSelector": ".bxi-banner__image.bxi-bg-image"
+      },
+      {
+        "type": "string",
+        "friendlyName": "Banner Title",
+        "jsonPath": "settings.home_page.banner.title",
+        "elementSelector": ".bxi-banner-content h2"
+      },
+      {
+        "type": "string",
+        "friendlyName": "Banner Subtitle",
+        "jsonPath": "settings.home_page.banner.subtitle",
+        "elementSelector": ".bxi-banner-content h5"
+      },
+      {
+        "type": "string",
+        "friendlyName": "Order Form Title",
+        "jsonPath": "settings.home_page.order_form.title",
+        "elementSelector": ".bxi-order-form h5"
+      },
+      {
+        "type": "image",
+        "friendlyName": "Order Form Image",
+        "jsonPath": "settings.home_page.order_form.image",
+        "elementSelector": ".bxi-order-form img"
+      },
+      {
+        "type": "string",
+        "friendlyName": "Order Form Button",
+        "jsonPath": "settings.home_page.order_form.button",
+        "elementSelector": ".bxi-order-form button"
+      },
+      {
+        "type": "string",
+        "friendlyName": "Discounts Section Title",
+        "jsonPath": "settings.home_page.discounts_section.title",
+        "elementSelector": ".bxi-discounts-section h1"
+      }
+    ],
+    "dashboard": [
+      {
+        "type": "string",
+        "friendlyName": "Dashboard Title",
+        "jsonPath": "settings.dashboard.title",
+        "elementSelector": ".bxi-main-header"
+      },
+      {
+        "type": "string",
+        "friendlyName": "Dashboard Description",
+        "jsonPath": "settings.dashboard.description",
+        "elementSelector": ".bxi-main-header + h2"
+      },
+      {
+        "type": "string",
+        "friendlyName": "Order History Title",
+        "jsonPath": "settings.dashboard.portal.title",
+        "elementSelector": ".bxi-eats-portal--header"
+      },
+      {
+        "type": "string",
+        "friendlyName": "Sidebar Title",
+        "jsonPath": "settings.dashboard.sidebar.title",
+        "elementSelector": ".bxi-eats-sidebar h1"
+      },
+      {
+        "type": "string",
+        "friendlyName": "Card Description",
+        "jsonPath": "settings.dashboard.sidebar.card.description",
+        "elementSelector": ".bxi-finance-card p"
+      },
+      {
+        "type": "string",
+        "friendlyName": "Card Amount",
+        "jsonPath": "settings.dashboard.sidebar.card.amount",
+        "elementSelector": ".bxi-finance-card h1"
+      },
+      {
+        "type": "string",
+        "friendlyName": "Card Amount",
+        "jsonPath": "settings.dashboard.sidebar.card.link",
+        "elementSelector": ".bxi-eats-sidebar .bxi-link"
+      }
+    ]
+  }
+}

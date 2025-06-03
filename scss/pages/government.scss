@@ -1,0 +1,126 @@
+@use '../common/mixins';
+
+.bxi.government {
+  &.home {
+    .bxi-caret-icon {
+      transform: scale(0.5);
+      margin-top: 7px;
+
+      .stroke-target {
+        stroke-width: 2.5;
+      }
+    }
+
+    .bxi-banner {
+      &--text {
+        color: var(--bxi-banner-color);
+      }
+
+      &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 55%;
+        background: linear-gradient(
+          180deg,
+          rgba(4, 3, 1, 0.6) 2.04%,
+          rgba(125, 89, 38, 0) 100%
+        );
+      }
+    }
+
+    .bxi-input-container {
+      svg {
+        top: 1.25rem;
+        right: 1rem;
+      }
+    }
+
+    .bxi-service {
+      &:not(:last-child) {
+        border-bottom: 1px solid var(--bxi-services-border-color);
+      }
+
+      @include mixins.breakpoint-md {
+        border-bottom: 1px solid var(--bxi-services-border-color);
+        border-right: 1px solid var(--bxi-services-border-color);
+      }
+    }
+  }
+
+  &.dashboard {
+    .bxi-dashboard-component-color {
+      color: var(--bxi-dashboard-component-color);
+    }
+
+    .bxi-dashboard-service {
+      border: 1px solid var(--bxi-dashboard-services-border-color);
+
+      @include mixins.breakpoint-lt-md {
+        &:not(:last-child) {
+          border-bottom: none;
+        }
+      }
+
+      @include mixins.breakpoint-md {
+        &:first-child {
+          border-right: none;
+          border-bottom: none;
+        }
+
+        &:nth-child(2) {
+          border-bottom: none;
+        }
+
+        &:nth-child(3) {
+          border-right: none;
+        }
+      }
+
+      @include mixins.breakpoint-lg {
+        &:first-child,
+        &:nth-child(2) {
+          border-bottom: 1px solid var(--bxi-dashboard-services-border-color);
+        }
+
+        &:nth-child(2) {
+          border-right: none;
+        }
+      }
+
+      &-icon {
+        width: 50px;
+
+        img {
+          max-width: 100%;
+          height: auto;
+        }
+      }
+    }
+
+    .bxi-portal-tile {
+      &-status-color {
+        color: var(--bxi-dashbarod-tile-status-color);
+      }
+
+      &-bg-color {
+        background-color: var(--bxi-dashboard-tile-failed-bg-color);
+
+        &.success {
+          background-color: var(--bxi-dashboard-tile-success-bg-color);
+        }
+      }
+
+      &-date-color {
+        color: var(--bxi-dashboard-tile-date-color);
+      }
+
+      &-icon {
+        @include mixins.color-icon(var(--bxi-dashboard-tile-icon-color));
+      }
+    }
+  }
+}

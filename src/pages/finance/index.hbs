@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  {{#> head }}
+    {{> financeBranding }}
+  {{/head}}
+  <body onload="bxi.pageLoad()" class="bxi finance home">
+    {{> variables}}
+    <header class="bxi-header bxi-bg-image bxi-zi-3">
+      <nav class="navbar navbar-expand-lg py-2 py-xl-3 flex-wrap">
+        <div class="container">
+          <div class="bxi-nav">
+            <a class="bxi-nav-toggle d-xl-none" role="button">
+              {{> hamburgerIcon }}
+            </a>
+            <ul class="bxi-nav-links bxi-bg-secondary">
+              {{#each settings.header.links}}
+              <li>
+                <a class="bxi-link bxi-link-light--primary">{{this}}</a>
+              </li>
+              {{/each}}
+            </ul>
+            <a id="bxi-logo" class="navbar-brand mt-1 mt-xl-0 py-0 ms-3 ms-lg-0">
+              <img src="{{settings.images.logo}}" alt="Logo" />
+            </a>
+          </div>
+          <div class="d-none d-xl-block flex-grow-1 ms-3">
+            <ul class="navbar-nav">
+              {{#each settings.header.links}}
+              <li class="nav-item mb-1">
+                <a class="bxi-link bxi-link--primary ps-0 pe-lg-4">{{this}}</a>
+              </li>
+              {{/each}}
+            </ul>
+          </div>
+          <div class="d-flex flex-row position-relative">
+            {{> searchIcon class="mt-1 me-3 d-lg-block d-none bxi-icon-color-primary" }}
+            <div class="bxi-user-icon bxi-bg-primary">
+              {{> userIcon }}
+            </div>
+            <div class="bxi-auth-buttons bxi-auth-buttons--primary-link bxi-bg-secondary bxi-bg-lg-transparent p-2 ps-3 py-lg-1">
+              {{!-- See src/home-nav-buttons.hbs to update auth buttons --}}
+              {{> homeNavButtons }}
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <section class="bxi-banner py-4 position-relative">
+      <div class="bxi-banner-circle rounded-circle position-absolute bxi-zi-1"></div>
+      <div class="bxi-banner-circle rounded-circle position-absolute bxi-zi-1"></div>
+      <div class="bxi-banner-circle rounded-circle position-absolute bxi-zi-1"></div>
+      <div class="container position-relative bxi-zi-2">
+        <div class="row w-100">
+          <div class="col-xl-8 col-md-6">
+            <h1 class="fw-bold mt-lg-5 pt-md-5">{{settings.home_page.banner.title}}</h1>
+            <p>{{settings.home_page.banner.sub_title}}</p>
+            {{#if settings.home_page.banner.button}}
+            <button class="bxi-button bxi-button--white bxi-button--lg">{{settings.home_page.banner.button}}</button>
+            {{/if}}
+          </div>
+          <div class="col-xl-4 col-md-6">
+            <div class="shine-rewards-card-pill-lg position-relative rounded-pill pb-4">
+              <img class="shine-rewards-card-image d-block position-absolute" src="{{settings.rewards_card.image}}" />
+              <h4 class="shine-rewards-card-color">{{settings.rewards_card.title}}</h4>
+              <p class="shine-rewards-card-color fs-7 shine-rewards-card-subtitle">{{settings.rewards_card.sub_title}}</p>
+            </div>
+            <div class="shine-rewards-card-pill-sm rounded-pill my-4"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="bxi-bg-primary bxi-zi-2">
+      <div class="container py-4 bxi-header-color">
+        <span class="fs-4 me-3 bxi-alert-banner-msg">{{settings.home_page.alert_banner.message}}</span>
+        <span class="fs-4 fw-boldish cursor-pointer position-relative bxi-zi-2 bxi-alert-banner-link">{{settings.home_page.alert_banner.link}}</span>
+      </div>
+    </section>
+    <section class="bxi-programs container bxi-zi-2">
+      <div class="row">
+        {{#each settings.home_page.programs}}
+        <div class="col-lg-4 mb-5 text-center text-lg-start">
+          <div class="bxi-icon-bg rounded-circle d-flex align-items-center justify-content-center mt-5 mb-4 mx-auto">
+            {{{ inlineSvg icon }}}
+          </div>
+          <h4 class="fw-boldish">{{title}}</h4>
+          <p class="mb-3">{{description}}</p>
+          <a class="bxi-button bxi-button--outline bxi-button--md">{{link}}</a>
+        </div>
+        {{/each}}
+      </div>
+    </section>
+    <footer class="bxi-footer py-5">
+      <div class="container text-center text-lg-start">
+        <div class="row">
+          <div class="col-lg-4 mb-3">
+            <ul class="d-flex justify-content-center justify-content-lg-start ls-none ps-0 mb-3">
+              <li>
+                <button class="bxi-button bxi-button--outline bxi-button--md bxi-button--icon rounded-circle me-lg-3 me-5">
+                  {{> facebookIcon }}
+                </button>
+              </li>
+              <li>
+                <button class="bxi-button bxi-button--outline bxi-button--md bxi-button--icon rounded-circle me-lg-3 me-5">
+                  {{> twitterIcon }}
+                </button>
+              </li>
+              <li>
+                <button class="bxi-button bxi-button--outline bxi-button--md bxi-button--icon rounded-circle">
+                  {{> instagramIcon }}
+                </button>
+              </li>
+            </ul>
+            <p class="mb-3 mb-md-0 fs-8 bxi-copyright-color">{{settings.footer.copyright}}</p>
+          </div>
+          <div class="col-lg-4 mb-3">
+            {{#each settings.footer.links}}
+            <a class="bxi-link bxi-link--white mb-2 d-block">{{this}}</a>
+            {{/each}}
+          </div>
+          <div class="col-lg-4 mb-3">
+            <a class="bxi-link bxi-link--white mb-2 d-block fw-bold footer-phone-number">{{settings.footer.phone_number}}</a>
+            <a class="bxi-link bxi-link--white mb-2 d-block fw-bold footer-email">{{settings.footer.email}}</a>
+            <a class="bxi-link bxi-link--white mb-2 d-block fw-bold footer-chat">{{settings.footer.chat}}</a>
+          </div>
+        </div>
+      </div>
+      {{> remix }}
+    </footer>
+    {{> modal}}
+  </body>
+</html>

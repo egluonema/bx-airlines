@@ -1,0 +1,27 @@
+<!-- Sign in via message one-time passcode -->
+<h1 class="dialog-header text-center bxi-ff-secondary fw-bold mb-4">Welcome back</h1>
+<div class="dialog-container bxi-color-light">
+  <form class="dialog-form dialog-content__form" id="otpForm">
+    <div class="d-flex justify-content-center my-5">
+      <svg fill="none" height="40" viewbox="0 0 38 40" width="38" xmlns="http://www.w3.org/2000/svg">
+        <path d="M8.10787 27.9584H9.60787V26.4584H8.10787V27.9584ZM9.73256 37.3475L10.6696 38.5188L10.6696 38.5188L9.73256 37.3475ZM21.4688 27.9584V26.4584H20.9427L20.5318 26.7871L21.4688 27.9584ZM3.5 4C3.5 3.72386 3.72386 3.5 4 3.5V0.5C2.067 0.5 0.5 2.06701 0.5 4H3.5ZM3.5 25.9584V4H0.5V25.9584H3.5ZM4 26.4584C3.72386 26.4584 3.5 26.2346 3.5 25.9584H0.5C0.5 27.8914 2.06701 29.4584 4 29.4584V26.4584ZM8.10787 26.4584H4V29.4584H8.10787V26.4584ZM9.60787 36.5666V27.9584H6.60787V36.5666H9.60787ZM8.79552 36.1762C9.12291 35.9142 9.60787 36.1473 9.60787 36.5666H6.60787C6.60787 38.6628 9.03269 39.8283 10.6696 38.5188L8.79552 36.1762ZM20.5318 26.7871L8.79552 36.1762L10.6696 38.5188L22.4059 29.1297L20.5318 26.7871ZM33.5933 26.4584H21.4688V29.4584H33.5933V26.4584ZM34.0933 25.9584C34.0933 26.2346 33.8694 26.4584 33.5933 26.4584V29.4584C35.5263 29.4584 37.0933 27.8914 37.0933 25.9584H34.0933ZM34.0933 4V25.9584H37.0933V4H34.0933ZM33.5933 3.5C33.8694 3.5 34.0933 3.72386 34.0933 4H37.0933C37.0933 2.067 35.5263 0.5 33.5933 0.5V3.5ZM4 3.5H33.5933V0.5H4V3.5Z" fill-opacity="0.6" fill="#0E264C"/>
+        <circle cx="10.3979" cy="14.9792" fill-opacity="0.6" fill="#0E264C" r="2.29045"/>
+        <circle cx="19.56" cy="14.9792" fill-opacity="0.6" fill="#0E264C" r="2.29045"/>
+        <circle cx="28.7221" cy="14.9792" fill-opacity="0.6" fill="#0E264C" r="2.29045"/>
+      </svg>
+    </div>
+    <p class="text-center mb-3">
+      We sent a message to 8*** 4837 <br />
+      Please enter one-time passcode to sign in to your account.
+    </p>
+    <div class="mb-4 row">
+      <div class="col-8 offset-2 col-sm-6 offset-sm-3">
+        <input type="text" id="smsOtp" name="smsOtp" class="form-control" />
+        <div data-skcomponent="skerrormessage" class="text-danger" data-skerrorid="smsOtp"></div>
+      </div>
+    </div>
+    <button class="bxi-button bxi-button--lg bxi-button--submit d-block mx-auto mb-3" data-skcomponent="skbutton" data-skbuttontype="form-submit" data-skform="otpForm" data-skbuttonvalue="exampleButtonValue">Log in</button>
+  </form>
+  <button class="bxi-button bxi-button--link d-block mx-auto mb-4">Resend</button>
+</div>
+<!-- / Sign in via message one-time passcode -->

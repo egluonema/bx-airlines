@@ -1,0 +1,142 @@
+{
+  "theme": {
+    "primaryFont": "'Noto Sans', sans-serif",
+    "secondaryFont": "'Fira Sans Condensed', sans-serif",
+    "primaryColor": "#4C6BF7",
+    "secondaryColor": "#182237",
+    "buttonColor": "#ffffff",
+    "buttonBgColor": "var(--bxi-primary-color)",
+    "buttonBgHoverColor": "#354bae",
+    "linkButtonColor": "#0E2742",
+    "linkButtonHoverColor": "var(--bxi-primary-color)",
+    "dashboardBgColor": "#ffffff",
+    "footerBgColor": "var(--bxi-secondary-color)",
+    "footerColor": "#ffffff",
+    "copyrightColor": "var(--bxi-secondary-color)",
+    "bannerColor": "#ffffff",
+    "bannerBgColor": "#0a1d39",
+    "bannerCirclesColor": "rgba(76, 107, 246, 0.3)",
+    "programColor": "#ffffff",
+    "copyrightBgColor": "#ffffff",
+    "portalColor": "#0e264c",
+    "portalBgColor": "rgba(221, 230, 253, 0.4)",
+    "portalBorderColor": "#dde6fd",
+    "portalChecklistItemBorderColor": "#bec9db",
+    "portalCheckmarkBorderColor": "#8391a7",
+    "portalCheckmarkBgColor": "#39c23e"
+  },
+  "settings": {
+    "title": "BXEducation",
+    "images": {
+      "favicon": "/education/favicon.png",
+      "apple_touch_icon": "/education/apple-touch-icon-192.png",
+      "logo": "/education/logo.svg",
+      "dialog_logo": "/education/logo.svg"
+    },
+    "header": {
+      "links": [
+        "Programs",
+        "Knowledge Base",
+        "Students",
+        "Teachers"
+      ]
+    },
+    "home_page": {
+      "banner": {
+        "image": "/education/banner.jpg",
+        "title": "Learn the skills you need to take your career to new heights",
+        "subtitle": "Take online courses, expand your skillset and connect with fellow students",
+        "button": "Try for Free"
+      },
+      "programs_section": {
+        "title": "Popular Programs",
+        "programs": [
+          {
+            "title": "Finance",
+            "image": "/education/program-1.jpg"
+          },
+          {
+            "title": "Analytics",
+            "image": "/education/program-2.jpg"
+          },
+          {
+            "title": "Development",
+            "image": "/education/program-3.jpg"
+          }
+        ]
+      }
+    },
+    "dashboard": {
+      "links": [
+        "Applications",
+        "Taxes & Fees",
+        "Programs",
+        "Utilities",
+        "Initiatives",
+        "Your City"
+      ],
+      "portal": {
+        "header": "Your Current Program",
+        "program": "Finance",
+        "summary_items": [
+          "2 of 5 topics complete",
+          "0 of 3 tests complete"
+        ],
+        "checklist": [
+          {
+            "complete": true,
+            "name": "What are assets and liabilities.",
+            "time": "9 min"
+          },
+          {
+            "complete": true,
+            "name": "Asset optimization.",
+            "time": "12 min"
+          },
+          {
+            "complete": false,
+            "name": "Risks. Defining the risk profile.",
+            "time": "10 min"
+          },
+          {
+            "complete": false,
+            "name": "Banking products. How to choose a bank.",
+            "time": "9 min"
+          },
+          {
+            "complete": false,
+            "name": "Stocks and how to choose a broker.",
+            "time": "9 min"
+          }
+        ]
+      },
+      "sidebar": {
+        "title": "Articles",
+        "articles": [
+          {
+            "image": "/education/article-1.jpg",
+            "title": "5 Outside the Box Strategies for Successful Financial Analysis"
+          },
+          {
+            "image": "/education/article-1.jpg",
+            "title": "How to Make a Successful Career Jump"
+          },
+          {
+            "image": "/education/article-1.jpg",
+            "title": "How Businesses Can Save Time and Money with Smart Purchasing"
+          }
+        ]
+      }
+    },
+    "footer": {
+      "links": [
+        "Programs",
+        "Careers",
+        "Blog",
+        "Help & Support"
+      ],
+      "phone_number": "800 568 9678",
+      "copyright": "© BXEducation, {{currentYear}}. All rights reserved."
+    }
+  }
+}

@@ -1,0 +1,54 @@
+{{#if showEditDrawer}}
+  <div class="edit-drawer position-fixed p-3 overflow-y-auto">
+    <button id="reset-all-settings" class="btn btn-danger mb-3 mx-auto d-block" data-bs-toggle="tooltip" data-bs-placement="bottom" title="WARNING: This will reset settings for all pages in the current vertical">Reset All Settings</button>
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="branding-tab" data-bs-toggle="tab" data-bs-target="#branding" type="button" role="tab" aria-controls="home" aria-selected="true">Branding</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="content-tab" data-bs-toggle="tab" data-bs-target="#content" type="button" role="tab" aria-controls="profile" aria-selected="false">Content</button>
+      </li>
+    </ul>
+    <div class="tab-content pt-3" id="myTabContent">
+      <div class="tab-pane fade show active" id="branding" role="tabpanel" aria-labelledby="branding-tab">
+        {{#if (gt (length (lookup editorMapping.theme currentPage)) 0) }}
+        <div class="border-bottom mb-3 pb-3">
+          <h4>Current Page</h4>
+          {{#each (lookup editorMapping.theme currentPage)}}
+          {{> editorThemeFields}}
+          {{/each}}
+        </div>
+        {{/if}}
+        <div class="border-bottom mb-3 pb-3">
+          <div class="d-flex">
+            <h4>Global</h4>
+            <span class="image-tooltip position-absolute cursor-pointer pe-3" data-bs-toggle="tooltip" data-bs-placement="right" title="Changes to global settings will reflect in all pages of the current vertical">{{> alertIcon }}</span>
+          </div>
+          {{#each editorMapping.theme.global}}
+          {{> editorThemeFields}}
+          {{/each}}
+        </div>
+      </div>
+      <div class="tab-pane fade" id="content" role="tabpanel" aria-labelledby="content-tab">
+        {{#if (gt (length (lookup editorMapping.content currentPage)) 0) }}
+        <div class="border-bottom mb-3 pb-3">
+          <h4>Current Page</h4>
+          {{#each (lookup editorMapping.content currentPage)}}
+          {{> editorContentFields}}
+          {{/each}}
+        </div>
+        {{/if}}
+        <div class="border-bottom mb-3 pb-3">
+          <div class="d-flex">
+            <h4>Global</h4>
+            <span class="image-tooltip position-absolute cursor-pointer pe-3" data-bs-toggle="tooltip" data-bs-placement="right" title="Changes to global settings will reflect in all pages of the current vertical">{{> alertIcon }}</span>
+          </div>
+          {{#each editorMapping.content.global}}
+          {{> editorContentFields}}
+          {{/each}}
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="module" src="/js/edit-drawer.js"></script>
+{{/if}}

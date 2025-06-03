@@ -1,0 +1,119 @@
+@use 'sass:map';
+
+// As defined in Bootstrap docs, we pull in the pre-built stylesheet so re-creating these
+$breakpoints: (
+  'sm': 576px,
+  'md': 768px,
+  'lg': 992px,
+  'xl': 1200px,
+  'xxl': 1400px,
+);
+
+@mixin breakpoint-sm {
+  @media screen and (min-width: map.get($breakpoints, 'sm')) {
+    @content;
+  }
+}
+
+@mixin breakpoint-lt-sm {
+  @media screen and (max-width: (map.get($breakpoints, 'sm') - 1px)) {
+    @content;
+  }
+}
+
+@mixin breakpoint-md {
+  @media screen and (min-width: map.get($breakpoints, 'md')) {
+    @content;
+  }
+}
+
+@mixin breakpoint-lt-md {
+  @media screen and (max-width: (map.get($breakpoints, 'md') - 1px)) {
+    @content;
+  }
+}
+
+@mixin breakpoint-lg {
+  @media screen and (min-width: map.get($breakpoints, 'lg')) {
+    @content;
+  }
+}
+
+@mixin breakpoint-lt-lg {
+  @media screen and (max-width: (map.get($breakpoints, 'lg') - 1px)) {
+    @content;
+  }
+}
+
+@mixin breakpoint-xl {
+  @media screen and (min-width: map.get($breakpoints, 'xl')) {
+    @content;
+  }
+}
+
+@mixin breakpoint-lt-xl {
+  @media screen and (max-width: (map.get($breakpoints, 'xl') - 1px)) {
+    @content;
+  }
+}
+
+@mixin breakpoint-xxl {
+  @media screen and (min-width: map.get($breakpoints, 'xxl')) {
+    @content;
+  }
+}
+
+@mixin breakpoint-lt-xxl {
+  @media screen and (max-width: (map.get($breakpoints, 'xxl') - 1px)) {
+    @content;
+  }
+}
+
+@mixin color-icon($color) {
+  .stroke-target {
+    stroke: $color;
+  }
+
+  .fill-target {
+    fill: $color;
+  }
+}
+
+// Used to create a triangle, typically included in
+// ::before or ::after, pass positioning in through @content
+//
+// Valid options for $direction are up, down, left or right
+//
+// Usage example:
+// @include triangle (5px, #000, "down") {
+//     top: 1rem;
+//     left: .5rem;
+// }
+@mixin triangle($size, $color, $direction) {
+  clear: both;
+  content: '';
+  height: 0;
+  position: absolute;
+  width: 0;
+  @content;
+
+  @if ($direction == 'down') {
+    border-left: $size solid transparent;
+    border-right: $size solid transparent;
+    border-top: $size solid $color;
+  } @else if ($direction == 'up') {
+    border-left: $size solid transparent;
+    border-right: $size solid transparent;
+    border-bottom: $size solid $color;
+  } @else if ($direction == 'left') {
+    border-top: $size solid transparent;
+    border-bottom: $size solid transparent;
+    border-right: $size solid $color;
+  } @else if ($direction == 'right') {
+    border-top: $size solid transparent;
+    border-bottom: $size solid transparent;
+    border-left: $size solid $color;
+  } @else {
+    @error "Invalid $direction " + $direction + ", valid directions are up, down, left or right.";
+  }
+}

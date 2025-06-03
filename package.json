@@ -1,0 +1,37 @@
+{
+  "name": "bxindustry-handlebars",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "A simple Node app built on fastify, instantly up and running. Built to be remixed on Glitch.com.",
+  "main": "server.js",
+  "scripts": {
+    "start": "concurrently --kill-others \"sass --watch scss/index.scss:public/styles.css\" \"node server.js\"",
+    "dev": "concurrently --kill-others \"sass --watch scss/index.scss:public/styles.css\" \"node server.js --dev\""
+  },
+  "dependencies": {
+    "@fastify/cookie": "^9.3.1",
+    "@fastify/static": "^7.0.4",
+    "@fastify/view": "^9.1.0",
+    "fastify": "^4.27.0",
+    "handlebars": "^4.7.8",
+    "handlebars-utils": "^1.0.6",
+    "node-fetch": "^3.3.2"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "dotenv": "^16.4.5",
+    "sass": "^1.77.4"
+  },
+  "engines": {
+    "node": "16.x"
+  },
+  "repository": {
+    "url": "https://glitch.com/edit/#!/glitch-hello-node"
+  },
+  "license": "MIT",
+  "keywords": [
+    "node",
+    "glitch",
+    "express"
+  ]
+}

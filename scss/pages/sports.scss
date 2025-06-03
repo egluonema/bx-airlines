@@ -1,0 +1,211 @@
+@use '../common/mixins';
+
+.bxi.sports {
+  .bxi-button {
+    border-radius: 50px;
+
+    &.active {
+      color: var(--bxi-button-color);
+      background: var(--bxi-primary-color);
+
+      &:hover {
+        border: 1px solid var(--bxi-primary-color);
+      }
+    }
+  }
+
+  .bxi-auth-buttons--outline-light-bg {
+    .bxi-button {
+      @include mixins.breakpoint-lg {
+        font-size: 12px;
+        padding: 0.5rem 1.5rem;
+      }
+    }
+  }
+
+  .bxi-link {
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  .bxi-bg-white {
+    background-color: #fff;
+  }
+
+  .bxi-banner-title {
+    margin-bottom: 1.5rem;
+    font-family: var(--bxi-secondary-font);
+    font-size: 64px;
+    line-height: 76px;
+    font-weight: 700;
+    max-width: 600px;
+    -webkit-font-smoothing: antialiased;
+
+    @include mixins.breakpoint-lt-lg {
+      font-size: 32px;
+      line-height: 42px;
+    }
+  }
+
+  .bxi-banner-text {
+    margin-bottom: 1.5rem;
+    font-family: var(--bxi-primary-font);
+    font-size: 22px;
+    max-width: 560px;
+    -webkit-font-smoothing: antialiased;
+
+    &.lh-base {
+      line-height: 36px !important;
+
+      @include mixins.breakpoint-lt-lg {
+        line-height: 22px !important;
+      }
+    }
+
+    @include mixins.breakpoint-lt-lg {
+      font-size: 16px;
+    }
+  }
+
+  .bxi-banner-overlay {
+    background: linear-gradient(
+      92.33deg,
+      rgba(0, 3, 11, 0.8) 27.4%,
+      rgba(0, 4, 14, 0) 82.41%
+    );
+    min-height: 650px;
+  }
+
+  .footer-contacts-text {
+    font-family: var(--bxi-secondary-font) !important;
+  }
+
+  .bxi-copyright-bg-color {
+    background-color: var(--bxi-sports-copyright-bg-color);
+  }
+
+  .bxi-tiles {
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    height: 250px;
+    padding-top: 50px;
+
+    &:hover {
+      padding-top: 0;
+    }
+
+    &-overlay {
+      background: linear-gradient(
+        3.88deg,
+        rgba(0, 3, 11, 0.8) 18.71%,
+        rgba(0, 4, 14, 0) 69.21%
+      );
+    }
+  }
+
+  .bxi-subscription {
+    border-radius: 0.5rem;
+    border: 1px solid #a6acba;
+    background: #fff;
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    height: 300px;
+    padding-top: 20px;
+
+    .tile__title {
+      font-size: 1.17rem;
+    }
+
+    .tile__card {
+      color: #fff;
+      margin-bottom: 1.5rem;
+      border-radius: 12px;
+      padding: 1rem;
+      height: 125px;
+      width: 202px;
+      margin: auto;
+
+      &.basic {
+        background: var(--bxi-sports-basic-bg-color);
+      }
+
+      &.standard {
+        background: var(--bxi-sports-standard-bg-color);
+      }
+
+      &.premium {
+        background: var(--bxi-sports-premium-bg-color);
+      }
+
+      &.__heading {
+        font-size: 14px !important;
+      }
+    }
+  }
+
+  .bxi-dashboard-banner-title {
+    margin-bottom: 1rem;
+    font-family: var(--bxi-secondary-font);
+    font-size: 44px;
+    line-height: 76px;
+    font-weight: 700;
+    max-width: 600px;
+    -webkit-font-smoothing: antialiased;
+
+    @include mixins.breakpoint-lt-lg {
+      font-size: 32px;
+      line-height: 42px;
+    }
+  }
+
+  .bxi-dashboard-banner-text {
+    margin-bottom: 1.5rem;
+    font-family: var(--bxi-primary-font);
+    font-size: 20px;
+    max-width: 560px;
+    -webkit-font-smoothing: antialiased;
+
+    &.lh-base {
+      line-height: 26px !important;
+
+      @include mixins.breakpoint-lt-lg {
+        line-height: 22px !important;
+      }
+    }
+
+    @include mixins.breakpoint-lt-lg {
+      font-size: 16px;
+    }
+  }
+
+  .bxi-dashboard-banner-overlay {
+    background: linear-gradient(
+      92.33deg,
+      rgba(0, 3, 11, 0.8) 27.4%,
+      rgba(0, 4, 14, 0) 82.41%
+    );
+  }
+
+  .learn {
+    color: var(--bxi-secondary-color);
+    &:hover {
+      color: var(--bxi-primary-color);
+    }
+  }
+
+  h4.dot:before {
+    color: var(--bxi-sports-dot-color);
+    content: '●';
+    font-size: 24px;
+    padding-right: 5px;
+  }
+
+  &.dashboard {
+    .navbar {
+      background-color: var(--bxi-dashboard-navbar-bg-color);
+    }
+  }
+}

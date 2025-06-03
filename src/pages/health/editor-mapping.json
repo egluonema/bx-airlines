@@ -1,0 +1,324 @@
+{
+  "theme": {
+    "global": [
+      {
+        "type": "font",
+        "friendlyName": "Primary Font",
+        "jsonPath": "theme.primaryFont",
+        "cssVariable": "--bxi-primary-font"
+      },
+      {
+        "type": "font", 
+        "friendlyName": "Secondary Font",
+        "jsonPath": "theme.secondaryFont",
+        "cssVariable": "--bxi-secondary-font"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Primary Color",
+        "jsonPath": "theme.primaryColor",
+        "cssVariable": "--bxi-primary-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Secondary Color",
+        "jsonPath": "theme.secondaryColor",
+        "cssVariable": "--bxi-secondary-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Button Color",
+        "jsonPath": "theme.buttonColor",
+        "cssVariable": "--bxi-button-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Button Background Color",
+        "jsonPath": "theme.buttonBgColor",
+        "cssVariable": "--bxi-button-bg-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Button Background Hover Color",
+        "jsonPath": "theme.buttonBgHoverColor",
+        "cssVariable": "--bxi-button-bg-hover-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Link Button Color",
+        "jsonPath": "theme.linkButtonColor",
+        "cssVariable": "--bxi-link-button-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Link Button Hover Color",
+        "jsonPath": "theme.linkButtonHoverColor",
+        "cssVariable": "--bxi-link-button-hover-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Footer Color",
+        "jsonPath": "theme.footerColor",
+        "cssVariable": "--bxi-footer-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Footer Background Color",
+        "jsonPath": "theme.footerBgColor",
+        "cssVariable": "--bxi-footer-bg-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Copyright Color",
+        "jsonPath": "theme.copyrightColor",
+        "cssVariable": "--bxi-copyright-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Banner Color",
+        "jsonPath": "theme.bannerColor",
+        "cssVariable": "--bxi-health-banner-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Banner Background Color",
+        "jsonPath": "theme.bannerBgColor",
+        "cssVariable": "--bxi-health-banner-bg-color"
+      }
+    ],
+    "home": [
+      {
+        "type": "color",
+        "friendlyName": "Header Color",
+        "jsonPath": "theme.headerColor",
+        "cssVariable": "--bxi-health-header-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Hero Color",
+        "jsonPath": "theme.heroColor",
+        "cssVariable": "--bxi-health-hero-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Hero Background Color",
+        "jsonPath": "theme.heroBgColor",
+        "cssVariable": "--bxi-health-hero-bg-color"
+      }
+    ],
+    "dashboard": [
+      {
+        "type": "color",
+        "friendlyName": "Page Background Color",
+        "jsonPath": "theme.dashboardBgColor",
+        "cssVariable": "--bxi-dashboard-bg-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Component Background Color",
+        "jsonPath": "theme.componentBgColor",
+        "cssVariable": "--bxi-component-bg-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Nav Link Color Inverse",
+        "jsonPath": "theme.navLinkColorInverse",
+        "cssVariable": "--bxi-nav-link-color-inverse"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Header Dropdown Color",
+        "jsonPath": "theme.headerDropdownColor",
+        "cssVariable": "--bxi-header-dropdown-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Header Dropdown Border Color",
+        "jsonPath": "theme.headerDropdownBorderColor",
+        "cssVariable": "--bxi-header-dropdown-border-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Events Header Color",
+        "jsonPath": "theme.eventsHeaderColor",
+        "cssVariable": "--bxi-health-events-header-color"
+      }
+    ]
+  },
+  "content": {
+    "global": [
+      {
+        "type": "string",
+        "friendlyName": "Title",
+        "jsonPath": "settings.title",
+        "elementSelector": "head > title"
+      }, 
+      {
+        "type": "image",
+        "friendlyName": "Favicon",
+        "jsonPath": "settings.images.favicon",
+        "elementSelector": "#favicon"
+      },
+      {
+        "type": "image",
+        "friendlyName": "Apple Touch Icon",
+        "jsonPath": "settings.images.apple_touch_icon",
+        "elementSelector": "#apple-touch-icon"
+      },
+      {
+        "type": "image",
+        "friendlyName": "Logo",
+        "jsonPath": "settings.images.logo",
+        "elementSelector": "#bxi-logo img"
+      },
+      {
+        "type": "image",
+        "friendlyName": "Dialog Logo",
+        "jsonPath": "settings.images.dialog_logo",
+        "elementSelector": "#dialog-logo"
+      },
+      {
+        "type": "string",
+        "friendlyName": "Footer Phone Number",
+        "jsonPath": "settings.footer.phone_number",
+        "elementSelector": ".footer-phone-number"
+      },
+      {
+        "type": "string",
+        "friendlyName": "Footer Email",
+        "jsonPath": "settings.footer.email",
+        "elementSelector": ".footer-email"
+      },
+      {
+        "type": "string",
+        "friendlyName": "Footer Chat",
+        "jsonPath": "settings.footer.chat",
+        "elementSelector": ".footer-chat"
+      }
+    ],
+    "home": [
+      {
+        "type": "image",
+        "friendlyName": "Banner Background Image",
+        "jsonPath": "settings.home_page.banner.background_image",
+        "elementSelector": ".bxi-header.bxi-bg-image"
+      },
+      {
+        "type": "string",
+        "friendlyName": "Banner Title",
+        "jsonPath": "settings.home_page.banner.title",
+        "elementSelector": ".bxi-health-banner h1"
+      },
+      {
+        "type": "string",
+        "friendlyName": "Banner Button",
+        "jsonPath": "settings.home_page.banner.button",
+        "elementSelector": ".bxi-health-banner button"
+      },
+      {
+        "type": "string",
+        "friendlyName": "Hero Title",
+        "jsonPath": "settings.home_page.app_hero.title",
+        "elementSelector": ".app-hero h4"
+      }, 
+      {
+        "type": "string",
+        "friendlyName": "Hero Subtitle",
+        "jsonPath": "settings.home_page.app_hero.sub_title",
+        "elementSelector": ".app-hero p"
+      }, 
+      {
+        "type": "image",
+        "friendlyName": "Banner Subtitle",
+        "jsonPath": "settings.home_page.app_hero.image",
+        "elementSelector": ".app-hero img"
+      },
+      {
+        "type": "string",
+        "friendlyName": "Alert Banner Message",
+        "jsonPath": "settings.home_page.alert_banner.message",
+        "elementSelector": ".bxi-banner span"
+      }, 
+      {
+        "type": "string",
+        "friendlyName": "Alert Banner First Link",
+        "jsonPath": "settings.home_page.alert_banner.patient_link",
+        "elementSelector": ".bxi-banner .bxi-patient-link"
+      }, 
+      {
+        "type": "string",
+        "friendlyName": "Alert Banner Second Link",
+        "jsonPath": "settings.home_page.alert_banner.caregiver_link",
+        "elementSelector": ".bxi-banner .bxi-caregiver-link"
+      }
+    ],
+    "dashboard": [
+      {
+        "type": "string",
+        "friendlyName": "Welcome Text",
+        "jsonPath": "settings.dashboard.welcome",
+        "elementSelector": ".bxi-welcome-text"
+      },
+      {
+        "type": "image",
+        "friendlyName": "Events Hero Image",
+        "jsonPath": "settings.dashboard.events_hero.banner_image",
+        "elementSelector": ".events-hero-image"
+      },
+      {
+        "type": "string",
+        "friendlyName": "Events Hero Title",
+        "jsonPath": "settings.dashboard.events_hero.title",
+        "elementSelector": ".events-hero h3"
+      },
+      {
+        "type": "string",
+        "friendlyName": "Events Hero Description",
+        "jsonPath": "settings.dashboard.events_hero.description",
+        "elementSelector": ".events-hero p"
+      },
+      {
+        "type": "string",
+        "friendlyName": "Events Hero Link",
+        "jsonPath": "settings.dashboard.events_hero.link",
+        "elementSelector": ".events-hero a"
+      },
+      {
+        "type": "string",
+        "friendlyName": "Portal Title",
+        "jsonPath": "settings.dashboard.portal.title",
+        "elementSelector": ".portal-title"
+      },
+      {
+        "type": "string",
+        "friendlyName": "Portal Dropdown Placeholder",
+        "jsonPath": "settings.dashboard.portal.dropdown_placeholder",
+        "elementSelector": ".portal-header-dropdown"
+      },
+      {
+        "type": "string",
+        "friendlyName": "Component Header",
+        "jsonPath": "settings.dashboard.portal.component_header",
+        "elementSelector": ".portal-component-header"
+      },
+      {
+        "type": "string",
+        "friendlyName": "Patient Number Label",
+        "jsonPath": "settings.dashboard.portal.patient_number_label",
+        "elementSelector": ".patient-number-label"
+      },
+      {
+        "type": "string",
+        "friendlyName": "Patient Number",
+        "jsonPath": "settings.dashboard.portal.patient_number",
+        "elementSelector": ".patient-number"
+      },
+      {
+        "type": "string",
+        "friendlyName": "Links Header",
+        "jsonPath": "settings.dashboard.portal.links_header",
+        "elementSelector": ".portal-links-header"
+      }
+    ]
+  }
+}

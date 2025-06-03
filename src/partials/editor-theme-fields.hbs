@@ -1,0 +1,40 @@
+{{#eq type "font" }}
+<div class="mb-3">
+  <label for="{{variableName}}" class="form-label">{{friendlyName}}</label>
+  <select class="form-select" data-editor-type="font" id="{{jsonPath}}" data-css-variable="{{cssVariable}}" value="{{lookupPath jsonPath}}">
+    <option value="'Arimo', sans-serif" {{#eq (lookupPath jsonPath) "'Arimo', sans-serif"}} selected="true"{{/eq}}>Arimo</option>
+    <option value="'capitolium-2', serif" {{#eq (lookupPath jsonPath) "'capitolium-2', serif"}} selected="true"{{/eq}}>Capitolium</option>
+    <option value="'Fira Sans Condensed', sans-serif" {{#eq (lookupPath jsonPath) "'Fira Sans Condensed', sans-serif"}} selected="true"{{/eq}}>Fira Sans Condensed</option>
+    <option value="'filson-soft', sans-serif" {{#eq (lookupPath jsonPath) "'filson-soft', sans-serif"}} selected="true"{{/eq}}>Filson Soft</option>
+    <option value="'Mohave', sans-serif" {{#eq (lookupPath jsonPath) "'Mohave', sans-serif"}} selected="true"{{/eq}}>Mohave</option>
+    <option value="'Montserrat', sans-serif" {{#eq (lookupPath jsonPath) "'Montserrat', sans-serif"}} selected="true"{{/eq}}>Montserrat</option>
+    <option value="'Noto Sans', sans-serif"{{#eq (lookupPath jsonPath) "'Noto Sans' sans-serif"}} selected="true"{{/eq}}>Noto Sans</option>
+    <option value="'Open Sans', sans-serif" {{#eq (lookupPath jsonPath) "'Open Sans', sans-serif"}} selected="true"{{/eq}}>Open Sans</option>
+    <option value="'Playfair Display', serif" {{#eq (lookupPath jsonPath) "'Playfair Display', serif"}} selected="true"{{/eq}}>Playfair Display</option>
+    <option value="'Poppins', serif" {{#eq (lookupPath jsonPath) "'Poppins', serif"}} selected="true"{{/eq}}>Poppins</option>
+  </select>
+</div>
+{{/eq}}
+{{#eq type "color"}}
+<div class="mb-3 row">
+  <div class="col-8">
+    <label for="{{jsonPath}}" class="form-label">{{friendlyName}}</label>
+    <input type="color" class="form-control form-control-color p-1" data-editor-type="color" id="{{jsonPath}}"
+      data-css-variable="{{cssVariable}}" value="{{lookupPath jsonPath}}" title="Choose a {{friendlyName}}">
+  </div>
+  {{#and (isnt cssVariable "--bxi-primary-color") (isnt cssVariable "--bxi-secondary-color")}}
+  <div class="col-4 mt-4">
+    <div class="form-check">
+      <input class="form-check-input" data-color-variable-for="{{jsonPath}}" type="checkbox" id="{{jsonPath}}-primary" 
+        value="var(--bxi-primary-color)"{{#eq (lookupPath jsonPath) 'var(--bxi-primary-color)'}} checked="true"{{/eq}}>
+      <label class="form-check-label" for="{{jsonPath}}-primary">Primary</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" data-color-variable-for="{{jsonPath}}" type="checkbox" id="{{jsonPath}}-secondary" 
+        value="var(--bxi-secondary-color)" {{#eq (lookupPath jsonPath) 'var(--bxi-secondary-color)'}} checked="true"{{/eq}}>
+      <label class="form-check-label" for="{{jsonPath}}-secondary">Secondary</label>
+    </div>
+  </div>
+  {{/and}}
+</div>
+{{/eq}}

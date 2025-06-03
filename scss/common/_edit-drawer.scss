@@ -1,0 +1,64 @@
+@use './mixins';
+
+@mixin edit-drawer-styles {
+  &.drawer-open {
+    margin-left: 400px;
+
+    .editing-element {
+      outline: 1px solid var(--bs-danger);
+    }
+
+    .tooltip * {
+      font-family: Arial, Helvetica, sans-serif !important;
+    }
+  }
+
+  .edit-drawer {
+    z-index: 10;
+    background-color: #ffffff;
+    left: 0;
+    height: 100vh;
+    width: 400px;
+    border-right: 1px solid black;
+
+    * {
+      font-family: Arial, Helvetica, sans-serif !important;
+    }
+
+    .image-tooltip {
+      right: 0;
+
+      @include mixins.color-icon(var(--bs-primary));
+    }
+
+    .confirm-change-button,
+    .cancel-change-button {
+      border: none;
+      padding: 0.25rem;
+      appearance: none;
+      background-color: #ffffff;
+    }
+
+    .cancel-change-button {
+      height: 32px;
+      top: 42px;
+      right: 0.25rem;
+      line-height: 1rem;
+      font-size: 2rem;
+      color: var(--bs-danger);
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .confirm-change-button {
+      right: 2rem;
+      top: 50%;
+
+      svg {
+        width: 20px;
+        height: 17px;
+      }
+
+      @include mixins.color-icon(var(--bs-success));
+    }
+  }
+}

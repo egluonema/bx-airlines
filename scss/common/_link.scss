@@ -1,0 +1,167 @@
+@use './mixins';
+
+@mixin link-styles {
+  .bxi-link {
+    cursor: pointer;
+    text-transform: none;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--bxi-primary-color);
+
+    &:hover {
+      color: var(--bxi-secondary-color);
+    }
+
+    &.bxi-link--white {
+      color: #fff;
+
+      &:hover {
+        color: #d2d2d2;
+      }
+    }
+
+    &.bxi-link--white-bold {
+      color: #fff;
+      font-weight: 300;
+
+      &:hover {
+        font-weight: 400;
+      }
+    }
+
+    &.bxi-link--primary {
+      color: var(--bxi-primary-color);
+
+      &:hover {
+        color: var(--bxi-secondary-color);
+      }
+    }
+
+    &.bxi-link--primary-bold {
+      color: var(--bxi-primary-color);
+      font-weight: 300;
+
+      &:hover {
+        font-weight: 400;
+      }
+    }
+
+    &.bxi-link--secondary {
+      color: var(--bxi-secondary-color);
+
+      &:hover {
+        color: var(--bxi-primary-color);
+      }
+    }
+
+    &.bxi-link-light--primary {
+      color: #fff;
+
+      &:hover {
+        color: var(--bxi-primary-color);
+      }
+    }
+
+    &.bxi-link-light--secondary {
+      color: #fff;
+
+      &:hover {
+        color: var(--bxi-secondary-color);
+      }
+    }
+
+    &.bxi-link-dark--primary {
+      color: var(--bxi-primary-color);
+
+      &:hover {
+        color: #fff;
+      }
+    }
+
+    &.bxi-link-dark--secondary {
+      color: var(--bxi-secondary-color);
+
+      &:hover {
+        color: #fff;
+      }
+    }
+
+    @include mixins.breakpoint-lg {
+      &.bxi-link-lg--white {
+        color: #fff;
+
+        &:hover {
+          color: #d2d2d2;
+        }
+      }
+
+      &.bxi-link-lg--white-bold {
+        color: #fff;
+        font-weight: 300;
+
+        &:hover {
+          font-weight: 400;
+        }
+      }
+
+      &.bxi-link-lg--primary {
+        color: var(--bxi-primary-color);
+
+        &:hover {
+          color: var(--bxi-secondary-color);
+        }
+      }
+
+      &.bxi-link-lg--primary-bold {
+        color: var(--bxi-primary-color);
+        font-weight: 300;
+
+        &:hover {
+          color: var(--bxi-primary-color);
+          font-weight: 400;
+        }
+      }
+
+      &.bxi-link-lg--secondary {
+        color: var(--bxi-secondary-color);
+
+        &:hover {
+          color: var(--bxi-primary-color);
+        }
+      }
+
+      &.bxi-link-light-lg--primary {
+        color: #fff;
+
+        &:hover {
+          color: var(--bxi-primary-color);
+        }
+      }
+
+      &.bxi-link-light-lg--secondary {
+        color: #fff;
+
+        &:hover {
+          color: var(--bxi-secondary-color);
+        }
+      }
+
+      &.bxi-link-dark-lg--primary {
+        color: var(--bxi-primary-color);
+
+        &:hover {
+          color: #fff;
+        }
+      }
+
+      &.bxi-link-dark-lg--secondary {
+        color: var(--bxi-secondary-color);
+
+        &:hover {
+          color: #fff;
+        }
+      }
+    }
+  }
+}

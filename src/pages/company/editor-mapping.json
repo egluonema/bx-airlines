@@ -1,0 +1,366 @@
+{
+  "theme": {
+    "global": [
+      {
+        "type": "font",
+        "friendlyName": "Primary Font",
+        "jsonPath": "theme.primaryFont",
+        "cssVariable": "--bxi-primary-font"
+      },
+      {
+        "type": "font", 
+        "friendlyName": "Secondary Font",
+        "jsonPath": "theme.secondaryFont",
+        "cssVariable": "--bxi-secondary-font"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Primary Color",
+        "jsonPath": "theme.primaryColor",
+        "cssVariable": "--bxi-primary-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Secondary Color",
+        "jsonPath": "theme.secondaryColor",
+        "cssVariable": "--bxi-secondary-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Button Color",
+        "jsonPath": "theme.buttonColor",
+        "cssVariable": "--bxi-button-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Button Background Color",
+        "jsonPath": "theme.buttonBgColor",
+        "cssVariable": "--bxi-button-bg-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Button Background Hover Color",
+        "jsonPath": "theme.buttonBgHoverColor",
+        "cssVariable": "--bxi-button-bg-hover-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Link Button Color",
+        "jsonPath": "theme.linkButtonColor",
+        "cssVariable": "--bxi-link-button-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Link Button Hover Color",
+        "jsonPath": "theme.linkButtonHoverColor",
+        "cssVariable": "--bxi-link-button-hover-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Footer Color",
+        "jsonPath": "theme.footerColor",
+        "cssVariable": "--bxi-footer-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Footer Background Color",
+        "jsonPath": "theme.footerBgColor",
+        "cssVariable": "--bxi-footer-bg-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Copyright Color",
+        "jsonPath": "theme.copyrightColor",
+        "cssVariable": "--bxi-copyright-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Main Font Color",
+        "jsonPath": "theme.mainFontColor",
+        "cssVariable": "--bxi-company-main-font-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Video Overlay Background Color",
+        "jsonPath": "theme.videoOverlayBg",
+        "cssVariable": "--bxi-company-video-overlay-bg"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Nav Button Divider Color",
+        "jsonPath": "theme.navDividerColor",
+        "cssVariable": "--bxi-company-nav-divider-color"
+      }
+    ],
+    "home": [
+      {
+        "type": "color",
+        "friendlyName": "Banner Color",
+        "jsonPath": "theme.homeBannerColor",
+        "cssVariable": "--bxi-company-banner-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "First Icon Gradient",
+        "jsonPath": "theme.firstIconGradient",
+        "cssVariable": "--bxi-company-first-icon-gradient"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Second Icon Gradient",
+        "jsonPath": "theme.secondIconGradient",
+        "cssVariable": "--bxi-company-second-icon-gradient"
+      }
+    ],
+    "dashboard": [
+      {
+        "type": "color",
+        "friendlyName": "Dashboard Background Color",
+        "jsonPath": "theme.dashboardBgColor",
+        "cssVariable": "--bxi-dashboard-bg-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Nav Border Color",
+        "jsonPath": "theme.navBorderColor",
+        "cssVariable": "--bxi-company-nav-border-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Vertical Chart First Color",
+        "jsonPath": "theme.verticalFirstColor",
+        "cssVariable": "--bxi-company-vertical-first-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Vertical Chart Second Color",
+        "jsonPath": "theme.verticalSecondColor",
+        "cssVariable": "--bxi-company-vertical-second-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Pie Chart First Color",
+        "jsonPath": "theme.pieFirstColor",
+        "cssVariable": "--bxi-company-pie-first-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Pie Chart Second Color",
+        "jsonPath": "theme.pieSecondColor",
+        "cssVariable": "--bxi-company-pie-second-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Horizontal Chart First Color",
+        "jsonPath": "theme.horizontalFirstColor",
+        "cssVariable": "--bxi-company-horizontal-first-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Horizontal Chart Second Color",
+        "jsonPath": "theme.horizontalSecondColor",
+        "cssVariable": "--bxi-company-horizontal-second-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Horizontal Chart Third Color",
+        "jsonPath": "theme.horizontalThirdColor",
+        "cssVariable": "--bxi-company-horizontal-third-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Components Border Color",
+        "jsonPath": "theme.componentsBorder",
+        "cssVariable": "--bxi-company-components-border"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Components Icon Color",
+        "jsonPath": "theme.componentsIconColor",
+        "cssVariable": "--bxi-company-components-icon-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Components Icon Background Color",
+        "jsonPath": "theme.componentsIconBg",
+        "cssVariable": "--bxi-company-components-icon-bg"
+      }
+    ]
+  },
+  "content": {
+    "global": [
+      {
+        "type": "string",
+        "friendlyName": "Title",
+        "jsonPath": "settings.title",
+        "elementSelector": "head > title"
+      }, 
+      {
+        "type": "image",
+        "friendlyName": "Favicon",
+        "jsonPath": "settings.images.favicon",
+        "elementSelector": "#favicon"
+      },
+      {
+        "type": "image",
+        "friendlyName": "Apple Touch Icon",
+        "jsonPath": "settings.images.apple_touch_icon",
+        "elementSelector": "#apple-touch-icon"
+      },
+      {
+        "type": "image",
+        "friendlyName": "Logo",
+        "jsonPath": "settings.images.logo",
+        "elementSelector": "#bxi-logo img"
+      },
+      {
+        "type": "image",
+        "friendlyName": "Dialog Logo",
+        "jsonPath": "settings.images.dialog_logo",
+        "elementSelector": "#dialog-logo"
+      },
+      {
+        "type": "string",
+        "friendlyName": "Footer Phone Number",
+        "jsonPath": "settings.footer.phone_number",
+        "elementSelector": ".footer-phone-number"
+      }
+    ],
+    "home": [
+      {
+        "type": "image",
+        "friendlyName": "Banner Background",
+        "jsonPath": "settings.home_page.banner.background_image",
+        "elementSelector": ".bxi-banner.bxi-bg-image"
+      }, 
+      {
+        "type": "string",
+        "friendlyName": "Banner Super Title",
+        "jsonPath": "settings.home_page.banner.supertitle",
+        "elementSelector": ".bxi-banner h4.bxi-banner__text"
+      },
+      {
+        "type": "string",
+        "friendlyName": "Banner Title",
+        "jsonPath": "settings.home_page.banner.title",
+        "elementSelector": ".bxi-banner h1.bxi-banner__text"
+      },
+      {
+        "type": "string",
+        "friendlyName": "Banner Subtitle",
+        "jsonPath": "settings.home_page.banner.subtitle",
+        "elementSelector": ".bxi-banner p.bxi-banner__text"
+      },
+      {
+        "type": "string",
+        "friendlyName": "Banner Button Text",
+        "jsonPath": "settings.home_page.banner.button_text",
+        "elementSelector": ".bxi-banner .bxi-button"
+      },
+      {
+        "type": "string",
+        "friendlyName": "Main Content Title",
+        "jsonPath": "settings.home_page.main_content.title",
+        "elementSelector": ".company-main-content-title"
+      },
+      {
+        "type": "string",
+        "friendlyName": "Main Content Description",
+        "jsonPath": "settings.home_page.main_content.description",
+        "elementSelector": ".company-main-content-description"
+      },
+      {
+        "type": "image",
+        "friendlyName": "Main Content Image",
+        "jsonPath": "settings.home_page.main_content.image",
+        "elementSelector": ".company-main-content-image"
+      }
+    ],
+    "dashboard": [
+      {
+        "type": "string",
+        "friendlyName": "Title",
+        "jsonPath": "settings.dashboard.title",
+        "elementSelector": "h1.dashboad-section__title"
+      },
+      {
+        "type": "string",
+        "friendlyName": "Filters Header",
+        "jsonPath": "settings.dashboard.filter_header",
+        "elementSelector": ".dashboad-section__filter-header"
+      },
+      {
+        "type": "string",
+        "friendlyName": "Filters Button",
+        "jsonPath": "settings.dashboard.filter_button",
+        "elementSelector": ".dashboard-section__reporting .filter-button"
+      },
+      {
+        "type": "string",
+        "friendlyName": "Vertical Chart First Legend",
+        "jsonPath": "settings.dashboard.vertical_chart.first_legend",
+        "elementSelector": ".bxi-vertical-first-legend + span"
+      },
+      {
+        "type": "string",
+        "friendlyName": "Vertical Chart Second Legend",
+        "jsonPath": "settings.dashboard.vertical_chart.second_legend",
+        "elementSelector": ".bxi-vertical-second-legend + span"
+      },
+      {
+        "type": "string",
+        "friendlyName": "Pie Chart First Legend",
+        "jsonPath": "settings.dashboard.pie_chart.first_legend",
+        "elementSelector": ".bxi-pie-first-legend + span"
+      },
+      {
+        "type": "string",
+        "friendlyName": "Pie Chart Second Legend",
+        "jsonPath": "settings.dashboard.pie_chart.second_legend",
+        "elementSelector": ".bxi-pie-second-legend + span"
+      },
+      {
+        "type": "string",
+        "friendlyName": "Horizontal Chart First Legend",
+        "jsonPath": "settings.dashboard.horizontal_chart.first_legend",
+        "elementSelector": ".bxi-horizontal-container > span:first-child"
+      },
+      {
+        "type": "string",
+        "friendlyName": "Horizontal Chart Second Legend",
+        "jsonPath": "settings.dashboard.horizontal_chart.second_legend",
+        "elementSelector": ".bxi-horizontal-container > span:nth-child(2)"
+      },
+      {
+        "type": "string",
+        "friendlyName": "Horizontal Chart Third Legend",
+        "jsonPath": "settings.dashboard.horizontal_chart.third_legend",
+        "elementSelector": ".bxi-horizontal-container > span:nth-child(3)"
+      },
+      {
+        "type": "string",
+        "friendlyName": "Components Section Title",
+        "jsonPath": "settings.dashboard.components_section.title",
+        "elementSelector": ".reporting__components h4"
+      },
+      {
+        "type": "string",
+        "friendlyName": "Components Section Subtitle",
+        "jsonPath": "settings.dashboard.components_section.subtitle",
+        "elementSelector": ".reporting__components p"
+      },
+      {
+        "type": "string",
+        "friendlyName": "Components Section Button",
+        "jsonPath": "settings.dashboard.components_section.button",
+        "elementSelector": ".reporting__components .bxi-button"
+      },
+      {
+        "type": "string",
+        "friendlyName": "Video Header",
+        "jsonPath": "settings.dashboard.videos.title",
+        "elementSelector": ".video-section-header"
+      }
+    ]
+  }
+}

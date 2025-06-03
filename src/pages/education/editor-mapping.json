@@ -1,0 +1,234 @@
+{
+  "theme": {
+    "global": [
+      {
+        "type": "font",
+        "friendlyName": "Primary Font",
+        "jsonPath": "theme.primaryFont",
+        "cssVariable": "--bxi-primary-font"
+      },
+      {
+        "type": "font", 
+        "friendlyName": "Secondary Font",
+        "jsonPath": "theme.secondaryFont",
+        "cssVariable": "--bxi-secondary-font"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Primary Color",
+        "jsonPath": "theme.primaryColor",
+        "cssVariable": "--bxi-primary-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Secondary Color",
+        "jsonPath": "theme.secondaryColor",
+        "cssVariable": "--bxi-secondary-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Button Color",
+        "jsonPath": "theme.buttonColor",
+        "cssVariable": "--bxi-button-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Button Background Color",
+        "jsonPath": "theme.buttonBgColor",
+        "cssVariable": "--bxi-button-bg-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Button Background Hover Color",
+        "jsonPath": "theme.buttonBgHoverColor",
+        "cssVariable": "--bxi-button-bg-hover-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Link Button Color",
+        "jsonPath": "theme.linkButtonColor",
+        "cssVariable": "--bxi-link-button-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Link Button Hover Color",
+        "jsonPath": "theme.linkButtonHoverColor",
+        "cssVariable": "--bxi-link-button-hover-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Copyright Color",
+        "jsonPath": "theme.footerColor",
+        "cssVariable": "--bxi-footer-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Copyright Background Color",
+        "jsonPath": "theme.copyrightBgColor",
+        "cssVariable": "--bxi-education-copyright-bg-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Footer Background Color",
+        "jsonPath": "theme.footerBgColor",
+        "cssVariable": "--bxi-footer-bg-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Program Color",
+        "jsonPath": "theme.programColor",
+        "cssVariable": "--bxi-education-program-color"
+      }
+    ],
+    "home": [
+      {
+        "type": "color",
+        "friendlyName": "Banner Color",
+        "jsonPath": "theme.bannerColor",
+        "cssVariable": "--bxi-education-banner-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Banner Background Color",
+        "jsonPath": "theme.bannerBgColor",
+        "cssVariable": "--bxi-education-banner-bg-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Banner Circles Color",
+        "jsonPath": "theme.bannerCirclesColor",
+        "cssVariable": "--bxi-banner-cirles-color"
+      }
+    ],
+    "dashboard": [
+      {
+        "type": "color",
+        "friendlyName": "Page Background Color",
+        "jsonPath": "theme.dashboardBgColor",
+        "cssVariable": "--bxi-dashboard-bg-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Portal Color",
+        "jsonPath": "theme.portalColor",
+        "cssVariable": "--bxi-education-portal-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Portal Background Color",
+        "jsonPath": "theme.portalBgColor",
+        "cssVariable": "--bxi-education-portal-bg-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Page Border Color",
+        "jsonPath": "theme.portalBorderColor",
+        "cssVariable": "--bxi-education-portal-border-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Checklist Item Border Color",
+        "jsonPath": "theme.portalChecklistItemBorderColor",
+        "cssVariable": "--bxi-education-portal-checklist-item-border-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Checkmark Border Color",
+        "jsonPath": "theme.portalCheckmarkBorderColor",
+        "cssVariable": "--bxi-education-portal-checkmark-border-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Checkmark Background Color",
+        "jsonPath": "theme.portalCheckmarkBgColor",
+        "cssVariable": "--bxi-education-portal-checkmark-bg-color"
+      }
+    ]
+  },
+  "content": {
+    "global": [
+      {
+        "type": "string",
+        "friendlyName": "Title",
+        "jsonPath": "settings.title",
+        "elementSelector": "head > title"
+      }, 
+      {
+        "type": "image",
+        "friendlyName": "Favicon",
+        "jsonPath": "settings.images.favicon",
+        "elementSelector": "#favicon"
+      },
+      {
+        "type": "image",
+        "friendlyName": "Apple Touch Icon",
+        "jsonPath": "settings.images.apple_touch_icon",
+        "elementSelector": "#apple-touch-icon"
+      },
+      {
+        "type": "image",
+        "friendlyName": "Logo",
+        "jsonPath": "settings.images.logo",
+        "elementSelector": "#bxi-logo img"
+      },
+      {
+        "type": "image",
+        "friendlyName": "Dialog Logo",
+        "jsonPath": "settings.images.dialog_logo",
+        "elementSelector": "#dialog-logo"
+      },
+      {
+        "type": "string",
+        "friendlyName": "Footer Phone Number",
+        "jsonPath": "settings.footer.phone_number",
+        "elementSelector": ".footer-phone-number"
+      }
+    ],
+    "home": [
+      {
+        "type": "image",
+        "friendlyName": "Banner Image",
+        "jsonPath": "settings.home_page.banner.image",
+        "elementSelector": "img.bxi-banner-image"
+      },
+      {
+        "type": "string",
+        "friendlyName": "Banner Title",
+        "jsonPath": "settings.home_page.banner.title",
+        "elementSelector": ".bxi-banner h1.bxi-main-header"
+      },
+      {
+        "type": "string",
+        "friendlyName": "Banner Title",
+        "jsonPath": "settings.home_page.banner.subtitle",
+        "elementSelector": ".bxi-banner h4"
+      },
+      {
+        "type": "string",
+        "friendlyName": "Programs Section Title",
+        "jsonPath": "settings.home_page.programs_section.title",
+        "elementSelector": ".bxi-program-sections h1.bxi-main-header"
+      }
+    ],
+    "dashboard": [
+      {
+        "type": "string",
+        "friendlyName": "Dashboard Header",
+        "jsonPath": "settings.dashboard.portal.header",
+        "elementSelector": ".bxi-education-portal h6:first-child"
+      },
+      {
+        "type": "string",
+        "friendlyName": "Dashboard Program Name",
+        "jsonPath": "settings.dashboard.portal.program",
+        "elementSelector": ".bxi-education-portal h1.bxi-main-header"
+      },
+      {
+        "type": "string",
+        "friendlyName": "Sidebar Title",
+        "jsonPath": "settings.dashboard.sidebar.title",
+        "elementSelector": ".bxi-sidebar h1.bxi-main-header"
+      }
+    ]
+  }
+}

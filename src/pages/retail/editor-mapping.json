@@ -1,0 +1,276 @@
+{
+  "theme": {
+    "global": [
+      {
+        "type": "font",
+        "friendlyName": "Primary Font",
+        "jsonPath": "theme.primaryFont",
+        "cssVariable": "--bxi-primary-font"
+      },
+      {
+        "type": "font", 
+        "friendlyName": "Secondary Font",
+        "jsonPath": "theme.secondaryFont",
+        "cssVariable": "--bxi-secondary-font"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Primary Color",
+        "jsonPath": "theme.primaryColor",
+        "cssVariable": "--bxi-primary-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Secondary Color",
+        "jsonPath": "theme.secondaryColor",
+        "cssVariable": "--bxi-secondary-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Button Color",
+        "jsonPath": "theme.buttonColor",
+        "cssVariable": "--bxi-button-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Button Background Color",
+        "jsonPath": "theme.buttonBgColor",
+        "cssVariable": "--bxi-button-bg-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Button Background Hover Color",
+        "jsonPath": "theme.buttonBgHoverColor",
+        "cssVariable": "--bxi-button-bg-hover-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Link Button Color",
+        "jsonPath": "theme.linkButtonColor",
+        "cssVariable": "--bxi-link-button-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Link Button Hover Color",
+        "jsonPath": "theme.linkButtonHoverColor",
+        "cssVariable": "--bxi-link-button-hover-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Footer Color",
+        "jsonPath": "theme.footerColor",
+        "cssVariable": "--bxi-footer-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Footer Background Color",
+        "jsonPath": "theme.footerBgColor",
+        "cssVariable": "--bxi-footer-bg-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Copyright Color",
+        "jsonPath": "theme.copyrightColor",
+        "cssVariable": "--bxi-copyright-color"
+      }
+    ],
+    "home": [
+      {
+        "type": "color",
+        "friendlyName": "Banner Color",
+        "jsonPath": "theme.bannerColor",
+        "cssVariable": "--bxi-retail-banner-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Banner Background Color",
+        "jsonPath": "theme.bannerBgColor",
+        "cssVariable": "--bxi-retail-banner-bg-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Nav Border Color",
+        "jsonPath": "theme.navBorderColor",
+        "cssVariable": "--bxi-retail-nav-border-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Hero Border Color",
+        "jsonPath": "theme.heroBorderColor",
+        "cssVariable": "--bxi-retail-hero-border-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Badge Background Gradient 1",
+        "jsonPath": "theme.featuresIconBgGradient1",
+        "cssVariable": "--bxi-retail-features-icon-gradient1"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Badge Background Gradient 2",
+        "jsonPath": "theme.featuresIconBgGradient2",
+        "cssVariable": "--bxi-retail-features-icon-gradient2"
+      }
+    ],
+    "dashboard": [
+      {
+        "type": "color",
+        "friendlyName": "Page Background Color",
+        "jsonPath": "theme.dashboardBgColor",
+        "cssVariable": "--bxi-dashboard-bg-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Component Background Color",
+        "jsonPath": "theme.componentBgColor",
+        "cssVariable": "--bxi-component-bg-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Dashboard Welcome Color",
+        "jsonPath": "theme.dashboardWelcomeColor",
+        "cssVariable": "--bxi-retail-dashboard-welcome-color"
+      }
+    ]
+  },
+  "content": {
+    "global": [
+      {
+        "type": "string",
+        "friendlyName": "Title",
+        "jsonPath": "settings.title",
+        "elementSelector": "head > title"
+      }, 
+      {
+        "type": "image",
+        "friendlyName": "Favicon",
+        "jsonPath": "settings.images.favicon",
+        "elementSelector": "#favicon"
+      },
+      {
+        "type": "image",
+        "friendlyName": "Apple Touch Icon",
+        "jsonPath": "settings.images.apple_touch_icon",
+        "elementSelector": "#apple-touch-icon"
+      },
+      {
+        "type": "image",
+        "friendlyName": "Logo",
+        "jsonPath": "settings.images.logo",
+        "elementSelector": "#bxi-logo img"
+      },
+      {
+        "type": "image",
+        "friendlyName": "Dialog Logo",
+        "jsonPath": "settings.images.dialog_logo",
+        "elementSelector": "#dialog-logo"
+      },
+      {
+        "type": "string",
+        "friendlyName": "Footer Phone Number",
+        "jsonPath": "settings.footer.phone_number",
+        "elementSelector": ".footer-phone-number"
+      },
+      {
+        "type": "string",
+        "friendlyName": "Footer Email",
+        "jsonPath": "settings.footer.email",
+        "elementSelector": ".footer-email"
+      },
+      {
+        "type": "string",
+        "friendlyName": "Footer Chat",
+        "jsonPath": "settings.footer.chat",
+        "elementSelector": ".footer-chat"
+      }
+    ],
+    "home": [
+      {
+        "type": "string",
+        "friendlyName": "Sale Tile Badge",
+        "jsonPath": "settings.home_page.sale_tile.badge",
+        "elementSelector": ".bxi-sale-section-badge"
+      },
+      {
+        "type": "string",
+        "friendlyName": "Sale Tile Title",
+        "jsonPath": "settings.home_page.sale_tile.title",
+        "elementSelector": ".bxi-sale-section h1"
+      },
+      {
+        "type": "string",
+        "friendlyName": "Sale Tile Description",
+        "jsonPath": "settings.home_page.sale_tile.description",
+        "elementSelector": ".bxi-sale-section p"
+      },
+      {
+        "type": "string",
+        "friendlyName": "Sale Tile Button",
+        "jsonPath": "settings.home_page.sale_tile.button",
+        "elementSelector": ".bxi-sale-section button"
+      },
+      {
+        "type": "image",
+        "friendlyName": "Sale Tile Image",
+        "jsonPath": "settings.home_page.sale_tile.image",
+        "elementSelector": ".bxi-sale-section-image img"
+      },
+      {
+        "type": "string",
+        "friendlyName": "Shop Tile Title",
+        "jsonPath": "settings.home_page.shop_tile.title",
+        "elementSelector": ".bxi-shop-section h1"
+      },
+      {
+        "type": "string",
+        "friendlyName": "Shop Tile Description",
+        "jsonPath": "settings.home_page.shop_tile.description",
+        "elementSelector": ".bxi-shop-section p"
+      },
+      {
+        "type": "string",
+        "friendlyName": "Shop Tile Button",
+        "jsonPath": "settings.home_page.shop_tile.button",
+        "elementSelector": ".bxi-shop-section button"
+      },
+      {
+        "type": "image",
+        "friendlyName": "Shop Tile Image",
+        "jsonPath": "settings.home_page.shop_tile.image",
+        "elementSelector": ".bxi-shop-section-image img"
+      },
+      {
+        "type": "string",
+        "friendlyName": "Banner Text",
+        "jsonPath": "settings.home_page.banner.text",
+        "elementSelector": ".bxi-banner h4"
+      }
+    ],
+    "dashboard": [
+      {
+        "type": "string",
+        "friendlyName": "Welcome Text",
+        "jsonPath": "settings.dashboard.welcome",
+        "elementSelector": ".bxi-welcome-color"
+      },
+      {
+        "type": "string",
+        "friendlyName": "Sidebar Text",
+        "jsonPath": "settings.dashboard.sidebar.text",
+        "elementSelector": ".sidebar-text"
+      },
+      {
+        "type": "string",
+        "friendlyName": "Portal Title",
+        "jsonPath": "settings.dashboard.portal.title",
+        "elementSelector": ".portal h4"
+      },
+      {
+        "type": "string",
+        "friendlyName": "Search Placeholder",
+        "jsonPath": "settings.dashboard.portal.search_placeholder",
+        "elementSelector": ".portal input"
+      }
+    ]
+  }
+}

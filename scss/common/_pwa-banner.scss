@@ -1,0 +1,60 @@
+@use './mixins';
+
+@mixin pwa-tooltip-styles {
+  .pwa-tooltip {
+    z-index: 200;
+    bottom: 1rem;
+    left: 2rem;
+    position: fixed;
+    background-color: #fff;
+    width: calc(100vw - 4rem);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+    &::before {
+      @include mixins.triangle(10px, #fff, 'down') {
+        bottom: -10px;
+        left: calc(50% - 12px);
+      }
+    }
+
+    .pwa-tooltip-icon {
+      margin: 0.5rem;
+      svg {
+        width: 1.5rem;
+        height: 1.5rem;
+
+        path {
+          fill: #006ee6;
+        }
+      }
+    }
+
+    .pwa-tooltip-message {
+      font-size: 13px;
+
+      svg {
+        display: inline;
+        height: 24px;
+        width: 24px;
+
+        path {
+          fill: #006ee6;
+        }
+      }
+    }
+
+    .bxi-button {
+      color: #006ee6 !important; // iPhone Blue
+      font-size: 12px !important;
+
+      &:hover,
+      &:active {
+        color: #0055b3 !important;
+      }
+    }
+  }
+}

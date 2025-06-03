@@ -1,0 +1,134 @@
+@use '../common/mixins';
+
+.bxi.volunteer {
+  background-color: var(--bxi-page-bg-color);
+
+  .navbar {
+    background-color: var(--bxi-header-nav-bg-color);
+  }
+
+  .bxi-button,
+  .bxi-button.bxi-button--lg {
+    border-radius: 50px;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 700;
+  }
+
+  &.home {
+    .bxi-auth-buttons {
+      .bxi-button {
+        @include mixins.breakpoint-lg {
+          padding: 0.5rem 1rem;
+          font-size: 12px;
+          font-weight: 700;
+        }
+      }
+    }
+
+    .bxi-banner {
+      min-height: 487px;
+    }
+
+    .bxi-hero {
+      .bxi-button {
+        min-width: 300px;
+      }
+
+      &-supertitle-color {
+        color: var(--bxi-hero-supertitle-color);
+      }
+
+      &-image {
+        top: -15px;
+
+        &--left {
+          width: 160px;
+          height: 134px;
+
+          @include mixins.breakpoint-lg {
+            width: 279px;
+            height: 256px;
+          }
+        }
+
+        &--right {
+          width: 223px;
+          height: 157px;
+
+          @include mixins.breakpoint-lg {
+            width: 357px;
+            height: 261px;
+          }
+        }
+      }
+    }
+
+    .bxi-services {
+      &-image {
+        height: 252px;
+      }
+    }
+  }
+
+  &.dashboard {
+    .bxi-statistic-icon {
+      svg {
+        @include mixins.color-icon(var(--bxi-primary-color));
+      }
+    }
+
+    .bxi-article {
+      min-height: 300px;
+
+      &-color {
+        color: var(--bxi-dashboard-article-color);
+      }
+
+      &-info-icon {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+
+        svg {
+          width: 24px;
+          height: 24px;
+        }
+      }
+
+      &::before {
+        content: '';
+        z-index: 2;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          180deg,
+          rgba(34, 34, 34, 0.7) 0%,
+          rgba(0, 0, 0, 0) 62.67%
+        );
+      }
+    }
+
+    .bxi-donation-form {
+      @include mixins.breakpoint-lt-lg {
+        max-width: 450px;
+      }
+
+      &-bg-color {
+        background-color: var(--bxi-dashboard-form-bg-color);
+      }
+
+      &-label-color {
+        color: var(--bxi-dashboard-donation-label-color);
+      }
+
+      select {
+        background: none;
+      }
+    }
+  }
+}

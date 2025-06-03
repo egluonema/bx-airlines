@@ -1,0 +1,129 @@
+{
+  "theme": {
+    "primaryFont": "'Open Sans', sans-serif",
+    "secondaryFont": "'Montserrat', sans-serif",
+    "primaryColor": "#27bd90",
+    "secondaryColor": "#3e4543",
+    "buttonColor": "#ffffff",
+    "buttonBgColor": "var(--bxi-primary-color)",
+    "buttonBgHoverColor": "#049469",
+    "linkButtonColor": "#0E2742",
+    "linkButtonHoverColor": "var(--bxi-primary-color)",
+    "dashboardBgColor": "#ffffff",
+    "footerBgColor": "#ffffff",
+    "footerColor": "var(--bxi-secondary-color)",
+    "copyrightColor": "var(--bxi-secondary-color)",
+    "componentBgColor": "#ffffff",
+    "navbarBgColor": "#ffffff",
+    "pageBgColor": "#ecf0ef",
+    "bannerColor": "#feffff",
+    "bannerBgColor": "#13362c",
+    "servicesBgColor": "#ffffff",
+    "servicesDescriptionColor": "#657772",
+    "servicesBorderColor": "#d7d7d7",
+    "dashboardBannerColor": "#ffffff",
+    "dashboardApplicationDateColor": "#8a99a8"
+  },
+  "settings": {
+    "title": "BXPharmacy",
+    "images": {
+      "favicon": "/pharmacy/favicon.png",
+      "apple_touch_icon": "/pharmacy/apple-touch-icon-192.png",
+      "logo": "/pharmacy/logo.svg",
+      "dialog_logo": "/pharmacy/logo.svg"
+    },
+    "header": {
+      "links": [
+        "About Us",
+        "Products",
+        "Science",
+        "News",
+        "Contacts"
+      ]
+    },
+    "home_page": {
+      "banner": {
+        "background_image": "/pharmacy/banner.jpg",
+        "title": "A pharmacy company for a new generation",
+        "subtitle": "See how we use cutting-edge science to create quality medicines"
+      },
+      "services": [
+        {
+          "icon": "/pharmacy/pill-icon.svg",
+          "title": "Pharmaceutical Production",
+          "description": "Perfect production means high-quality products, every time",
+          "button": "More"
+        },
+        {
+          "icon": "/pharmacy/contract-icon.svg",
+          "title": "Contract Production",
+          "description": "When your brand is on the line, it's important to choose a manufacturer you trust",
+          "button": "More"
+        },
+        {
+          "icon": "/pharmacy/science-icon.svg",
+          "title": "Research & Development",
+          "description": "Need a solution? Leverage the best brains in the business",
+          "button": "More"
+        }
+      ]
+    },
+    "dashboard": {
+      "portal": {
+        "header": "Key Directions",
+        "articles": [
+          {
+            "image": "/pharmacy/article-1.jpg",
+            "description": "Partnering in Cardiology",
+            "button": "More"
+          },
+          {
+            "image": "/pharmacy/article-2.jpg",
+            "description": "Partnering in Women's Healthcare",
+            "button": "More"
+          },
+          {
+            "image": "/pharmacy/article-3.jpg",
+            "description": "Partnering in Oncology",
+            "button": "More"
+          },
+          {
+            "image": "/pharmacy/article-4.jpg",
+            "description": "Partnering in Ophthalmology",
+            "button": "More"
+          }
+        ],
+        "sidebar": {
+          "header": "Your applications",
+          "applications": [
+            {
+              "banner": "Accepted",
+              "name": "Registration document N2394",
+              "date": "10/25/{{currentYear}}"
+            },
+            {
+              "banner": "Accepted",
+              "name": "September delivery list",
+              "date": "10/20/{{currentYear}}"
+            },
+            {
+              "banner": "Accepted",
+              "name": "August delivery list",
+              "date": "9/18/{{currentYear}}"
+            }
+          ],
+          "button": "Add Application"
+        }
+      }
+    },
+    "footer": {
+      "links": [
+        "Company",
+        "Careers",
+        "Help and Support",
+        "Privacy Policy"
+      ],
+      "copyright": "© BXPharmacy, {{currentYear}}. All rights reserved."
+    }
+  }
+}

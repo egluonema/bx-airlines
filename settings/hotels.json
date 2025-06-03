@@ -1,0 +1,153 @@
+{
+  "theme": {
+    "primaryFont": "'Noto Sans', sans-serif",
+    "secondaryFont": "'Playfair Display', serif",
+    "primaryColor": "#B49732",
+    "secondaryColor": "#08152B",
+    "buttonColor": "#ffffff",
+    "buttonBgColor": "var(--bxi-primary-color)",
+    "buttonBgHoverColor": "#8A7427",
+    "linkButtonColor": "var(--bxi-primary-color)",
+    "linkButtonHoverColor": "#8a7427",
+    "dashboardBgColor": "#ffffff",
+    "footerBgColor": "var(--bxi-secondary-color)",
+    "footerColor": "#ffffff",
+    "copyrightColor": "#817D73",
+    "bannerColor": "#ffffff",
+    "usernameColor": "#ffffff",
+    "portalBgColor": "#f1ede0",
+    "portalBorderColor": "#c8c5ba",
+    "alertIconColor": "#d83135",
+    "cardColor": "#ffffff",
+    "cardBgColor1": "#F8E07F",
+    "cardBgColor2": "#CAAC5D",
+    "cardBgColor3": "#A98746",
+    "cardBgColor4": "#936E37",
+    "cardBgColor5": "#87612F",
+    "cardBgColor6": "#835D2D",
+    "cardShadowColor": "#a19683",
+    "offerColor": "#ffffff"
+  },
+  "settings": {
+    "title": "BXHotels",
+    "images": {
+      "favicon": "/hotels/favicon.png",
+      "apple_touch_icon": "/hotels/apple-touch-icon-192.png",
+      "logo": "/hotels/logo-white.svg",
+      "dialog_logo": "/hotels/logo.svg"
+    },
+    "header": {
+      "links": [
+        "Hotels",
+        "Destinations",
+        "Experiences",
+        "Offers",
+        "Loyalty Program"
+      ]
+    },
+    "home_page": {
+      "banner": {
+        "background_image": "/hotels/banner.jpg",
+        "title": "Stay awhile, and relax!",
+        "subtitle": "Book you visit to our hotel",
+        "search": {
+          "inputs": [
+            {
+              "label": "Check-In — Check-Out",
+              "placeholder": "Arrive — Depart",
+              "icon": "calendarIcon"
+            },
+            {
+              "label": "Rooms",
+              "placeholder": "1 room",
+              "icon": "keyIcon"
+            },
+            {
+              "label": "Guests",
+              "placeholder": "2 Adults",
+              "icon": "userIcon"
+            }
+          ],
+          "button": "Check Availability"
+        }
+      },
+      "features_section": {
+        "title": "The very best, all for you",
+        "features": [
+          {
+            "image": "/hotels/offer-1.jpg",
+            "description": "12 Hotels in the World's Best Places"
+          },
+          {
+            "image": "/hotels/offer-2.jpg",
+            "description": "Rooms with a unique interior, from Standard to VIP suites"
+          },
+          {
+            "image": "/hotels/offer-3.jpg",
+            "description": "Premium restaurants in our hotels"
+          },
+          {
+            "image": "/hotels/offer-4.jpg",
+            "description": "Spa and lounge zones"
+          }
+        ]
+      }
+    },
+    "dashboard": {
+      "username": "",
+      "header": "Welcome Back",
+      "portal": {
+        "tabs": [
+          "My Reservation",
+          "Activity",
+          "Settings"
+        ],
+        "title": "Deluxe Apartment",
+        "image": "/hotels/apartment.jpg",
+        "reservation_info": [
+          {
+            "icon": "calendarIcon",
+            "details": "10/25/{{currentYear}} - 11/01/{{currentYear}}"
+          },
+          {
+            "icon": "userIcon",
+            "details": "2 Adults"
+          },
+          {
+            "icon": "foodIcon",
+            "details": "Breakfast and dinner included"
+          },
+          {
+            "icon": "dollarIcon",
+            "details": "$1493"
+          }
+        ],
+        "button": "Details",
+        "alert": "You can cancel your reservation until 10/25/{{currentYear}}"
+      },
+      "sidebar": {
+        "title": "BXHotels Loyalty Program",
+        "card": {
+          "title": "Points You've Earned:",
+          "points": "3452"
+        },
+        "link": "More About Loyalty Program"
+      },
+      "offer": {
+        "image": "/hotels/banner.jpg",
+        "title": "50% off spa packages",
+        "button": "Show Details"
+      }
+    },
+    "footer": {
+      "links": [
+        "Hotels",
+        "Customer Service",
+        "Corporate",
+        "Legal",
+        "Help"
+      ],
+      "copyright": "© BXHotels, {{currentYear}}.  All rights reserved."
+    }
+  }
+}

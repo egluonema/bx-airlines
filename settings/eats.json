@@ -1,0 +1,172 @@
+{
+  "theme": {
+    "primaryFont": "'Noto Sans', sans-serif",
+    "secondaryFont": "'Fira Sans Condensed', sans-serif",
+    "primaryColor": "#32B668",
+    "secondaryColor": "#1D2922",
+    "buttonColor": "#ffffff",
+    "buttonBgColor": "var(--bxi-primary-color)",
+    "buttonBgHoverColor": "#25874D",
+    "linkButtonColor": "var(--bxi-primary-color)",
+    "linkButtonHoverColor": "var(--bxi-secondary-color)",
+    "footerColor": "#817D73",
+    "footerBgColor": "#181818",
+    "dashboardBgColor": "#EAEAEA",
+    "bannerColor": "#ffffff",
+    "checklistDateColor": "#0e264c",
+    "orderBgColor": "var(--bxi-primary-color)",
+    "orderFormBgColor": "#f8f9fb",
+    "amountColor": "#A7A7A7",
+    "portalCategoryColor": "#ffffff",
+    "portalCardColor": "#ffffff",
+    "portalChecklistItemBorderColor": "#bec9db",
+    "portalChecklistItemColor": "#8391a7",
+    "portalCheckmarkBgColor": "#39c23e",
+    "cardFirstGradient": "var(--bxi-primary-color)",
+    "cardSecondGradient": "#29864F"
+  },
+  "settings": {
+    "title": "BXEats",
+    "images": {
+      "favicon": "/eats/favicon.png",
+      "apple_touch_icon": "/eats/apple-touch-icon-192.png",
+      "logo": "/eats/logo.svg",
+      "dialog_logo": "/eats/logo.svg"
+    },
+    "header": {
+      "main_link": "Product Catalog",
+      "links": [
+        "Delivery",
+        "Express",
+        "Shops",
+        "Promo",
+        "Recipes"
+      ]
+    },
+    "home_page": {
+      "banner": {
+        "image": "/eats/banner.jpg",
+        "title": "Groceries from our store to your door in 30 minutes",
+        "subtitle": "Order your favorite products online, and we'll deliver them to your home"
+      },
+      "order_form": {
+        "title": "$10 Promo code for your first order",
+        "image": "/eats/order-form-image.jpg",
+        "inputs": [
+          {
+            "placeholder": "Your Name"
+          },
+          {
+            "placeholder": "Phone Number"
+          }
+        ],
+        "button": "Get promo code"
+      },
+      "discounts_section": {
+        "title": "Discounts on fresh fruit and vegetables",
+        "discounts": [
+          {
+            "image": "/eats/product-1.jpg",
+            "item": "Fresh Apples",
+            "amount": "1 lb",
+            "price": "$2.99",
+            "new_price": "$1.99"
+          },
+          {
+            "image": "/eats/product-2.jpg",
+            "item": "Juicy Oranges",
+            "amount": "3 lb bag",
+            "price": "$6.00",
+            "new_price": "$4.99"
+          },
+          {
+            "image": "/eats/product-3.jpg",
+            "item": "Bananas",
+            "amount": "each",
+            "price": "$0.40",
+            "new_price": "$0.25"
+          },
+          {
+            "image": "/eats/product-4.jpg",
+            "item": "Tomatoes",
+            "amount": "1 lb",
+            "price": "$2.99",
+            "new_price": "$1.50"
+          }
+        ]
+      }
+    },
+    "dashboard": {
+      "title": "Welcome",
+      "description": "Choose a category below for increased cashback", 
+      "categories": [
+        {
+          "background_image": "/eats/product-category-1.jpg",
+          "percentage": "4%",
+          "category": "Fresh Vegetables",
+          "button": "Choose"
+        },
+        {
+          "background_image": "/eats/product-category-2.jpg",
+          "percentage": "2%",
+          "category": "Fresh Meat",
+          "button": "Choose"
+        },
+        {
+          "background_image": "/eats/product-category-3.jpg",
+          "percentage": "5%",
+          "category": "Local Cheese",
+          "button": "Choose"
+        }
+      ],
+      "portal": {
+        "title": "Your order history",
+        "orders": [
+          {
+            "date": "December 12, {{lastYear}}",
+            "items": "10 items",
+            "button": "Receipt"
+          },
+          {
+            "date": "December 6, {{lastYear}}",
+            "items": "22 items",
+            "button": "Receipt"
+          },
+          {
+            "date": "November 28, {{lastYear}}",
+            "items": "7 items",
+            "button": "Receipt"
+          },
+          {
+            "date": "November 26, {{lastYear}}",
+            "items": "12 items",
+            "button": "Receipt"
+          },
+          {
+            "date": "November 23, {{lastYear}}",
+            "items": "8 items",
+            "button": "Receipt"
+          }
+        ]
+      },
+      "sidebar": {
+        "title": "Cashback Program",
+        "card": {
+          "description": "Your Current Balance",
+          "amount": "$145",
+          "link": "More about Cashback Program"
+        }
+      }
+    },
+    "footer": {
+      "links": [
+        "About",
+        "Customer Service",
+        "Partners",
+        "Collaboration",
+        "Contacts"
+      ],
+      "copyright": "© BXEats, {{currentYear}}. All rights reserved."
+    }
+  }
+}

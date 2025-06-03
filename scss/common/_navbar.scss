@@ -1,0 +1,152 @@
+@use './mixins';
+
+@mixin navbar-styles {
+  .bxi-user-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    @include mixins.breakpoint-lg {
+      display: none;
+    }
+  }
+
+  .navbar {
+    flex-direction: column;
+
+    &-brand {
+      height: 45px;
+      width: auto;
+    }
+  }
+
+  .static-user-icon {
+    border: 1px solid var(--bxi-primary-color);
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    svg {
+      @include mixins.color-icon(var(--bxi-primary-color));
+    }
+  }
+
+  .navbar-toggler {
+    background: transparent;
+    border: none;
+
+    &:active,
+    &:focus {
+      border: none;
+      box-shadow: none;
+    }
+  }
+
+  .dashboard .bxi-user-icon {
+    display: flex;
+  }
+
+  @include mixins.breakpoint-lt-lg {
+    // Make the collapsible nav menu float (rather than push page down)
+    .bxi-navbar {
+      position: absolute;
+      top: 60px;
+      min-width: 250px;
+    }
+
+    .bxi-auth-buttons {
+      position: absolute;
+      top: 30px;
+      min-width: 100px;
+      right: 0;
+      padding: 0.5rem 0.5rem 0 0.5rem;
+    }
+  }
+
+  .navbar-dark {
+    .bxi-nav-toggle {
+      @include mixins.color-icon(#fff);
+    }
+  }
+
+  .bxi-nav {
+    display: flex;
+    position: relative;
+    align-items: center;
+
+    &-toggle {
+      display: flex;
+      flex-direction: column;
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+      margin-right: 0.25rem;
+      &-line {
+        display: inline-block;
+        height: 1px;
+        @include mixins.color-icon(#000);
+        width: 100%;
+      }
+
+      &:hover,
+      &:active,
+      &:focus {
+        & + .bxi-nav-links {
+          display: block;
+        }
+      }
+    }
+
+    &-links {
+      position: absolute;
+      display: none;
+      top: 30px;
+      left: 0;
+      list-style: none;
+      padding: 0.5rem 1rem;
+      z-index: 10;
+
+      &:hover,
+      &:active {
+        display: block;
+      }
+    }
+  }
+
+  @include mixins.breakpoint-lt-lg {
+    .bxi-user-icon {
+      & ~ .bxi-auth-buttons {
+        display: none;
+
+        .bxi-button {
+          white-space: nowrap;
+          font-size: 1rem;
+          display: block;
+
+          &:not(:last-child) {
+            margin-bottom: 0.5rem;
+          }
+        }
+
+        &:hover {
+          display: block;
+        }
+      }
+
+      &:hover,
+      &:active,
+      &:focus {
+        & ~ .bxi-auth-buttons {
+          display: block;
+        }
+      }
+    }
+  }
+}

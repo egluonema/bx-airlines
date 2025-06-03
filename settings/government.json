@@ -1,0 +1,199 @@
+{
+  "theme": {
+    "primaryFont": "'Noto Sans', sans-serif",
+    "secondaryFont": "'Montserrat', sans-serif",
+    "primaryColor": "#CF8C1A",
+    "secondaryColor": "#070402",
+    "buttonColor": "#ffffff",
+    "buttonBgColor": "var(--bxi-primary-color)",
+    "buttonBgHoverColor": "#A77116",
+    "linkButtonColor": "var(--bxi-primary-color)",
+    "linkButtonHoverColor": "#A77116",
+    "dashboardBgColor": "#ffffff",
+    "componentBgColor": "#f4f1f1",
+    "footerColor": "#ffffff",
+    "footerBgColor": "var(--bxi-secondary-color)",
+    "copyrightColor": "#ffffff",
+    "bannerColor": "#ffffff",
+    "homeServicesBorderColor": "#bdb9b2",
+    "dashboardServiceBorderColor": "#98a3b7",
+    "componentColor": "#626c76",
+    "tileStatusColor": "#ffffff",
+    "tileSuccessBgColor": "#1ec67f",
+    "tileFailedBgColor": "#d83135",
+    "tileDateColor": "#b8b8b8",
+    "tileIconColor": "#8a99a8"
+  },
+  "settings": {
+    "title": "BXGovernment",
+    "images": {
+      "favicon": "/government/favicon.png",
+      "apple_touch_icon": "/government/apple-touch-icon-192.png",
+      "logo": "/government/logo.svg",
+      "dialog_logo": "/government/logo.svg"
+    },
+    "home_page": {
+      "header": {
+        "location": "Chicago",
+        "links": [
+          "All Services",
+          "For Individuals",
+          "For Businesses",
+          "More"
+        ]
+      },
+      "banner": {
+        "background_image": "/government/banner.jpg",
+        "title": "Government services at your fingertips",
+        "subtitle": "Find resources, browse services and connect with others in the community",
+        "search": "What kind of service are you looking for?"
+      },
+      "services": [
+        {
+          "title": "Pay Bills",
+          "description": "Process ticket payments, utility bills and more",
+          "button": "More"
+        },
+        {
+          "title": "Licenses",
+          "description": "Renew and apply for licenses",
+          "button": "More"
+        },
+        {
+          "title": "Real Estate Registration",
+          "description": "Use our online portal to make sure your home and property are properly registered",
+          "button": "More"
+        },
+        {
+          "title": "Taxes and Finance",
+          "description": "Find information about local tax laws and manage your filing online",
+          "button": "More"
+        }
+      ],
+      "footer": {
+        "links_section": [
+          {
+            "title": "Citizens",
+            "links": [
+              "Family & Children",
+              "Passports & Registrations",
+              "Transportation & Driving",
+              "Education",
+              "Taxes & Finance"
+            ]
+          },
+          {
+            "title": "Businesses",
+            "links": [
+              "Regulations",
+              "Tax Information",
+              "Licenses"
+            ]
+          },
+          {
+            "title": "Other Sites",
+            "links": [
+              "Airport",
+              "Courts",
+              "Public Library",
+              "Zoo"
+            ]
+          }
+        ]
+      }
+    },
+    "dashboard": {
+      "username": "",
+      "header_links": [
+        "Services",
+        "Payments",
+        "Support"
+      ],
+      "subnav_links": [
+        "Applications",
+        "Documents",
+        "Taxes & Fees",
+        "Programs",
+        "Utilities",
+        "Initiatives",
+        "Your City"
+      ],
+      "services": [
+        {
+          "title": "Fines",
+          "line_items": [
+            "1 new fine",
+            "5 paid fines"
+          ],
+          "icon": "/government/portal-block-1.png",
+          "button": "Open"
+        },
+        {
+          "title": "Document Requests",
+          "line_items": [
+            "2 in progress"
+          ],
+          "icon": "/government/portal-block-2.png",
+          "button": "Open"
+        },
+        {
+          "title": "Programs",
+          "line_items": [
+            "1 new program",
+            "4 accepted"
+          ],
+          "icon": "/government/portal-block-3.png",
+          "button": "Open"
+        },
+        {
+          "title": "Utilities",
+          "line_items": [
+            "Electricity",
+            "Water supply",
+            "Gas"
+          ],
+          "icon": "/government/portal-block-4.png",
+          "button": "Open"
+        }
+      ],
+      "portal": {
+        "header": "New Responses: 3",
+        "tiles": [
+          {
+            "status": "Accepted",
+            "success": true,
+            "title": "Senior Property Tax Exemption",
+            "description": "A property tax exemption is available for senior Colorado residents or surviving spouses, provided they meet the requirements. You must apply by July 15 of the year in which you seek an exemption. Applications postmarked by July 15 are valid, but you have to wait for January 2 of the following year if you miss this cut-off. Additionally, exemptions are only considered for the year in which you apply, not for previous years.",
+            "date": "07/10/{{currentYear}}"
+          },
+          {
+            "status": "Accepted",
+            "success": true,
+            "title": "Senior Property Tax Exemption",
+            "description": "Since 2005, the Mayor's Design Awards have honored projects throughout the city for excellence in architecture, exterior design and place-making. The awards are presented to Denver homeowners, business owners, nonprofits, artists and others for their creative contributions to the public realm through innovative design and place-making.",
+            "date": "06/17/{{currentYear}}"
+          },
+          {
+            "status": "Cancelled",
+            "success": false,
+            "title": "Senior Property Tax Exemption",
+            "description": "In an effort to protect public safety, all customers seeking in-person customer service at Excise and Licenses are encouraged to make an appointment prior to visiting the office. Please visit our appointments website to make an appointment. All license application not available online can be submitted via email. Please visit our email application process page for more information on submitting email applications.",
+            "date": "01/28/{{currentYear}}"
+          }
+        ],
+        "button": "Add new application"
+      },
+      "footer": {
+        "links": [
+          "Help and Support",
+          "Terms of Use",
+          "Privacy Policy"
+        ]
+      }
+    },
+    "footer": {
+      "phone_number": "800 568 9678",
+      "copyright": "© BXGovernment, {{currentYear}}. All rights reserved."
+    }
+  }
+}

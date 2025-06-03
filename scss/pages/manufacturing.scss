@@ -1,0 +1,110 @@
+@use '../common/mixins';
+
+.bxi.manufacturing {
+  .bxi-button,
+  .bxi-link {
+    text-transform: uppercase;
+  }
+
+  .navbar-brand {
+    max-width: 250px;
+  }
+
+  .bxi-footer *,
+  .bxi-button,
+  .bxi-link {
+    font-family: var(--bxi-secondary-font);
+  }
+
+  .bxi-auth-buttons {
+    .bxi-button {
+      @include mixins.breakpoint-lt-lg {
+        &:hover {
+          color: var(--bxi-secondary-color);
+        }
+      }
+    }
+  }
+
+  @include mixins.breakpoint-lg {
+    .bxi-auth-buttons {
+      .bxi-button {
+        &:not(:last-child) {
+          padding-right: 1rem;
+          border-right: 2px solid var(--bxi-secondary-color);
+        }
+      }
+    }
+  }
+
+  &.home {
+    .bxi-banner {
+      &:after {
+        content: ' ';
+        position: absolute;
+        height: 100%;
+        width: 50%;
+        right: 0;
+        top: 0;
+        background: var(--bxi-manufacturing-banner-bg-color);
+        opacity: 0.6;
+
+        @include mixins.breakpoint-lt-lg {
+          height: 50%;
+          width: 100%;
+          top: 50%;
+        }
+      }
+
+      &-content {
+        min-height: 630px;
+
+        @include mixins.breakpoint-lg {
+          width: 50%;
+        }
+
+        &-color {
+          color: var(--bxi-manufacturing-banner-color);
+        }
+      }
+    }
+
+    .services {
+      &-color {
+        color: var(--bxi-manufacturing-service-color);
+      }
+
+      &-link {
+        color: var(--bxi-manufacturing-service-link-color);
+        border-top: 2px solid
+          var(--bxi-manufacturing-service-link-bg-hover-color);
+        text-decoration: none;
+
+        &:hover {
+          color: var(--bxi-manufacturing-service-link-hover-color);
+          background-color: var(
+            --bxi-manufacturing-service-link-bg-hover-color
+          );
+        }
+      }
+    }
+  }
+
+  &.dashboard {
+    .navbar {
+      background-color: var(--bxi-manufacturing-dashboard-nav-bg-color);
+    }
+
+    .bxi-header {
+      box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.11);
+    }
+
+    .services {
+      min-height: 300px;
+
+      &-image {
+        min-height: 225px;
+      }
+    }
+  }
+}

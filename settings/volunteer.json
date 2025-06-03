@@ -1,0 +1,143 @@
+{
+  "theme": {
+    "primaryFont": "'Noto Sans', sans-serif",
+    "secondaryFont": "'Playfair Display', serif",
+    "primaryColor": "#3C7157",
+    "secondaryColor": "#201D1F",
+    "buttonColor": "#ffffff",
+    "buttonBgColor": "var(--bxi-primary-color)",
+    "buttonBgHoverColor": "#224434",
+    "linkButtonColor": "var(--bxi-primary-color)",
+    "linkButtonHoverColor": "#224434",
+    "footerBgColor": "var(--bxi-secondary-color)",
+    "footerColor": "#ffffff",
+    "copyrightColor": "#ffffff",
+    "pageBgColor": "#f0f0f0",
+    "componentBgColor": "#f9eec3",
+    "headerNavBgColor": "#ffffff",
+    "heroSupertitleColor": "#6b7176",
+    "dashboardArticleColor": "#ffffff",
+    "dashboardFormBgColor": "#ffffff",
+    "dashboardDonationLabelColor": "#76818b"
+  },
+  "settings": {
+    "title": "BXVolunteer",
+    "images": {
+      "favicon": "/volunteer/favicon.png",
+      "apple_touch_icon": "/volunteer/apple-touch-icon-192.png",
+      "logo": "/volunteer/logo.svg",
+      "dialog_logo": "/volunteer/logo.svg"
+    },
+    "header": {
+      "links": [
+        "Volunteering",
+        "Directions",
+        "About Foundation",
+        "Reports",
+        "News"
+      ]
+    },
+    "home_page": {
+      "hero": {
+        "image_left": "/volunteer/banner-left-side.png",
+        "image_right": "/volunteer/banner-right-side.png",
+        "title": "Let's help each other",
+        "supertitle": "Become a part of our non-profit volunteer organization",
+        "button": "Become a Volunteer"
+      },
+      "banner": {
+        "background_image": "/volunteer/banner.jpg"
+      },
+      "services": {
+        "title": "Our Services",
+        "items": [
+          {
+            "image": "/volunteer/child.jpg",
+            "title": "Family Assistance",
+            "description": "Help families affected by the pandemic and recent ecological crises",
+            "button": "Donate"
+          },
+          {
+            "image": "/volunteer/homeless-person.jpg",
+            "title": "Fight Homelessness",
+            "description": "We proudly support all members of our community. Help us connect those in need with valuable assistance and resources",
+            "button": "Donate"
+          },
+          {
+            "image": "/volunteer/animal.jpg",
+            "title": "Support Local Animal Shelters",
+            "description": "By giving local animal shelters manpower & support, we help our furry friends find loving homes",
+            "button": "Donate"
+          }
+        ]
+      }
+    },
+    "dashboard": {
+      "username": "",
+      "header": "Thank you. We appreciate your contributions.",
+      "statistics": [
+        {
+          "icon": "/volunteer/money-icon.svg",
+          "title": "$534",
+          "description": "You sent to charity."
+        },
+        {
+          "icon": "/volunteer/user-icon.svg",
+          "title": "25",
+          "description": "People felt better because of you."
+        },
+        {
+          "icon": "/volunteer/animal-icon.svg",
+          "title": "15",
+          "description": "Animals felt better because of you."
+        }
+      ],
+      "articles": [
+        {
+          "title": "Help for traumatized homeless animals",
+          "image": "/volunteer/article-1.jpg"
+        },
+        {
+          "title": "Help with warm clothes for homeless people",
+          "image": "/volunteer/article-2.jpg"
+        },
+        {
+          "title": "Help with food for homeless people",
+          "image": "/volunteer/article-3.jpg"
+        },
+        {
+          "title": "Help children get ready for school",
+          "image": "/volunteer/article-4.jpg"
+        }
+      ],
+      "donation": {
+        "title": "Quick Donation",
+        "input": {
+          "label": "Amount",
+          "placeholder": "$5.00"
+        },
+        "dropdown": {
+          "label": "What do you want to donate to?",
+          "options": [
+            "Stray animals",
+            "Homeless",
+            "Children"
+          ]
+        },
+        "button": "Donate",
+        "link": "Set payment method"
+      }
+    },
+    "footer": {
+      "links": [
+        "About",
+        "Our work",
+        "Sponsorship Offers",
+        "Projects",
+        "Privacy"
+      ],
+      "phone_number": "800 568 9678",
+      "copyright": "© BXVolunteer, {{currentYear}}.  All rights reserved."
+    }
+  }
+}

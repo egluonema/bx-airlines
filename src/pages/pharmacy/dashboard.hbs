@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  {{#> head }}
+  {{> pharmacyBranding }}
+  {{/head}}
+  <body onload="bxi.pageLoad()" class="bxi pharmacy dashboard">
+    {{> variables}}
+    <header>
+      <nav class="navbar navbar-expand-lg flex-wrap p-0">
+        <div class="container py-2">
+          <div class="bxi-nav">
+            <a class="bxi-nav-toggle" role="button">
+              {{> hamburgerIcon }}
+            </a>
+            <ul class="bxi-nav-links bxi-bg-secondary">
+              {{#each settings.header.links}}
+              <li>
+                <a class="bxi-link bxi-link-light--primary">{{this}}</a>
+              </li>
+              {{/each}}
+            </ul>
+            <a id="bxi-logo" class="navbar-brand py-0 ms-3">
+              <img src="{{settings.images.logo}}" alt="Logo" />
+            </a>
+          </div>
+          <div class="d-flex flex-row position-relative">
+            <p id="username-container"
+              class="bxi-color-primary fw-bold d-none d-sm-flex mb-0 me-2">{{settings.dashboard.username}}</p>
+            <div class="bxi-user-icon d-flex d-lg-none bxi-bg-primary">
+              {{> userIcon }}
+            </div>
+            <div class="d-none d-lg-flex static-user-icon me-2">
+              {{> userIcon }}
+            </div>
+            <div
+              class="bxi-auth-buttons bxi-auth-buttons--secondary-link bxi-bg-primary bxi-zi-2 pb-1 pb-lg-0 bxi-bg-lg-transparent">
+              <button id="oidc-logout" onclick="bxi.logout()"
+                class="bxi-button mb-1 mb-lg-0">Log Out</button>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <section class="container">
+      <div class="d-flex flex-column flex-md-row justify-content-end mt-4">
+        {{!-- See src/dashboard-buttons.hbs to update dashboard buttons --}}
+        {{> dashboardButtons}}
+      </div>
+      <div class="row mt-5 mb-4">
+        <div class="col-lg-8 order-2 order-lg-1">
+          <h1
+            class="bxi-main-header bxi-color-secondary bxi-ff-secondary">{{settings.dashboard.portal.header}}</h1>
+          <div class="row">
+            {{#each settings.dashboard.portal.articles}}
+            <div class="col-md-6 overflow-hidden bxi-article mb-4">
+              <div class="cursor-pointer h-100 d-flex flex-column">
+                <div class="overflow-hidden">
+                  <img class="bxi-article-img bxi-img-cover" src="{{image}}">
+                </div>
+                <div
+                  class="bxi-component-bg-color d-flex flex-column flex-grow-1 p-3">
+                  <h5 class="fw-boldish">{{description}}</h5>
+                  <a
+                    class="bxi-link bxi-link--primary text-uppercase mt-auto">{{button}}<span
+                      class="fs-5 ms-3">&rarr;</span></a>
+                </div>
+              </div>
+            </div>
+            {{/each}}
+          </div>
+        </div>
+        <div class="col-lg-4 order-1 order-lg-2">
+          <h2
+            class="bxi-ff-secondary fw-bold bxi-color-secondary mt-3 sidebar-header">{{settings.dashboard.portal.sidebar.header}}</h2>
+          {{#each settings.dashboard.portal.sidebar.applications}}
+          <div class="rounded bxi-component-bg-color mb-4">
+            <h6
+              class="bxi-bg-primary px-3 py-2 bxi-sidebar-banner-color fw-boldish rounded-top">{{banner}}</h6>
+            <h5 class="fw-boldish p-3">{{name}}</h5>
+            <div
+              class="bxi-sidebar-application-date d-flex justify-content-between p-3">
+              <div
+                class="bxi-sidebar-application-date-color fs-7 d-flex align-items-end">{{date}}</div>
+              <div>{{> pdfIcon}}</div>
+            </div>
+          </div>
+          {{/each}}
+          <button
+            class="bxi-button bxi-button--outline bxi-button--lg w-100 sidebar-button">{{settings.dashboard.portal.sidebar.button}}</button>
+        </div>
+      </div>
+      {{#if env.BXI_DASHBOARD_POLICY_ID}}
+      <div class="mb-3 bxi-component-bg-color" data-dv-flow="static"
+        data-policy-id="{{env.BXI_DASHBOARD_POLICY_ID}}"></div>
+      {{/if}}
+    </section>
+    <footer class="bxi-footer pt-5 pb-4">
+      <div class="container">
+        <div class="d-block mb-sm-3 mb-4 d-lg-flex justify-content-between">
+          <ul class="d-none d-md-flex flex-wrap mb-4 p-0 ls-none">
+            {{#each settings.footer.links }}
+            <li class="me-4 mb-2"><a
+                class="bxi-link bxi-link--secondary">{{this}}</a></li>
+            {{/each}}
+          </ul>
+          <div
+            class="footer-contacts d-flex flex-column-reverse flex-md-row align-items-center align-items-md-start">
+            <div class>
+              <ul class="d-flex align-items-center mb-0 ls-none ps-0">
+                <li>
+                  <button
+                    class="bxi-button bxi-button--icon bxi-button--md me-md-3 me-5 rounded-circle">
+                    {{> facebookIcon }}
+                  </button>
+                </li>
+                <li>
+                  <button
+                    class="bxi-button bxi-button--icon bxi-button--md me-md-3 me-5 rounded-circle">
+                    {{> twitterIcon }}
+                  </button>
+                </li>
+                <li>
+                  <button
+                    class="bxi-button bxi-button--icon bxi-button--md rounded-circle">
+                    {{> instagramIcon }}
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <section class="bxi-footer bxi-copyright-bg-color py-4">
+      <div class="container">
+        <p
+          class="fs-8 m-0 text-md-start bxi-copyright-color">{{settings.footer.copyright}}</p>
+        {{> remix }}
+      </div>
+    </section>
+    {{> modal}}
+  </body>
+</html>

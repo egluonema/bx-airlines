@@ -1,0 +1,238 @@
+@use '../common/mixins';
+
+.bxi.eats {
+  .navbar-brand img {
+    max-width: 250px;
+  }
+
+  .bxi-button {
+    border-radius: 50px;
+  }
+
+  &.home {
+    .bxi-banner {
+      &--text {
+        color: var(--bxi-eats-banner-color);
+      }
+
+      &__image {
+        height: 500px;
+        @include mixins.breakpoint-md {
+          height: 700px;
+        }
+      }
+
+      &-content {
+        height: 100%;
+        width: 100%;
+        background: linear-gradient(
+          90.77deg,
+          rgba(15, 17, 14, 0.7) 15.41%,
+          rgba(15, 17, 14, 0) 97.48%
+        );
+      }
+
+      &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 55%;
+      }
+    }
+
+    .bxi-order-form {
+      height: 100%;
+      background-color: var(--bxi-dashboard-bg-color);
+
+      &__bg {
+        background-color: var(--bxi-eats-order-bg-color);
+        height: 300px;
+      }
+
+      h5 {
+        font-size: 54px;
+        line-height: 76px;
+        font-weight: 700;
+        text-align: center;
+      }
+
+      .bxi-order {
+        background-color: var(--bxi-eats-order-form-bg-color);
+        max-width: 1012px;
+        box-shadow: 6px 6px 40px rgb(0 0 0 / 15%);
+        border-radius: 14px;
+        margin-top: -270px;
+      }
+
+      .bxi-input-container {
+        border: 1px solid #cecece;
+        background-color: #ffffff;
+      }
+
+      .bxi-button {
+        min-width: 254px;
+      }
+    }
+
+    .bxi-discounts-section {
+      background-color: var(--bxi-dashboard-bg-color);
+
+      &__text-small {
+        color: var(--bxi-eats-amount-color);
+      }
+
+      &__text-st {
+        text-decoration: line-through black;
+      }
+
+      .bxi-discounts-section-discount {
+        background-color: #ffffff;
+        height: 85%;
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+      }
+
+      .bxi-discounts-footer {
+        &__side {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+        }
+      }
+
+      .product-img {
+        height: 164px;
+        min-height: 164px;
+        object-fit: contain;
+      }
+    }
+
+    .bxi-footer {
+      .bxi-copyright-color {
+        color: var(--bxi-footer-color);
+      }
+    }
+  }
+
+  &.dashboard {
+    background-color: var(--bxi-dashboard-bg-color);
+
+    .navbar {
+      background-color: #ffffff;
+    }
+
+    .bxi-eats-date-color {
+      color: var(--bxi-eats-portal-checklist-date-color);
+    }
+
+    .bxi-dashboard {
+      .bxi-categories {
+        color: var(--bxi-eats-portal-category-color);
+
+        .img-wrapper {
+          height: 75%;
+
+          &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 50%;
+            background: linear-gradient(
+              180deg,
+              rgba(33, 33, 33, 0.48) 9.94%,
+              rgba(36, 36, 36, 0) 94.52%
+            );
+            z-index: 1;
+          }
+        }
+      }
+
+      .bxi-eats-portal {
+        background-color: #ffffff;
+
+        &--header {
+          font-size: 55px;
+          font-weight: 600;
+        }
+
+        &--text {
+          color: var(--bxi-eats-portal-checklist-item-color);
+        }
+
+        .bxi-checkmark {
+          width: 25px;
+          min-width: 25px;
+          height: 25px;
+          border: 1px solid var(--bxi-eats-portal-checkmark-bg-color);
+
+          svg {
+            display: none;
+          }
+
+          &--checked {
+            background-color: var(--bxi-eats-portal-checkmark-bg-color);
+            border: none;
+
+            svg {
+              display: block;
+            }
+          }
+        }
+
+        .bxi-checklist-item {
+          border-top: 1px solid
+            var(--bxi-eats-portal-checklist-item-border-color);
+        }
+      }
+
+      .bxi-finance-card {
+        max-width: 307px;
+        height: 50%;
+        margin: auto;
+        background: linear-gradient(
+          109.68deg,
+          var(--bxi-eats-finance-card-first-gradient) 6.61%,
+          var(--bxi-eats-finance-card-second-gradient) 93.88%
+        );
+        box-shadow: 2px 4px 19px rgb(0 0 0 / 25%);
+        border-radius: 11px;
+        color: var(--bxi-eats-portal-card-color);
+
+        &--line {
+          height: 40px;
+          background: rgba(29, 41, 34, 0.19);
+        }
+      }
+
+      .bxi-document {
+        @include mixins.color-icon(var(--bxi-primary-color));
+
+        &--color {
+          color: var(--bxi-primary-color);
+        }
+
+        & > span {
+          width: 60px;
+        }
+      }
+
+      .bxi-eats-sidebar {
+        background-color: #ffffff;
+        height: 100%;
+        width: 100%;
+      }
+    }
+
+    .bxi-footer {
+      .bxi-copyright-color {
+        color: var(--bxi-footer-color);
+      }
+    }
+  }
+}

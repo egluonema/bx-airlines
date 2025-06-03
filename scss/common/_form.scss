@@ -1,0 +1,30 @@
+@mixin form-styles {
+  input,
+  select,
+  textarea {
+    border-radius: 2px;
+    padding: 0.75rem 1rem;
+    border: 1px solid #909daa;
+    outline: none;
+
+    &[type='checkbox'] {
+      padding: 0;
+    }
+
+    &:focus {
+      box-shadow: none;
+      border-color: var(--bxi-primary-color);
+    }
+  }
+
+  .bxi-radio {
+    width: 100%;
+    border: 1px solid #d6dde9;
+    cursor: pointer;
+    background: none;
+
+    &:hover {
+      border-color: var(--bxi-primary-color);
+    }
+  }
+}

@@ -1,0 +1,394 @@
+@use './mixins';
+
+@mixin button-styles {
+  .bxi-button {
+    padding: 6px 27px;
+    font-size: 14px;
+    font-weight: 500;
+    border: none;
+    background: var(--bxi-button-bg-color);
+    color: var(--bxi-button-color);
+    cursor: pointer;
+    transition: all 0.1s ease-in;
+
+    &:hover,
+    &:active {
+      border: none;
+      color: var(--bxi-button-color);
+      background: var(--bxi-button-bg-hover-color);
+    }
+
+    &.bxi-button--white {
+      color: var(--bxi-primary-color);
+      background-color: #fff;
+      background: #fff;
+
+      &:hover {
+        color: #fff;
+        background-color: var(--bxi-primary-color);
+      }
+    }
+
+    &.bxi-button--white-secondary {
+      color: var(--bxi-secondary-color);
+      background-color: #fff;
+      background: #fff;
+
+      &:hover {
+        color: #fff;
+        background-color: var(--bxi-primary-color);
+      }
+    }
+
+    &.bxi-button--md {
+      padding: 10px 26px;
+    }
+
+    &.bxi-button--lg {
+      padding: 16px 27px;
+      font-size: 1rem;
+    }
+
+    &.bxi-button--link,
+    &.bxi-button--link-bold {
+      padding: 0;
+      font-size: 16px;
+      background: transparent;
+      color: var(--bxi-link-button-color);
+    }
+
+    &.bxi-button--link {
+      &:hover {
+        color: var(--bxi-link-button-hover-color);
+        background: transparent;
+      }
+    }
+
+    &.bxi-button--link-bold {
+      font-weight: 400;
+      &:hover {
+        font-weight: 700;
+        background: transparent;
+      }
+    }
+
+    &.bxi-button--submit {
+      min-width: 300px;
+    }
+
+    &.bxi-button--outline,
+    &.bxi-button--outline-secondary {
+      background: transparent;
+      border: 1px solid var(--bxi-primary-color);
+      color: var(--bxi-primary-color);
+
+      svg {
+        @include mixins.color-icon(var(--bxi-primary-color));
+      }
+
+      &:hover,
+      &:active {
+        color: #fff;
+        background: var(--bxi-primary-color);
+        border: 1px solid #fff;
+
+        svg {
+          @include mixins.color-icon(#fff);
+        }
+      }
+    }
+
+    &.bxi-button--outline-secondary {
+      border: 1px solid var(--bxi-secondary-color);
+      color: var(--bxi-secondary-color);
+
+      svg {
+        @include mixins.color-icon(var(--bxi-secondary-color));
+      }
+
+      &:hover,
+      &:active {
+        background: var(--bxi-secondary-color);
+      }
+    }
+
+    &.bxi-button--icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      width: 42px;
+      height: 42px;
+      padding: 0;
+
+      svg {
+        @include mixins.color-icon(#fff);
+      }
+
+      &.bxi-button--md {
+        width: 50px;
+        height: 50px;
+      }
+
+      &.bxi-button--lg {
+        width: 54.5px;
+        height: 54.5px;
+      }
+
+      &.bxi-button--xl {
+        width: 58px;
+        height: 58px;
+      }
+
+      &.bxi-button--facebook {
+        border-color: #275fab;
+
+        svg path {
+          fill: #275fab;
+        }
+
+        &:hover {
+          background-color: #275fab;
+
+          svg path {
+            fill: #fff;
+          }
+        }
+      }
+
+      &.bxi-button--linkedin {
+        border-color: #0c61b8;
+
+        svg path {
+          fill: #0c61b8;
+        }
+
+        &:hover {
+          background-color: #0c61b8;
+
+          svg path {
+            fill: #fff;
+          }
+        }
+      }
+
+      &.bxi-button--apple {
+        border-color: #050708;
+
+        svg path {
+          fill: #050708;
+        }
+
+        &:hover {
+          background-color: #050708;
+
+          svg path {
+            fill: #fff;
+          }
+        }
+      }
+    }
+  }
+
+  .bxi-auth-buttons {
+    display: flex;
+
+    .bxi-button {
+      font-size: 14px;
+      font-weight: 400;
+      padding: 0.5rem 1rem;
+
+      &:not(:last-child) {
+        margin-right: 1rem;
+      }
+
+      @include mixins.breakpoint-lt-lg {
+        padding: 0;
+        background: transparent;
+        color: #fff;
+
+        &:hover {
+          background: transparent;
+          color: var(--bxi-primary-color);
+        }
+      }
+    }
+
+    &.bxi-auth-buttons--link,
+    &.bxi-auth-buttons--link-bold,
+    &.bxi-auth-buttons--white-link,
+    &.bxi-auth-buttons--primary-link,
+    &.bxi-auth-buttons--secondary-link,
+    &.bxi-auth-buttons--outline-light-bg,
+    &.bxi-auth-buttons--outline-dark-bg {
+      .bxi-button {
+        background: transparent;
+        font-size: 1rem;
+        padding: 0;
+        font-weight: 500;
+      }
+    }
+
+    &.bxi-auth-buttons--link {
+      .bxi-button {
+        &:hover {
+          color: var(--bxi-primary-color);
+        }
+      }
+    }
+
+    &.bxi-auth-buttons--link-bold {
+      .bxi-button {
+        color: var(--bxi-primary-color);
+        font-weight: 400;
+
+        &:hover {
+          color: var(--bxi-primary-color);
+          font-weight: 700;
+        }
+      }
+    }
+
+    &.bxi-auth-buttons--white-link {
+      .bxi-button {
+        color: #fff;
+
+        &:hover {
+          color: #d2d2d2;
+        }
+      }
+    }
+
+    &.bxi-auth-buttons--outline-dark-bg {
+      .bxi-button {
+        padding: 0.3rem 1.5rem;
+        border: 1px solid #fff;
+
+        &:hover {
+          background-color: #fff;
+          color: var(--bxi-secondary-color);
+        }
+
+        @include mixins.breakpoint-lt-lg {
+          padding: 0;
+          border: none;
+
+          &:hover {
+            background-color: transparent;
+            color: var(--bxi-primary-color);
+          }
+        }
+      }
+    }
+
+    &.bxi-auth-buttons--outline-light-bg {
+      .bxi-button {
+        padding: 0.3rem 1.5rem;
+        border: 1px solid var(--bxi-primary-color);
+        color: var(--bxi-primary-color);
+
+        &:hover {
+          color: #fff;
+          background-color: var(--bxi-primary-color);
+        }
+
+        @include mixins.breakpoint-lt-lg {
+          color: #fff;
+          padding: 0;
+          border: none;
+
+          &:hover {
+            background-color: transparent;
+            color: var(--bxi-primary-color);
+          }
+        }
+      }
+    }
+
+    &.bxi-auth-buttons--primary-link {
+      .bxi-button {
+        color: var(--bxi-primary-color);
+        &:hover {
+          color: var(--bxi-secondary-color);
+        }
+
+        @include mixins.breakpoint-lt-lg {
+          color: #fff;
+          &:hover {
+            color: var(--bxi-primary-color);
+          }
+        }
+      }
+    }
+
+    &.bxi-auth-buttons--secondary-link {
+      .bxi-button {
+        color: var(--bxi-secondary-color);
+        &:hover {
+          color: var(--bxi-primary-color);
+        }
+
+        @include mixins.breakpoint-lt-lg {
+          color: #fff;
+          &:hover {
+            color: var(--bxi-secondary-color);
+          }
+        }
+      }
+    }
+  }
+
+  a,
+  a.bxi-button,
+  .bxi-button--link {
+    text-transform: none;
+    text-decoration: none;
+  }
+
+  .bxi-footer {
+    .bxi-button--outline {
+      background: transparent;
+      border: 1px solid #fff;
+      color: #fff;
+
+      &:hover,
+      &:active {
+        color: #fff;
+        background: var(--bxi-primary-color);
+        border: 1px solid #fff;
+      }
+    }
+  }
+
+  .floating-button {
+    position: fixed;
+    display: inline-block;
+    background: #fff;
+    height: 33px;
+    bottom: 1.5rem;
+    cursor: pointer;
+    box-shadow: 0px 0px 8px 0px rgba(34, 60, 80, 0.2);
+    z-index: 100;
+
+    &:hover {
+      box-shadow: 0px 0px 10px 0px rgba(34, 60, 80, 0.4);
+    }
+
+    &:active {
+      bottom: calc(1.5rem - 1px);
+    }
+  }
+
+  .verticals-link {
+    right: -2px;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    width: 33px;
+    border: 2px solid black;
+  }
+
+  .glitch-button {
+    right: 3rem;
+    border-radius: 6px;
+  }
+}

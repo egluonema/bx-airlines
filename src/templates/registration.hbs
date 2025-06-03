@@ -1,0 +1,48 @@
+<!-- registration -->
+<h1 class="dialog-header text-center bxi-ff-secondary fw-bold mb-4">Create an account</h1>
+<form class="dialog-container bxi-color-light" id="registrationForm">
+  <div class="mb-3">
+    <label for="firstName" class="form-label mb-1">First name *</label>
+    <input type="text" id="firstName" name="firstName" class="form-control" />
+    <div data-skcomponent="skerrormessage" class="text-danger" data-skerrorid="firstName"></div>
+  </div>
+  <div class="mb-3">
+    <label for="lastName" class="form-label mb-1">Last name *</label>
+    <input type="text" id="lastName" name="lastName" class="form-control" />
+    <div data-skcomponent="skerrormessage" class="text-danger" data-skerrorid="lastName"></div>
+  </div>
+  <div class="mb-3">
+    <label for="email" class="form-label mb-1">Email *</label>
+    <input type="email" id="email" name="email" class="form-control" />
+    <div data-skcomponent="skerrormessage" class="text-danger" data-skerrorid="email"></div>
+  </div>
+  <div class="mb-3">
+    <label for="region" class="form-label mb-1">Country or region *</label>
+    <input type="email" id="region" name="region" class="form-control" />
+    <div data-skcomponent="skerrormessage" class="text-danger" data-skerrorid="region"></div>
+  </div>
+  <div class="mb-3">
+    <label for="password" class="form-label mb-1">Create password *</label>
+    <input type="password" id="password" name="password" class="form-control" />
+    <div data-skcomponent="skerrormessage" class="text-danger" data-skerrorid="password"></div>
+  </div>
+  <div class="mb-4">
+    <label for="confirmPassword" class="form-label mb-1">Confirm password *</label>
+    <input type="password" id="confirmPassword" name="confirmPassword" class="form-control" />
+    <div data-skcomponent="skerrormessage" class="text-danger" data-skerrorid="confirmPassword"></div>
+  </div>
+  <p class="mb-4 text-center">
+    By clicking on the "Create Account" button, you are agreeing to the
+    <a class="bxi-utton bxi-button--link">Terms of Use</a>
+    and
+    <a class="bxi-button bxi-button--link">Privacy Policy</a>
+  </p>
+  <button class="bxi-button bxi-button--lg bxi-button--submit d-block mx-auto mb-4" data-skcomponent="skbutton" data-skbuttontype="form-submit" data-skform="registrationForm" data-skbuttonvalue="exampleButtonValue">Create account</button>
+  <p class="text-center">
+    Already have an account?
+    <a class="bxi-button bxi-button--link">
+      Log in
+    </a>
+  </p>
+</form>
+<!--/ registration -->

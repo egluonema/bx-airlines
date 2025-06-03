@@ -1,0 +1,194 @@
+@use './mixins';
+
+@mixin utility-styles {
+  .fw-boldish {
+    font-weight: 500;
+  }
+
+  .ls-none {
+    list-style: none;
+  }
+
+  .fs-7 {
+    font-size: 14px !important;
+  }
+
+  .fs-8 {
+    font-size: 12px !important;
+  }
+
+  .pe-lg-none {
+    @include mixins.breakpoint-lg {
+      pointer-events: none;
+    }
+  }
+
+  .text-none {
+    text-transform: none !important;
+  }
+
+  .bxi-overflow-x-auto {
+    overflow-x: auto;
+  }
+
+  .bxi-zi-1 {
+    z-index: 1;
+  }
+
+  .bxi-zi-2 {
+    z-index: 2;
+  }
+
+  .bxi-zi-3 {
+    z-index: 3;
+  }
+
+  .bxi-zi-4 {
+    z-index: 4;
+  }
+
+  .bxi-zi-5 {
+    z-index: 5;
+  }
+
+  .bxi-truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .cursor-pointer {
+    cursor: pointer;
+  }
+
+  .bxi-ff-primary {
+    font-family: var(--primary-font);
+  }
+
+  .bxi-ff-secondary {
+    font-family: var(--bxi-secondary-font);
+  }
+
+  .bxi-footer {
+    color: var(--bxi-footer-color);
+    background-color: var(--bxi-footer-bg-color);
+  }
+
+  .bxi-copyright-color {
+    color: var(--bxi-copyright-color);
+  }
+
+  .bxi-color-primary {
+    color: var(--bxi-primary-color);
+  }
+
+  .bxi-color-secondary {
+    color: var(--bxi-secondary-color);
+  }
+
+  .bxi-color-dark {
+    color: #192130;
+  }
+
+  .bxi-color-light {
+    color: #76818b;
+  }
+
+  .bxi-bg-primary {
+    background-color: var(--bxi-primary-color);
+  }
+
+  .bxi-bg-secondary {
+    background-color: var(--bxi-secondary-color);
+  }
+
+  .bxi-bg-transparent {
+    background-color: transparent;
+  }
+
+  .bxi-bg-lg-transparent {
+    @include mixins.breakpoint-lg {
+      background-color: transparent;
+    }
+  }
+
+  .bxi-bg-image {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .bxi-img-cover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .bxi-main-header {
+    font-weight: 700;
+    font-size: 2rem;
+
+    @include mixins.breakpoint-sm {
+      font-size: 2.5rem;
+    }
+
+    @include mixins.breakpoint-lg {
+      font-size: 3.75rem;
+    }
+
+    &-xl {
+      font-weight: 700;
+      font-size: 36px;
+
+      @include mixins.breakpoint-md {
+        font-size: 52px;
+      }
+
+      @include mixins.breakpoint-lg {
+        font-size: 82px;
+      }
+    }
+  }
+
+  .bxi-icon-color-primary {
+    @include mixins.color-icon(var(--bxi-primary-color));
+  }
+
+  .bxi-icon-color-secondary {
+    @include mixins.color-icon(var(--bxi-secondary-color));
+  }
+
+  .bxi-icon-color-white {
+    @include mixins.color-icon(#fff);
+  }
+
+  .bxi-icon-color-black {
+    @include mixins.color-icon(#000);
+  }
+
+  .bxi-stretch-third-md {
+    @include mixins.breakpoint-lt-lg {
+      .col-md-6 {
+        &:nth-child(3) {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .bxi-fill-primary {
+    fill: var(--bxi-primary-color);
+  }
+
+  .bxi-fill-secondary {
+    fill: var(--bxi-secondary-color);
+  }
+
+  .bxi-stroke-primary {
+    stroke: var(--bxi-primary-color);
+  }
+
+  .bxi-stroke-secondary {
+    stroke: var(--bxi-secondary-color);
+  }
+}

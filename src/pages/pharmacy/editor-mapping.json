@@ -1,0 +1,216 @@
+{
+  "theme": {
+    "global": [
+      {
+        "type": "font",
+        "friendlyName": "Primary Font",
+        "jsonPath": "theme.primaryFont",
+        "cssVariable": "--bxi-primary-font"
+      },
+      {
+        "type": "font", 
+        "friendlyName": "Secondary Font",
+        "jsonPath": "theme.secondaryFont",
+        "cssVariable": "--bxi-secondary-font"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Primary Color",
+        "jsonPath": "theme.primaryColor",
+        "cssVariable": "--bxi-primary-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Secondary Color",
+        "jsonPath": "theme.secondaryColor",
+        "cssVariable": "--bxi-secondary-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Button Color",
+        "jsonPath": "theme.buttonColor",
+        "cssVariable": "--bxi-button-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Button Background Color",
+        "jsonPath": "theme.buttonBgColor",
+        "cssVariable": "--bxi-button-bg-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Button Background Hover Color",
+        "jsonPath": "theme.buttonBgHoverColor",
+        "cssVariable": "--bxi-button-bg-hover-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Link Button Color",
+        "jsonPath": "theme.linkButtonColor",
+        "cssVariable": "--bxi-link-button-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Link Button Hover Color",
+        "jsonPath": "theme.linkButtonHoverColor",
+        "cssVariable": "--bxi-link-button-hover-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Footer Color",
+        "jsonPath": "theme.footerColor",
+        "cssVariable": "--bxi-footer-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Footer Background Color",
+        "jsonPath": "theme.footerBgColor",
+        "cssVariable": "--bxi-footer-bg-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Copyright Color",
+        "jsonPath": "theme.copyrightColor",
+        "cssVariable": "--bxi-copyright-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Navbar Background Color",
+        "jsonPath": "theme.navbarBgColor",
+        "cssVariable": "--bxi-pharmacy-navbar-bg-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Page Background Color",
+        "jsonPath": "theme.pageBgColor",
+        "cssVariable": "--bxi-pharmacy-page-bg-color"
+      }
+    ],
+    "home": [
+      {
+        "type": "color",
+        "friendlyName": "Banner Color",
+        "jsonPath": "theme.bannerColor",
+        "cssVariable": "--bxi-pharmacy-banner-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Banner Background Color",
+        "jsonPath": "theme.bannerBgColor",
+        "cssVariable": "--bxi-pharmacy-banner-bg-color"
+      }, 
+      {
+        "type": "color",
+        "friendlyName": "Services Background Color",
+        "jsonPath": "theme.servicesBgColor",
+        "cssVariable": "--bxi-pharmacy-services-bg-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Services Description Color",
+        "jsonPath": "theme.servicesDescriptionColor",
+        "cssVariable": "--bxi-pharmacy-services-description-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Services Border Color",
+        "jsonPath": "theme.servicesBorderColor",
+        "cssVariable": "--bxi-pharmacy-services-border-color"
+      }
+    ],
+    "dashboard": [
+      {
+        "type": "color",
+        "friendlyName": "Component Background Color",
+        "jsonPath": "theme.componentBgColor",
+        "cssVariable": "--bxi-component-bg-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Header Color",
+        "jsonPath": "theme.dashboardBannerColor",
+        "cssVariable": "--bxi-pharmacy-dashboard-banner-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Application Date Color",
+        "jsonPath": "theme.dashboardApplicationDateColor",
+        "cssVariable": "--bxi-pharmacy-dashboard-application-date-color"
+      }
+    ]
+  },
+  "content": {
+    "global": [
+      {
+        "type": "string",
+        "friendlyName": "Title",
+        "jsonPath": "settings.title",
+        "elementSelector": "head > title"
+      }, 
+      {
+        "type": "image",
+        "friendlyName": "Favicon",
+        "jsonPath": "settings.images.favicon",
+        "elementSelector": "#favicon"
+      },
+      {
+        "type": "image",
+        "friendlyName": "Apple Touch Icon",
+        "jsonPath": "settings.images.apple_touch_icon",
+        "elementSelector": "#apple-touch-icon"
+      },
+      {
+        "type": "image",
+        "friendlyName": "Logo",
+        "jsonPath": "settings.images.logo",
+        "elementSelector": "#bxi-logo img"
+      },
+      {
+        "type": "image",
+        "friendlyName": "Dialog Logo",
+        "jsonPath": "settings.images.dialog_logo",
+        "elementSelector": "#dialog-logo"
+      }
+    ],
+    "home": [
+      {
+        "type": "image",
+        "friendlyName": "Banner Background Image",
+        "jsonPath": "settings.home_page.banner.background_image",
+        "elementSelector": ".bxi-banner.bxi-bg-image"
+      },
+      {
+        "type": "string",
+        "friendlyName": "Banner Title",
+        "jsonPath": "settings.home_page.banner.title",
+        "elementSelector": ".bxi-banner-content h1"
+      },
+      {
+        "type": "string",
+        "friendlyName": "Banner Subtitle",
+        "jsonPath": "settings.home_page.banner.subtitle",
+        "elementSelector": ".bxi-banner-content h5"
+      }
+    ],
+    "dashboard": [
+      {
+        "type": "string",
+        "friendlyName": "Portal Header",
+        "jsonPath": "settings.dashboard.portal.header",
+        "elementSelector": ".bxi-main-header"
+      },
+      {
+        "type": "string",
+        "friendlyName": "Sidebar Header",
+        "jsonPath": "settings.dashboard.portal.sidebar.header",
+        "elementSelector": ".sidebar-header"
+      },
+      {
+        "type": "string",
+        "friendlyName": "Sidebar Button",
+        "jsonPath": "settings.dashboard.portal.sidebar.button",
+        "elementSelector": ".sidebar-button"
+      }
+    ]
+  }
+}

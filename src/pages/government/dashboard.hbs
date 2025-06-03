@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  {{#> head }}
+  {{> governmentBranding }}
+  {{/head}}
+  <body onload="bxi.pageLoad()" class="bxi government dashboard">
+    {{> variables}}
+    <header>
+      <nav class="navbar navbar-expand-lg flex-wrap p-0">
+        <div class="container py-2">
+          <div class="bxi-nav">
+            <a class="bxi-nav-toggle" role="button">
+              {{> hamburgerIcon }}
+            </a>
+            <ul class="bxi-nav-links bxi-bg-secondary">
+              {{#each settings.dashboard.header_links}}
+              <li>
+                <a class="bxi-link bxi-link-light--primary">{{this}}</a>
+              </li>
+              {{/each}}
+              {{#each settings.dashboard.subnav_links}}
+              <li class="d-block d-lg-none">
+                <a class="bxi-link bxi-link-light--primary">{{this}}</a>
+              </li>
+              {{/each}}
+            </ul>
+            <a id="bxi-logo" class="navbar-brand py-0 ms-3">
+              <img src="{{settings.images.logo}}" alt="Logo" />
+            </a>
+          </div>
+          <div class="d-flex flex-row position-relative align-items-center">
+            <p id="username-container"
+              class="bxi-color-primary fw-bold d-none d-sm-flex mb-0 pt-0 me-2 mt-lg-0">{{settings.dashboard.username}}</p>
+            <div class="bxi-user-icon d-flex d-lg-none bxi-bg-primary">
+              {{> userIcon }}
+            </div>
+            <div class="d-none d-lg-flex static-user-icon me-2 rounded-circle">
+              {{> userIcon }}
+            </div>
+            <div
+              class="bxi-auth-buttons bxi-auth-buttons--secondary-link bxi-bg-primary bxi-bg-lg-transparent pb-1 pb-lg-0">
+              <button id="oidc-logout" onclick="bxi.logout()"
+                class="bxi-button mb-1 mb-lg-0">Log Out</button>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div
+        class="bxi-subnav bxi-bg-secondary justify-content-center d-none d-lg-flex">
+        {{#each settings.dashboard.subnav_links}}
+        <a class="bxi-link bxi-link-light--primary p-3">{{this}}</a>
+        {{/each}}
+      </div>
+    </header>
+    <section class="bxi-component-bg-color mb-5">
+      <div class="container">
+        <div class="d-flex flex-column flex-md-row justify-content-end mt-4">
+          {{!-- See src/dashboard-buttons.hbs to update dashboard buttons --}}
+          {{> dashboardButtons}}
+        </div>
+      </div>
+      <div class="container p-5">
+        <div class="row">
+          {{#each settings.dashboard.services}}
+          <div
+            class="col-12 col-md-6 col-lg-3 bxi-dashboard-service d-flex flex-column align-items-start">
+            <div class="p-3 px-2 d-flex justify-content-between">
+              <div>
+                <h5 class="fw-boldish">{{title}}</h5>
+                <div class="mb-3">
+                  {{#each line_items}}
+                  <p class="bxi-dashboard-component-color mb-1">{{this}}</p>
+                  {{/each}}
+                </div>
+              </div>
+              <div
+                class="bxi-dashboard-service-icon d-flex justify-content-end align-items-start">
+                <img src="{{icon}}" />
+              </div>
+            </div>
+            <button class="bxi-button bxi-button--link mt-auto ms-2 mb-4"><span
+                class="me-2">{{button}}</span>{{> arrowIcon
+              class="bxi-icon-color-primary"}}</button>
+          </div>
+          {{/each}}
+        </div>
+      </div>
+    </section>
+    <section class="container bxi-dashboard-portal">
+      <h2
+        class="bxi-ff-secondary fw-bold mb-4">{{settings.dashboard.portal.header}}</h2>
+      <div class="row">
+        {{#each settings.dashboard.portal.tiles}}
+        <div class="col-lg-4 mb-4">
+          <div
+            class="bxi-component-bg-color d-flex flex-column h-100 rounded-bottom">
+            <h6
+              class="px-3 rounded-top py-2 bxi-portal-tile-status-color bxi-portal-tile-bg-color{{#if success}} success{{/if}}">{{status}}</h6>
+            <h5 class=" ps-3 fw-bold">{{title}}</h5>
+            <p
+              class="px-3 bxi-dashboard-component-color pe-3">{{description}}</p>
+            <div
+              class="px-3 mt-auto d-flex align-items-end justify-content-between mb-4 ">
+              <div class="bxi-portal-tile-date-color fs-7">{{date}}</div>
+              {{> pdfIcon class="bxi-portal-tile-icon" }}
+            </div>
+          </div>
+        </div>
+        {{/each}}
+      </div>
+      <button
+        class="bxi-button bxi-button--lg bxi-button--outline mb-5 mt-2">{{settings.dashboard.portal.button}}</button>
+      {{#if env.BXI_DASHBOARD_POLICY_ID}}
+      <div class="mb-3" data-dv-flow="static"
+        data-policy-id="{{env.BXI_DASHBOARD_POLICY_ID}}"></div>
+      {{/if}}
+    </section>
+    <footer class="bxi-footer py-4">
+      <div class="container">
+        <div
+          class="d-block d-lg-flex align-items-center justify-content-between mb-sm-3 mb-4">
+          <ul class="d-none d-md-flex mb-4 mb-md-3 mb-lg-0 p-0 ls-none">
+            {{#each settings.dashboard.footer.links }}
+            <li class="fs-6 me-4"><a
+                class="bxi-link bxi-link-light--primary fs-6">{{this}}</a></li>
+            {{/each}}
+            <li class="fs-6 me-4"><a
+                class="bxi-link bxi-link-light--primary fs-6 footer-phone-number">{{settings.footer.phone_number}}</a></li>
+          </ul>
+          <div
+            class="footer-contacts d-flex mt-4 flex-column-reverse flex-md-row justify-content-start align-items-center align-items-md-start justify-content-md-between justify-content-lg-end">
+            <div class="footer-support">
+              <button
+                class="bxi-button bxi-button--outline bxi-button--lg">Online
+                support</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section class="container">
+        <p
+          class="mb-3 mb-md-0 fs-8 bxi-copyright-color">{{settings.footer.copyright}}</p>
+        {{> remix }}
+      </section>
+    </footer>
+    {{> modal}}
+  </body>
+</html>

@@ -1,0 +1,133 @@
+{
+  "theme": {
+    "primaryFont": "'Montserrat', sans-serif",
+    "secondaryFont": "'Poppins', serif",
+    "primaryColor": "#002AEC",
+    "secondaryColor": "#070001",
+    "buttonColor": "#FFFFFF",
+    "buttonBgColor": "var(--bxi-primary-color)",
+    "buttonBgHoverColor": "#0228d5",
+    "linkButtonColor": "var(--bxi-primary-color)",
+    "linkButtonHoverColor": "var(--bxi-secondary-color)",
+    "dashboardBgColor": "#FFFFFF",
+    "footerBgColor": "#0A0001",
+    "footerColor": "#FFFFFF",
+    "copyrightColor": "#817D73",
+    "mainFontColor": "#253746",
+    "navDividerColor": "#68747F",
+    "navBorderColor": "#CACED3",
+    "homeBannerColor": "#FFFFFF",
+    "firstIconGradient": "#4462ED",
+    "secondIconGradient": "#D033FF",
+    "videoOverlayBg": "linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7))",
+    "verticalFirstColor": "var(--bxi-primary-color)",
+    "verticalSecondColor": "#DFC6FF",
+    "pieFirstColor": "var(--bxi-primary-color)",
+    "pieSecondColor": "#5D00D6",
+    "horizontalFirstColor": "var(--bxi-primary-color)",
+    "horizontalSecondColor": "#DFC6FF",
+    "horizontalThirdColor": "#758ACD",
+    "componentsBorder": "#E6E7E9",
+    "componentsIconColor": "var(--bxi-primary-color)",
+    "componentsIconBg": "rgba(0, 42, 236, 0.1)"
+  },
+  "settings": {
+    "title": "BXCompany",
+    "images": {
+      "favicon": "/company/favicon.png",
+      "apple_touch_icon": "/company/apple-touch-icon-192.png",
+      "logo": "/company/logo.svg",
+      "dialog_logo": "/company/logo.svg"
+    },
+    "header": {
+      "links": ["About", "Investor", "Personal", "FAQs", "Contact"]
+    },
+    "home_page": {
+      "banner": {
+        "background_image": "/company/banner.png",
+        "supertitle": "Our Mission",
+        "title": "We are the complete solution for your company",
+        "subtitle": "We invest a tremendous amount of resources to ensure that our clients are becoming the greatest companies",
+        "button_text": "Get Started",
+        "video_tiles": [
+          "/company/video-tile-1.png",
+          "/company/video-tile-2.png",
+          "/company/video-tile-3.png"
+        ]
+      },
+      "main_content": {
+        "title": "Work Process",
+        "description": "The first conversation you ever have with a strategic business partner should not be about technology. It should be about your business, vision, workflow and the opportunities that exist to help you grow.",
+        "image": "/company/laptop.png",
+        "steps": [
+          {
+            "icon": "/company/book.svg",
+            "text": "1. Let's learn about each other. We want to learn about your vision, needs and workflow"
+          },
+          {
+            "icon": "/company/message.svg",
+            "text": "2. We focus on outcome and nothing more. It's time to have a real discussion about lifeline's process"
+          },
+          {
+            "icon": "/company/head.svg",
+            "text": "3. We need to understand the main profit drivers of your business"
+          },
+          {
+            "icon": "/company/user-check.svg",
+            "text": "4. This is the part of the process where we stop simply talking about all the things we do"
+          },
+          {
+            "icon": "/company/plant.svg",
+            "text": "5. Result: Now you're free to grow with us"
+          }
+        ]
+      }
+    },
+    "dashboard": {
+      "username": "",
+      "title": "Latest Activity",
+      "filter_header": "Filters",
+      "filters": ["All clients", "International contract", "Month"],
+      "filter_button": "Search",
+      "vertical_chart": {
+        "image": "/company/vertical-chart.svg",
+        "first_legend": "Century Link",
+        "second_legend": "Lennar",
+        "date": "March {{currentYear}}"
+      },
+      "pie_chart": {
+        "title": "Successful Deals",
+        "image": "/company/pie-chart.svg",
+        "first_legend": "With consultation",
+        "second_legend": "Full process"
+      },
+      "horizontal_chart": {
+        "title": "Client Activity",
+        "image": "/company/horizontal-chart.svg",
+        "first_legend": "Century Link",
+        "second_legend": "Lennar",
+        "third_legend": "Danaher Corporation"
+      },
+      "components_section": {
+        "icon": "+",
+        "title": "No components created yet",
+        "subtitle": "To create your first component simply click on the button",
+        "button": "Add component"
+      },
+      "videos": {
+        "title": "Preview conference videos",
+        "video_tiles": [
+          "/company/dashboard-video-tile-1.png",
+          "/company/dashboard-video-tile-2.png",
+          "/company/dashboard-video-tile-3.png",
+          "/company/dashboard-video-tile-4.png"
+        ]
+      }
+    },
+    "footer": {
+      "phone_number": "800 568 9678",
+      "links": ["About", "Investor", "Personal", "FAQs", "Contact"],
+      "copyright": "© BXCompany, {{currentYear}}.  All rights reserved."
+    }
+  }
+}

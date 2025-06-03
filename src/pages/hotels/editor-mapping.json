@@ -1,0 +1,306 @@
+{
+  "theme": {
+    "global": [
+      {
+        "type": "font",
+        "friendlyName": "Primary Font",
+        "jsonPath": "theme.primaryFont",
+        "cssVariable": "--bxi-primary-font"
+      },
+      {
+        "type": "font", 
+        "friendlyName": "Secondary Font",
+        "jsonPath": "theme.secondaryFont",
+        "cssVariable": "--bxi-secondary-font"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Primary Color",
+        "jsonPath": "theme.primaryColor",
+        "cssVariable": "--bxi-primary-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Secondary Color",
+        "jsonPath": "theme.secondaryColor",
+        "cssVariable": "--bxi-secondary-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Button Color",
+        "jsonPath": "theme.buttonColor",
+        "cssVariable": "--bxi-button-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Button Background Color",
+        "jsonPath": "theme.buttonBgColor",
+        "cssVariable": "--bxi-button-bg-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Button Background Hover Color",
+        "jsonPath": "theme.buttonBgHoverColor",
+        "cssVariable": "--bxi-button-bg-hover-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Link Button Color",
+        "jsonPath": "theme.linkButtonColor",
+        "cssVariable": "--bxi-link-button-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Link Button Hover Color",
+        "jsonPath": "theme.linkButtonHoverColor",
+        "cssVariable": "--bxi-link-button-hover-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Footer Color",
+        "jsonPath": "theme.footerColor",
+        "cssVariable": "--bxi-footer-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Footer Background Color",
+        "jsonPath": "theme.footerBgColor",
+        "cssVariable": "--bxi-footer-bg-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Copyright Color",
+        "jsonPath": "theme.copyrightColor",
+        "cssVariable": "--bxi-copyright-color"
+      }
+    ],
+    "home": [
+      {
+        "type": "color",
+        "friendlyName": "Banner Color",
+        "jsonPath": "theme.bannerColor",
+        "cssVariable": "--bxi-hotels-banner-color"
+      }
+    ],
+    "dashboard": [
+      {
+        "type": "color",
+        "friendlyName": "Page Background Color",
+        "jsonPath": "theme.dashboardBgColor",
+        "cssVariable": "--bxi-dashboard-bg-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Username Color",
+        "jsonPath": "theme.usernameColor",
+        "cssVariable": "--bxi-hotels-dashboard-username-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Portal Background Color",
+        "jsonPath": "theme.portalBgColor",
+        "cssVariable": "--bxi-hotels-dashboard-portal-bg-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Portal Border Color",
+        "jsonPath": "theme.portalBorderColor",
+        "cssVariable": "--bxi-hotels-dashboard-portal-border-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Alert Icon Color",
+        "jsonPath": "theme.alertIconColor",
+        "cssVariable": "--bxi-hotels-dashboard-alert-icon-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Card Color",
+        "jsonPath": "theme.cardColor",
+        "cssVariable": "--bxi-hotels-dashboard-card-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Card Background Color 1",
+        "jsonPath": "theme.cardBgColor1",
+        "cssVariable": "--bxi-hotels-dashboard-card-bg-color1"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Card Background Color 2",
+        "jsonPath": "theme.cardBgColor2",
+        "cssVariable": "--bxi-hotels-dashboard-card-bg-color2"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Card Background Color 3",
+        "jsonPath": "theme.cardBgColor3",
+        "cssVariable": "--bxi-hotels-dashboard-card-bg-color3"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Card Background Color 4",
+        "jsonPath": "theme.cardBgColor4",
+        "cssVariable": "--bxi-hotels-dashboard-card-bg-color4"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Card Background Color 5",
+        "jsonPath": "theme.cardBgColor1",
+        "cssVariable": "--bxi-hotels-dashboard-card-bg-color5"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Card Background Color 6",
+        "jsonPath": "theme.cardBgColor1",
+        "cssVariable": "--bxi-hotels-dashboard-card-bg-color6"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Card Shadow Color",
+        "jsonPath": "theme.cardShadowColor",
+        "cssVariable": "--bxi-hotels-dashboard-card-shadow-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Offer Color",
+        "jsonPath": "theme.offerColor",
+        "cssVariable": "--bxi-hotels-dashboard-offer-color"
+      }
+    ]
+  },
+  "content": {
+    "global": [
+      {
+        "type": "string",
+        "friendlyName": "Title",
+        "jsonPath": "settings.title",
+        "elementSelector": "head > title"
+      }, 
+      {
+        "type": "image",
+        "friendlyName": "Favicon",
+        "jsonPath": "settings.images.favicon",
+        "elementSelector": "#favicon"
+      },
+      {
+        "type": "image",
+        "friendlyName": "Apple Touch Icon",
+        "jsonPath": "settings.images.apple_touch_icon",
+        "elementSelector": "#apple-touch-icon"
+      },
+      {
+        "type": "image",
+        "friendlyName": "Logo",
+        "jsonPath": "settings.images.logo",
+        "elementSelector": "#bxi-logo img"
+      },
+      {
+        "type": "image",
+        "friendlyName": "Dialog Logo",
+        "jsonPath": "settings.images.dialog_logo",
+        "elementSelector": "#dialog-logo"
+      }
+    ],
+    "home": [
+      {
+        "type": "image",
+        "friendlyName": "Banner Background Image",
+        "jsonPath": "settings.home_page.banner.background_image",
+        "elementSelector": ".bxi-banner__image.bxi-bg-image"
+      },
+      {
+        "type": "string",
+        "friendlyName": "Banner Title",
+        "jsonPath": "settings.home_page.banner.title",
+        "elementSelector": ".bxi-banner .bxi-main-header-xl"
+      },
+      {
+        "type": "string",
+        "friendlyName": "Banner Subtitle",
+        "jsonPath": "settings.home_page.banner.subtitle",
+        "elementSelector": ".bxi-banner p"
+      },
+      {
+        "type": "string",
+        "friendlyName": "Banner Button",
+        "jsonPath": "settings.home_page.banner.search.button",
+        "elementSelector": ".bxi-banner-input-button"
+      },
+      {
+        "type": "string",
+        "friendlyName": "Features Header",
+        "jsonPath": "settings.home_page.features_section.title",
+        "elementSelector": ".features-section h1"
+      }
+    ],
+    "dashboard": [
+      {
+        "type": "string",
+        "friendlyName": "Dashboard Header",
+        "jsonPath": "settings.dashboard.header",
+        "elementSelector": ".dashboard-header"
+      },
+      {
+        "type": "string",
+        "friendlyName": "Portal Header",
+        "jsonPath": "settings.dashboard.portal.title",
+        "elementSelector": ".bxi-dashboard-portal-content h5"
+      },
+      {
+        "type": "image",
+        "friendlyName": "Portal Image",
+        "jsonPath": "settings.dashboard.portal.image",
+        "elementSelector": ".bxi-dashboard-portal-content img"
+      },
+      {
+        "type": "string",
+        "friendlyName": "Portal Button",
+        "jsonPath": "settings.dashboard.portal.button",
+        "elementSelector": ".bxi-dashboard-portal-content .bxi-button"
+      },
+      {
+        "type": "string",
+        "friendlyName": "Sidebar Header",
+        "jsonPath": "settings.dashboard.sidebar.title",
+        "elementSelector": ".bxi-dashboard-sidebar h5"
+      },
+      {
+        "type": "string",
+        "friendlyName": "Card Description",
+        "jsonPath": "settings.dashboard.sidebar.card.title",
+        "elementSelector": ".bxi-dashboard-sidebar .sidebar-card-description"
+      },
+      {
+        "type": "string",
+        "friendlyName": "Card Amount",
+        "jsonPath": "settings.dashboard.sidebar.card.points",
+        "elementSelector": ".bxi-dashboard-sidebar h1"
+      },
+      {
+        "type": "string",
+        "friendlyName": "Sidebar Link",
+        "jsonPath": "settings.dashboard.sidebar.link",
+        "elementSelector": ".bxi-dashboard-sidebar a.bxi-button"
+      },
+      {
+        "type": "image",
+        "friendlyName": "Offer Image",
+        "jsonPath": "settings.dashboard.offer.image",
+        "elementSelector": ".bxi-banner__image"
+      },
+      {
+        "type": "string",
+        "friendlyName": "Offer Title",
+        "jsonPath": "settings.dashboard.offer.title",
+        "elementSelector": ".bxi-banner h1"
+      },
+      {
+        "type": "string",
+        "friendlyName": "Offer Button",
+        "jsonPath": "settings.dashboard.offer.button",
+        "elementSelector": ".bxi-banner button"
+      }
+    ]
+  }
+}

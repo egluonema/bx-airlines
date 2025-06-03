@@ -1,0 +1,187 @@
+@use '../common/mixins';
+
+.bxi.retail {
+  .bxi-button {
+    font-size: 16px;
+    border-radius: 0.25rem;
+
+    &--icon {
+      border-radius: 50%;
+    }
+  }
+
+  @include mixins.breakpoint-lg {
+    .bxi-auth-buttons {
+      border-left: 1px solid #68747f;
+    }
+  }
+
+  .bxi-banner {
+    color: var(--bxi-retail-banner-color);
+    background-color: var(--bxi-retail-banner-bg-color);
+
+    img {
+      height: 30px;
+    }
+  }
+
+  &.home {
+    .navbar {
+      border-bottom: 1px solid var(--bxi-retail-nav-border-color);
+    }
+
+    .bxi-feature-icon {
+      background: var(--bxi-retail-features-icon-bg-color);
+      width: 92px;
+      height: 92px;
+    }
+
+    .bxi-shop-hero {
+      border: 2px solid var(--bxi-retail-hero-border-color);
+      border-radius: 0.5rem;
+    }
+
+    .bxi-sale-section {
+      &-badge {
+        color: #fff;
+        left: 2rem;
+        top: 2rem;
+        width: 100px;
+        height: 100px;
+        background: var(--bxi-retail-features-icon-bg-color);
+      }
+
+      &-image {
+        max-width: 700px;
+        height: 350px;
+
+        @include mixins.breakpoint-lg {
+          max-width: 500px;
+        }
+
+        @include mixins.breakpoint-xl {
+          max-width: 700px;
+        }
+      }
+    }
+
+    .bxi-shop-section {
+      &-content {
+        flex: 0 0 auto;
+        height: 348px;
+
+        @include mixins.breakpoint-lg {
+          width: 700px;
+          max-width: 500px;
+        }
+
+        @include mixins.breakpoint-xl {
+          max-width: 700px;
+        }
+      }
+
+      &-image {
+        width: 100%;
+        height: 348px;
+
+        @include mixins.breakpoint-xxl {
+          img {
+            width: 100%;
+            height: auto;
+          }
+        }
+      }
+    }
+
+    .bxi-banner-logo-container {
+      margin-right: -1.5rem;
+    }
+  }
+
+  &.dashboard {
+    .bxi-retail-user-icon {
+      margin-top: 2px;
+    }
+
+    .bxi-welcome-color {
+      color: var(--bxi-retail-dashboard-welcome-color);
+    }
+
+    .bxi-dashboard-buttons .bxi-button {
+      background-color: #fff;
+      color: var(--bxi-primary-color);
+    }
+
+    .bxi-portal-sidebar {
+      margin-top: 0;
+
+      @include mixins.breakpoint-lg {
+        margin-top: 87px;
+      }
+    }
+
+    .portal-sidebar-dropdown {
+      box-shadow: 0px 1px 8px 0px #0000001a;
+    }
+
+    .portal-sidebar-logo {
+      svg {
+        height: 22px;
+        width: auto;
+        margin: 0 4px;
+
+        @include mixins.color-icon(#000);
+      }
+    }
+
+    .bxi-search-icon {
+      transform: scale(0.75);
+      top: 8px;
+      left: 4px;
+    }
+
+    .product-title {
+      height: 48px;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+    }
+
+    .cart-icon {
+      margin-top: -4px;
+      margin-left: -8px;
+    }
+
+    .items-per-page {
+      border-bottom: 2px solid var(--bxi-primary-color);
+    }
+
+    .pagination {
+      margin-top: -4px;
+
+      span {
+        &:first-child {
+          color: #fff;
+          background-color: var(--bxi-primary-color);
+        }
+      }
+
+      &::before {
+        @include mixins.triangle(5px, var(--bxi-primary-color), 'left') {
+          top: 10px;
+          left: -1rem;
+          cursor: pointer;
+        }
+      }
+
+      &::after {
+        @include mixins.triangle(5px, var(--bxi-primary-color), 'right') {
+          top: 10px;
+          right: -1rem;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

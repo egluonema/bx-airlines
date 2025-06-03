@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  {{#> head }}
+  {{> companyBranding }}
+  {{/head}}
+  <body onload="bxi.pageLoad()" class="bxi company dashboard">
+    {{> variables}}
+    <header class="bxi-nav-bg-color">
+      <nav class="navbar navbar-expand-lg navbar-light py-3">
+        <div class="container">
+          <div class="bxi-nav">
+            <a class="bxi-nav-toggle" role="button">
+              {{> hamburgerIcon }}
+            </a>
+            <ul class="bxi-nav-links bxi-bg-secondary">
+              {{#each settings.header.links}}
+              <li>
+                <a class="bxi-link bxi-link-light--primary">{{this}}</a>
+              </li>
+              {{/each}}
+            </ul>
+            <a id="bxi-logo" class="navbar-brand py-0 ms-3">
+              <img src="{{settings.images.logo}}" alt="Logo" />
+            </a>
+          </div>
+          <div class="d-flex flex-row position-relative">
+            <p id="username-container"
+              class="bxi-nav-color me-3 d-none d-sm-flex m-0 align-items-center">{{settings.dashboard.username}}</p>
+            <div
+              class="bxi-user-icon d-flex bxi-bg-primary me-0 me-lg-3 pe-lg-none">
+              {{> userIcon }}
+            </div>
+            <div
+              class="bxi-auth-buttons bxi-auth-buttons--primary-link bxi-bg-secondary bxi-bg-lg-transparent p-2 ps-3 p-lg-0">
+              <button id="oidc-logout" onclick="bxi.logout()"
+                class="bxi-button">Log Out</button>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <section class="container bxi-company-main-font-color">
+      <div class="d-flex flex-column flex-md-row justify-content-end mt-4">
+        {{!-- See src/dashboard-buttons.hbs to update dashboard buttons --}}
+        {{> dashboardButtons}}
+      </div>
+      <div class="row">
+        <div class="col-xl-8 dashboard-section__reporting">
+          <h1
+            class="bxi-ff-secondary fw-bold my-4 fs-1 dashboad-section__title">{{settings.dashboard.title}}</h1>
+          <p
+            class="mb-0 fw-bold dashboad-section__filter-header">{{settings.dashboard.filter_header}}</p>
+          <div class="d-flex align-items-center flex-wrap">
+            {{#each settings.dashboard.filters}}
+            <div
+              class="filter-dropdown mt-3 me-3 cursor-pointer rounded-1 pe-5 position-relative">
+              {{this}}
+            </div>
+            {{/each}}
+            <button
+              class="bxi-button filter-button fs-7 rounded-1">{{settings.dashboard.filter_button}}</button>
+          </div>
+          <div class="d-flex justify-content-between mt-4 mb-3 fs-7">
+            <div>
+              <span class="me-3"><span
+                  class="bxi-vertical-first-legend rounded-circle d-inline-block me-2"></span><span>{{settings.dashboard.vertical_chart.first_legend}}</span></span>
+              <span><span
+                  class="bxi-vertical-second-legend rounded-circle d-inline-block me-2"></span><span>{{settings.dashboard.vertical_chart.second_legend}}</span></span>
+            </div>
+            <div class="fw-bold">
+              {{settings.dashboard.vertical_chart.date}}
+            </div>
+          </div>
+          <div class="bxi-overflow-x-auto">
+            {{{ inlineSvg settings.dashboard.vertical_chart.image }}}
+          </div>
+          <div class="row my-5">
+            <div class="col-lg-6 mb-5">
+              <h5
+                class="fw-bold mb-3">{{settings.dashboard.pie_chart.title}}</h5>
+              <div class="d-flex">
+                <div class="bxi-pie-container position-relative">
+                  {{{ inlineSvg settings.dashboard.pie_chart.image }}}
+                </div>
+                <div class="ms-3 ms-xl-0 ms-xxl-3">
+                  <div><span
+                      class="bxi-pie-first-legend d-inline-block me-2 rounded-1"></span><span>{{
+                      settings.dashboard.pie_chart.first_legend }}</span></div>
+                  <div><span
+                      class="bxi-pie-second-legend d-inline-block me-2 rounded-1"></span><span>{{
+                      settings.dashboard.pie_chart.second_legend }}</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 bxi-overflow-x-auto">
+              <h5
+                class="fw-bold mb-3">{{settings.dashboard.horizontal_chart.title}}</h5>
+              <div class="bxi-horizontal-container position-relative">
+                <span
+                  class="position-absolute">{{settings.dashboard.horizontal_chart.first_legend}}</span>
+                <span
+                  class="position-absolute">{{settings.dashboard.horizontal_chart.second_legend}}</span>
+                <span
+                  class="position-absolute">{{settings.dashboard.horizontal_chart.third_legend}}</span>
+                {{{ inlineSvg settings.dashboard.horizontal_chart.image }}}
+              </div>
+            </div>
+          </div>
+          <div
+            class="reporting__components components d-flex flex-column my-3 p-4 justify-content-center align-items-center">
+            <div
+              class="components-icon text-center mb-3 rounded-circle">{{settings.dashboard.components_section.icon}}</div>
+            <h4
+              class="fw-boldish fs-6 mb-3">{{settings.dashboard.components_section.title}}</h4>
+            <p
+              class="fs-8 mb-3 text-center">{{settings.dashboard.components_section.subtitle}}</p>
+            <button
+              class="bxi-button bxi-button--lg">{{settings.dashboard.components_section.button}}</button>
+          </div>
+          {{#if env.BXI_DASHBOARD_POLICY_ID}}
+          <div class="mb-3" data-dv-flow="modal"
+            data-policy-id="{{env.BXI_DASHBOARD_POLICY_ID}}"></div>
+          {{/if}}
+        </div>
+        <div class="col-xl-4 mb-5">
+          <h5
+            class="mt-4 mb-0 fw-bold video-section-header">{{settings.dashboard.videos.title}}</h5>
+          <div class="row">
+            {{#each settings.dashboard.videos.video_tiles}}
+            <div
+              class="video-tile__thumbnail position-relative gx-3 gy-3 col-md-6 col-xl-12">
+              <div class="thumbnail-overlay position-absolute h-100"></div>
+              <img src="{{this}}" alt="Video tile {{@index}}" />
+              <button
+                class="bxi-button bxi-button--white thumbnail-button position-absolute top-50 start-50 translate-middle rounded-circle"></button>
+            </div>
+            {{/each}}
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="bxi-footer py-4">
+      <div class="container">
+        <div
+          class="d-block d-lg-flex align-items-center justify-content-between mb-sm-3 mb-4">
+          <ul class="d-none d-md-flex mb-4 mb-md-3 mb-lg-0 p-0 ls-none">
+            {{#each settings.footer.links }}
+            <li class="fs-6 me-4"><a
+                class="bxi-link bxi-link-light--primary fs-6">{{this}}</a></li>
+            {{/each}}
+          </ul>
+          <div
+            class="footer-contacts d-flex flex-column-reverse flex-md-row justify-content-start align-items-center align-items-md-start justify-content-md-between justify-content-lg-end">
+            <div class="footer-support">
+              <div
+                class="text-center text-md-start mb-3 footer-phone-number">{{settings.footer.phone_number}}</div>
+              <button
+                class="bxi-button bxi-button--outline bxi-button--lg">Online
+                support</button>
+            </div>
+            <div class="ms-0 ms-md-3">
+              <div class="ms-0 mb-3 text-center text-md-start">Follow us:</div>
+              <ul class="d-flex align-items-center ls-none ps-0">
+                <li>
+                  <button
+                    class="bxi-button bxi-button--outline bxi-button--icon bxi-button--lg me-md-3 me-5">
+                    {{> facebookIcon }}
+                  </button>
+                </li>
+                <li>
+                  <button
+                    class="bxi-button bxi-button--outline bxi-button--icon bxi-button--lg me-md-3 me-5">
+                    {{> twitterIcon }}
+                  </button>
+                </li>
+                <li>
+                  <button
+                    class="bxi-button bxi-button--outline bxi-button--icon bxi-button--lg">
+                    {{> instagramIcon }}
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section class="container">
+        <p
+          class="mb-3 mb-md-0 fs-8 bxi-copyright-color">{{settings.footer.copyright}}</p>
+        {{> remix }}
+      </section>
+    </footer>
+    {{> modal}}
+  </body>
+</html>

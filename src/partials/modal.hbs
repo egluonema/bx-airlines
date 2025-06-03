@@ -1,0 +1,28 @@
+<div id="dv-modal" class="modal dialog" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="d-flex justify-content-end">
+          <button type="button" class="btn-close" data-bs-dismiss="modal"
+            aria-label="Close"></button>
+        </div>
+        <div class="d-flex justify-content-center dialog-logo mb-4">
+          {{#if settings.images.dialog_logo}}
+          <img id="dialog-logo" width="170"
+            src="{{ settings.images.dialog_logo }}" alt="Logo" />
+          {{/if}}
+        </div>
+        <div id="modal-widgetbox"></div>
+        <div id="modal-error" class="text-danger text-center d-none"></div>
+      </div>
+    </div>
+  </div>
+</div>
+{{> pwa }}
+{{> editDrawer }}
+<script type="module" src="/bxi-davinci.js"></script>
+{{#if env.BXI_USE_REDIRECT}}
+<script type="module"
+  src="https://unpkg.com/@pingidentity-developers-experience/ping-oidc-client-sdk@^2/lib/ping-oidc.js"></script>
+<script type="module" src="/js/oidc.js"></script>
+{{/if}}

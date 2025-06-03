@@ -1,0 +1,154 @@
+@use '../common/mixins';
+
+.bxi.hotels {
+  .bxi-button {
+    text-transform: uppercase;
+  }
+  .bxi-link {
+    font-size: 14px;
+  }
+
+  .bxi-auth-buttons {
+    .bxi-button {
+      text-transform: uppercase;
+
+      @include mixins.breakpoint-lg {
+        &:not(:last-child) {
+          padding: 0.15rem 1rem 0 0;
+          border-right: 1px solid white;
+        }
+      }
+    }
+  }
+
+  &.home {
+    .bxi-banner {
+      &__image {
+        height: 300px;
+        @include mixins.breakpoint-md {
+          height: 700px;
+        }
+      }
+
+      &__color {
+        color: var(--bxi-hotels-banner-color);
+      }
+
+      &-input-container {
+        background-color: white;
+      }
+    }
+
+    .bxi-offers-image {
+      height: 280px;
+      width: 100%;
+    }
+  }
+
+  &.dashboard {
+    #username-container {
+      color: var(--bxi-hotels-dashboard-username-color);
+    }
+
+    .bxi-dashboard-portal {
+      border: 1px solid var(--bxi-hotels-dashboard-portal-border-color);
+
+      &-tabs {
+        & > div {
+          &:first-child {
+            background-color: var(--bxi-hotels-dashboard-portal-bg-color);
+          }
+
+          &:not(:first-child) {
+            border-right: 1px solid
+              var(--bxi-hotels-dashboard-portal-border-color);
+          }
+
+          &:last-child {
+            border-right: none;
+          }
+        }
+      }
+
+      &-content {
+        background-color: var(--bxi-hotels-dashboard-portal-bg-color);
+      }
+
+      &-details {
+        .icon-container {
+          width: 22px;
+          display: flex;
+          justify-content: center;
+        }
+      }
+
+      .bxi-alert-icon {
+        @include mixins.color-icon(
+          var(--bxi-hotels-dashboard-alert-icon-color)
+        );
+      }
+    }
+
+    .bxi-dashboard-sidebar {
+      border: 1px solid var(--bxi-hotels-dashboard-portal-border-color);
+
+      &-card {
+        max-width: 250px;
+        border-radius: 10px;
+        background: linear-gradient(
+          109.57deg,
+          var(--bxi-hotels-dashboard-card-bg-color1) -2.03%,
+          var(--bxi-hotels-dashboard-card-bg-color2) 18.51%,
+          var(--bxi-hotels-dashboard-card-bg-color3) 39.2%,
+          var(--bxi-hotels-dashboard-card-bg-color4) 59.21%,
+          var(--bxi-hotels-dashboard-card-bg-color5) 78.06%,
+          var(--bxi-hotels-dashboard-card-bg-color6) 94.53%
+        );
+        box-shadow: 10px 10px 10px 0
+          var(--bxi-hotels-dashboard-card-shadow-color);
+
+        .star-container {
+          svg {
+            margin: 0 2px;
+          }
+        }
+
+        &-color {
+          color: var(--bxi-hotels-dashboard-card-color);
+        }
+      }
+    }
+
+    .bxi-banner {
+      &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(27, 27, 27, 0.4);
+      }
+
+      &__image {
+        min-height: 350px;
+      }
+
+      &-color {
+        color: var(--bxi-hotels-dashboard-offer-color);
+      }
+
+      .bxi-button {
+        min-width: 300px;
+        color: var(--bxi-primary-color);
+        background-color: var(--bxi-hotels-dashboard-offer-color);
+
+        &:hover {
+          color: var(--bxi-hotels-dashboard-offer-color);
+          background-color: var(--bxi-primary-color);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,41 @@
+@use '../common/mixins';
+
+.bxi.generic {
+  * {
+    font-family: var(--bs-body-font-family);
+  }
+
+  .masthead {
+    color: var(--bxi-generic-banner-color);
+    padding-top: 12.5rem;
+    padding-bottom: 12.5rem;
+    background: no-repeat center center;
+    background-color: #6c757d;
+    background-size: cover;
+    background-attachment: scroll;
+    position: relative;
+
+    .bxi-button {
+      margin-left: 1rem;
+    }
+
+    h1 {
+      font-size: 3rem;
+
+      @include mixins.breakpoint-sm {
+        font-size: 5rem;
+      }
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #212529;
+      opacity: 0.5;
+    }
+  }
+}

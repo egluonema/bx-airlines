@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  {{#> head }}
+    {{> hotelsBranding }}
+  {{/head}}
+  <body onload="bxi.pageLoad()" class="bxi hotels home">
+    {{> variables}}
+    <header class="bxi-bg-secondary">
+      <nav class="navbar py-2 navbar-expand-lg navbar-dark">
+        <div class="container">
+          <div class="bxi-nav">
+            <a class="bxi-nav-toggle" role="button">
+              {{> hamburgerIcon }}
+            </a>
+            <ul class="bxi-nav-links bxi-bg-secondary">
+              {{#each settings.header.links}}
+              <li>
+                <a class="bxi-link bxi-link-light--primary">{{this}}</a>
+              </li>
+              {{/each}}
+            </ul>
+            <a id="bxi-logo" class="navbar-brand py-0 ms-3">
+              <img src="{{settings.images.logo}}" alt="Logo" />
+            </a>
+          </div>
+          <div class="d-flex flex-row position-relative">
+            <div class="bxi-user-icon bxi-bg-primary">
+              {{> userIcon }}
+            </div>
+            <div class="bxi-auth-buttons bxi-auth-buttons--link bxi-bg-secondary bxi-bg-lg-transparent pb-2 mt-lg-2">
+              {{!-- See src/home-nav-buttons.hbs to update auth buttons --}}
+              {{> homeNavButtons }}
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <section class="bxi-banner bxi-bg-secondary">
+      <div class="bxi-banner__image bxi-bg-image" style="background-image: url('{{settings.home_page.banner.background_image}}')"></div>
+      <div class="container">
+        <h1 class="bxi-main-header-xl bxi-banner__color bxi-ff-secondary mt-5">{{settings.home_page.banner.title}}</h1>
+        <p class="fs-5 lh-base mb-4 bxi-banner__color">{{settings.home_page.banner.subtitle}}</p>
+        <div class="d-flex flex-column flex-xl-row mb-4">
+          {{#each settings.home_page.banner.search.inputs}}
+          <div class="bxi-banner-input-container me-0 me-xl-3 mb-3 pt-2 d-flex justify-content-between">
+            <div>
+              <label class="fs-8 ms-3 d-block">{{label}}</label>
+              <input class="border-0 pt-1 mb-2" type="text" placeholder="{{placeholder}}" />
+            </div>
+            <div class="mt-3 pt-1 pe-3 bxi-icon-color-primary">
+              {{> (lookup . 'icon') }}
+            </div>
+          </div>
+          {{/each}}
+          <button class="bxi-banner-input-button bxi-button mb-3 py-4 py-xl-0 align-self-center align-self-xl-stretch"><div>{{settings.home_page.banner.search.button}}</div></button>
+        </div>
+      </div>
+    </section>
+    <section class="container features-section my-5">
+      <h1 class="bxi-main-header bxi-ff-secondary">{{settings.home_page.features_section.title}}</h1>
+      <div class="row">
+        {{#each settings.home_page.features_section.features}}
+        <div class="col-sm-6 col-lg-3 overflow-hidden">
+          <img class="bxi-offers-image mb-2" src="{{image}}" />
+          <h5 class="text-center px-3 mb-4">{{description}}</h5>
+        </div>
+        {{/each}}
+      </div>
+    </section>
+    <footer class="bxi-footer py-4">
+      <div class="container">
+        <div class="d-block d-lg-flex align-items-center justify-content-between mb-sm-3 mb-4">
+          <ul class="d-none d-md-flex mb-4 mb-md-3 mb-lg-0 p-0 ls-none">
+            {{#each settings.footer.links }}
+              <li class="fs-6 me-4"><a class="bxi-link bxi-link-light--primary fs-6">{{this}}</a></li>
+            {{/each}}
+          </ul>
+          <div class="footer-contacts d-flex mt-4 flex-column-reverse flex-md-row justify-content-start align-items-center align-items-md-start justify-content-md-between justify-content-lg-end">
+            <div class="footer-support">
+              <button class="bxi-button bxi-button--outline bxi-button--lg">Online support</button>
+            </div>
+            <div class="ms-0 ms-md-3 mb-4 mb-lg-0">
+              <ul class="d-flex align-items-center ls-none ps-0 bxi-social-buttons">
+                <li>
+                  <button class="bxi-button bxi-button--lg bxi-button--outline bxi-button--icon me-md-3 me-5">
+                    {{> facebookIcon }}
+                  </button>
+                </li>
+                <li>
+                  <button class="bxi-button bxi-button--lg bxi-button--outline bxi-button--icon me-md-3 me-5">
+                    {{> twitterIcon }}
+                  </button>
+                </li>
+                <li>
+                  <button class="bxi-button bxi-button--lg bxi-button--outline bxi-button--icon">
+                    {{> instagramIcon }}
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section class="container">
+        <p class="mb-3 mb-md-0 fs-8 bxi-copyright-color">{{settings.footer.copyright}}</p>
+        {{> remix }}
+      </section>
+    </footer>
+    {{> modal}}
+  </body>
+</html>

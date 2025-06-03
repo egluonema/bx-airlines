@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BXIndustry Dev Docs</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
+  
+  <link rel="stylesheet" href="/styles.css">
+
+  {{> (brandingPartial)}}
+
+  <style>
+    .icon-color .fill-target {
+      fill: black;
+    }
+
+    .icon-color .stroke-target {
+      stroke: black;
+    }
+
+    .table td {
+      min-width: 150px;
+    }
+    .table td:nth-child(2) {
+      min-width: 200px;
+    }
+
+    .bxi .bxi-auth-buttons {
+      display: table-cell;
+    }
+  </style>
+</head>
+<body>
+  <div class="container mt-4">
+    <div class="row">
+      <a href="/shortcuts">< Shortcuts Page</a>
+      <div class="col-8"><h1>Developer Documentation</h1></div>
+      <div class="col-4">
+        <select id="select-vertical" class="form-select">
+          {{#each verticals}}
+          <option value="{{this}}">{{this}}</option>
+          {{/each}}
+        </select>
+      </div>
+    </div>
+  </div>
+  <div class="bxi {{selectedVertical}}">
+    <div class="container">
+      <h3>Introduction</h3>
+        <p class="my-3">
+          See documentation/README.md for an overview of the project structure and general guidelines for using BXI before digging into docs on this page.
+        </p>
+      <h4>Adding a new vertical</h4>
+      <p class="my-3">
+        To add a new vertical add a folder for it in public/ (put images here if you have them) scss/ and src/pages/ along with appropriate files 
+        (see an existing vertical as an example). At this point you'll need to add the customizations.scss file in
+        scss/index.scss, and adjust the vertical values in the newly created index and dashboard files (see the branding
+        partial and body class). Then you will need run <code>npm run start</code> from the BXI repo. At this point
+        server.js should pick up the new vertical and you should be able to access it via your browser and start developing!
+      </p>
+      <h4>Branding and Content</h4>
+      <p class="my-3">
+        Each vertical has a branding.hbs and settings.json file next to the index.hbs (/&lt;vertical&gt;) 
+        and dashboad.hbs (/&lt;vertical&gt;/dashboard) pages. The branding file contains various css vars
+        that typically handle colors and make re-branding a vertical easy for the user. Each branding file has
+        a Global vars sections (variables that are using in the common scss styles and are typically the same across
+        all verticals) and a vertical specific section (variables that are used in scss/&lt;vertical&gt;/customizations.scss).
+        Generally you should never hard-code a color in a customizations or common scss file since it wouldn't be easy for users
+        to customize. Some exceptions are made for non-brand specific colors (e.g. white). Content such as text 
+        and image locations should always be in the settings.json file for the vertical.
+      </p>
+      <h4>CSS and Layout</h4>
+      <p class="my-3">
+        The general philosophy for page structure is use bootstrap 5.2 for as much as possible. If layout or adjustments
+        can't be done with bootstrap, check for a BXI utility CSS class or add one (if it makes sense). Specific size values or
+        colors that don't make sense as a common utility class can be added to customizations.scss for that vertical. 
+        Utility classes and classes added to the customizations file should be prefixed with <code>.bxi-</code> this is particulary
+        important for trials and DV flows to help prevent styles from leaking outside of BXI. A similar pattern should also be 
+        followed with CSS variables.
+      </p>
+      <h3>Buttons</h3>
+      <div id="vertical-styling">
+        <table class="table mb-5">
+          <thead>
+            <tr>
+              <td>Name</td>
+              <td>Example</td>
+              <td>Code Snippet</td>
+              <td>Notes</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Small Button</td>
+              <td><button class="bxi-button">Click Me</button></td>
+              <td><code>&lt;button class="bxi-button"&gt;Click Me&lt;/button&gt;</code></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Medium Button</td>
+              <td><button class="bxi-button bxi-button--md">Click Me</button></td>
+              <td><code>&lt;button class="bxi-button bxi-button--md"&gt;Click Me&lt;/button&gt;</code></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Large Button</td>
+              <td><button class="bxi-button bxi-button--lg">Click Me</button></td>
+              <td><code>&lt;button class="bxi-button bxi-button--lg"&gt;Click Me&lt;/button&gt;</code></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Link Button</td>
+              <td><button class="bxi-button bxi-button--link">Click Me</button></td>
+              <td><code>&lt;button class="bxi-button bxi-button--link"&gt;Click Me&lt;/button&gt;</code></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Link Button Bold</td>
+              <td><button class="bxi-button bxi-button--link-bold">Click Me</button></td>
+              <td><code>&lt;button class="bxi-button bxi-button--link-bold"&gt;Click Me&lt;/button&gt;</code></td>
+              <td class="fs-8">Changes font-weight from 300 - 400 on hover, this is used in health, may not have any effect on other verticals depending on font</td>
+            </tr>
+            <tr>
+              <td>Icon Button</td>
+              <td><button class="bxi-button bxi-button--icon">{{> facebookIcon}}</button></td>
+              <td><code>&lt;button class="bxi-button bxi-button--icon"&gt;\{{> facebookIcon}}&lt;/button&gt;</code></td>
+              <td class="fs-8">Works with bxi-button--md and bxi-button--lg as well</td>
+            </tr>
+            <tr>
+              <td>X-Large Icon Button</td>
+              <td><button class="bxi-button bxi-button--xl bxi-button--icon">{{> facebookIcon}}</button></td>
+              <td><code>&lt;button class="bxi-button bxi-button--xl bxi-button--icon"&gt;\{{> facebookIcon}}&lt;/button&gt;</code></td>
+              <td class="fs-8">xl size only applies to icon buttons, necessary for alignment on some verticals in footer</td>
+            </tr>
+            <tr>
+              <td>Outline Button</td>
+              <td><button class="bxi-button bxi-button--outline">Click Me</button></td>
+              <td><code>&lt;button class="bxi-button bxi-button--outline"&gt;Click Me&lt;/button&gt;</code></td>
+              <td class="fs-8">Works with bxi-button--md and bxi-button--lg as well</td>
+            </tr>
+            <tr>
+              <td>White Button</td>
+              <td class="bxi-bg-secondary"><button class="bxi-button bxi-button--white">Click Me</button></td>
+              <td><code>&lt;button class="bxi-button bxi-button--white"&gt;Click Me&lt;/button&gt;</code></td>
+              <td class="fs-8">Works with bxi-button--md and bxi-button--lg as well</td>
+            </tr>
+            <tr>
+              <td>White Secondary Button</td>
+              <td class="bxi-bg-secondary"><button class="bxi-button bxi-button--white-secondary">Click Me</button></td>
+              <td><code>&lt;button class="bxi-button bxi-button--white-secondary"&gt;Click Me&lt;/button&gt;</code></td>
+              <td class="fs-8">Works with bxi-button--md and bxi-button--lg as well</td>
+            </tr>
+            <tr>
+              <td>Submit Button</td>
+              <td><button class="bxi-button bxi-button--submit">Click Me</button></td>
+              <td><code>&lt;button class="bxi-button bxi-button--submit"&gt;Click Me&lt;/button&gt;</code></td>
+              <td class="fs-8">Works with bxi-button--md and bxi-button--lg as well</td>
+            </tr>
+            <tr>
+              <td>Footer Outline Button</td>
+              <td class="bxi-footer"><button class="bxi-button bxi-button--md bxi-button--outline">Click Me</button></td>
+              <td>
+                <pre>
+                  <code>
+&lt;footer class="bxi-footer"&gt;
+  ...
+  &lt;button class="bxi-button bxi-button--md bxi-button-outline"&gt;
+    Click Me
+  &lt;/button&gt;
+  ...
+&lt;/footer&gt;
+                  </code>
+                </pre>
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Footer Outline Icon Button</td>
+              <td class="bxi-footer"><button class="bxi-button bxi-button--outline bxi-button--icon">{{> twitterIcon}}</button></td>
+              <td>
+                <pre>
+                  <code>
+&lt;footer class="bxi-footer"&gt;
+  ...
+  &lt;button class="bxi-button bxi-button--outline bxi-button--icon"&gt;
+    \{{> twitterIcon }}
+  &lt;/button&gt;
+  ...
+&lt;/footer&gt;
+                  </code>
+                </pre>
+              </td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <h3>Auth Buttons</h3>
+      <p class="my-3">
+        These are pretty confusing, there were no "stardards" followed when the original verticals 
+        were designed so each vertical has slightly different sizes, colors, borders etc. Here are 
+        some common examples, however often-times customizations to colors and sizes are necessary 
+        in the vertical's customizations.scss file (especially on mobile sizes where bg color can vary). 
+        Furthering the problem, since the nav buttons are in one file (home-nav-button.hbs) to make it
+        easy to configure common buttons, the classes on the buttons cannot be modified directly, 
+        forcing us to rely on the bxi-auth-buttons parent element.
+      </p>
+      <table class="table mb-5">
+        <thead>
+          <tr>
+            <td>Name</td>
+            <td>Example</td>
+            <td>Code Snippets</td>
+            <td>Description</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Default</td>
+            <td class="bxi-auth-buttons"><button class="bxi-button">Login</button></td>
+            <td><code>&lt;div class="bxi-auth-buttons"&gt;&lt;button class="bxi-button"&gt;Login&lt;/button&gt;&lt;/div&gt;</code></td>
+            <td class="fs-8">Default button styling</td>
+          </tr>
+          <tr>
+            <td>Link</td>
+            <td class="bxi-bg-secondary bxi-auth-buttons bxi-auth-buttons--link"><button class="bxi-button">Login</button></td>
+            <td><code>&lt;div class="bxi-auth-buttons bxi-auth-buttons--link"&gt;&lt;button class="bxi-button"&gt;Login&lt;/button&gt;&lt;/div&gt;</code></td>
+            <td class="fs-8">White link, primary hover</td>
+          </tr>
+          <tr>
+            <td>Link Bold</td>
+            <td class="bxi-auth-buttons bxi-auth-buttons--link-bold"><button class="bxi-button">Login</button></td>
+            <td><code>&lt;div class="bxi-auth-buttons bxi-auth-buttons--link-bold"&gt;&lt;button class="bxi-button"&gt;Login&lt;/button&gt;&lt;/div&gt;</code></td>
+            <td class="fs-8">Primary link, bold hover (behaves like bxi-button--link-bold)</td>
+          </tr>
+          <tr>
+            <td>White Link</td>
+            <td class="bxi-bg-secondary bxi-auth-buttons bxi-auth-buttons--white-link"><button class="bxi-button">Login</button></td>
+            <td><code>&lt;div class="bxi-auth-buttons bxi-auth-buttons--white-link"&gt;&lt;button class="bxi-button"&gt;Login&lt;/button&gt;&lt;/div&gt;</code></td>
+            <td class="fs-8">White link, off-white hover</td>
+          </tr>
+          <tr>
+            <td>Primary Link</td>
+            <td class="bxi-auth-buttons bxi-auth-buttons--primary-link"><button class="bxi-button">Login</button></td>
+            <td><code>&lt;div class="bxi-auth-buttons bxi-auth-buttons--primary-link"&gt;&lt;button class="bxi-button"&gt;Login&lt;/button&gt;&lt;/div&gt;</code></td>
+            <td class="fs-8">Primary link, secondary hover</td>
+          </tr>
+          <tr>
+            <td>Secondary Link</td>
+            <td class="bxi-auth-buttons bxi-auth-buttons--secondary-link"><button class="bxi-button">Login</button></td>
+            <td><code>&lt;div class="bxi-auth-buttons bxi-auth-buttons--secondary-link"&gt;&lt;button class="bxi-button"&gt;Login&lt;/button&gt;&lt;/div&gt;</code></td>
+            <td class="fs-8">Secondary link, primary hover</td>
+          </tr>
+          <tr>
+            <td>Outline Button - Dark BG</td>
+            <td class="bxi-bg-secondary bxi-auth-buttons bxi-auth-buttons--outline-dark-bg"><button class="bxi-button">Login</button></td>
+            <td><code>&lt;div class="bxi-auth-buttons bxi-auth-buttons--outline-dark-bg"&gt;&lt;button class="bxi-button"&gt;Login&lt;/button&gt;&lt;/div&gt;</code></td>
+            <td class="fs-8">White outline button, white bg secondary text on hover</td>
+          </tr>
+          <tr>
+            <td>Outline Button - Light BG</td>
+            <td class="bxi-auth-buttons bxi-auth-buttons--outline-light-bg"><button class="bxi-button">Login</button></td>
+            <td><code>&lt;div class="bxi-auth-buttons bxi-auth-buttons--outline-light-bg"&gt;&lt;button class="bxi-button"&gt;Login&lt;/button&gt;&lt;/div&gt;</code></td>
+            <td class="fs-8">White outline button, white bg secondary text on hover</td>
+          </tr>
+        </tbody>
+      </table>
+      <h3>Navigation Links</h3>
+      <p class="my-3">All navigation links have an accompanying breakpoint version that activates on large + screen sizes, this is used for links that need to be a different color in the dropdown hamburger menu.</p>
+      <table class="table mb-5">
+        <thead>
+          <tr>
+            <td>Name</td>
+            <td>Example</td>
+            <td>Usage</td>
+            <td>Breakpoint Class</td>
+            <td>Notes</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Link</td>
+            <td><a class="bxi-link">Link</a></td>
+            <td><code>&lt;a class="bxi-link"&gt;Link&lt;/a&gt;</code></td>
+            <td><code>n/a (see Link Primary)</code></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Link White</td>
+            <td class="bxi-bg-secondary"><a class="bxi-link bxi-link--white">Link</a></td>
+            <td><code>&lt;a class="bxi-link bxi-link--white"&gt;Link&lt;/a&gt;</code></td>
+            <td><code>bxi-link-lg--white</code></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Link White Bold</td>
+            <td class="bxi-bg-secondary"><a class="bxi-link bxi-link--white-bold">Link</a></td>
+            <td><code>&lt;a class="bxi-link bxi-link--white-bold"&gt;Link&lt;/a&gt;</code></td>
+            <td><code>bxi-link-lg--white-bold</code></td>
+            <td class="fs-8">Changes font-weight from 300 - 400 on hover, this is used in health, may not have any effect on other verticals depending on font</td>
+          </tr>
+          <tr>
+            <td>Link Primary</td>
+            <td><a class="bxi-link bxi-link--primary">Link</a></td>
+            <td><code>&lt;a class="bxi-link bxi-link--primary"&gt;Link&lt;/a&gt;</code></td>
+            <td><code>bxi-link-lg--primary</code></td>
+            <td class="fs-8">Same as default</td>
+          </tr>
+          <tr>
+            <td>Link Primary Bold</td>
+            <td><a class="bxi-link bxi-link--primary-bold">Link</a></td>
+            <td><code>&lt;a class="bxi-link bxi-link--primary-bold"&gt;Link&lt;/a&gt;</code></td>
+            <td><code>bxi-link-lg--primary-bold</code></td>
+            <td class="fs-8">Changes font-weight from 300 - 400 on hover, this is used in health, may not have any effect on other verticals depending on font</td>
+          </tr>
+          <tr>
+            <td>Link Secondary</td>
+            <td><a class="bxi-link bxi-link--secondary">Link</a></td>
+            <td><code>&lt;a class="bxi-link bxi-link--secondary"&gt;Link&lt;/a&gt;</code></td>
+            <td><code>bxi-link-lg--secondary</code></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Link Light Primary</td>
+            <td class="bxi-bg-secondary"><a class="bxi-link bxi-link-light--primary">Link</a></td>
+            <td><code>&lt;a class="bxi-link bxi-link-light--primary"&gt;Link&lt;/a&gt;</code></td>
+            <td><code>bxi-link-light-lg--primary</code></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Link Light Secondary</td>
+            <td class="bxi-bg-primary"><a class="bxi-link bxi-link-light--secondary">Link</a></td>
+            <td><code>&lt;a class="bxi-link bxi-link-light--secondary"&gt;Link&lt;/a&gt;</code></td>
+            <td><code>bxi-link-lg-light--secondary</code></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Link Dark Primary</td>
+            <td class="bxi-bg-secondary"><a class="bxi-link bxi-link-dark--primary">Link</a></td>
+            <td><code>&lt;a class="bxi-link bxi-link-dark--primary"&gt;Link&lt;/a&gt;</code></td>
+            <td><code>bxi-link-dark-lg--primary</code></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Link Dark Secondary</td>
+            <td class="bxi-bg-primary"><a class="bxi-link bxi-link-dark--secondary">Link</a></td>
+            <td><code>&lt;a class="bxi-link bxi-link-dark--secondary"&gt;Link&lt;/a&gt;</code></td>
+            <td><code>bxi-link-lg-dark--secondary</code></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <h3>BXI Utility CSS</h3>
+      <p class="my-3">
+        Note: the first few are not prefixed with bxi- I did this on purpose as they are filling in gaps
+        with Bootstrap's utility classes.
+      </p>
+      <table class="table mb-5">
+        <thead>
+          <tr>
+            <td>Name</td>
+            <td>Example</td>
+            <td>Usage</td>
+            <td>Description</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>.fw-boldish</td>
+            <td><span class="fw-boldish">Text</span></td>
+            <td><code>class="fw-boldish"</code></td>
+            <td class="fs-7">Sets font weight to 500 (in addition to bootraps font weight classes)</td>
+          </tr>
+          <tr>
+            <td>.ls-none</td>
+            <td><ul class="ls-none"><li>1</li><li>2</li></ul></td>
+            <td><code>&lt;ul class="ls-none"&gt;...&lt;/ul&gt;</code></td>
+            <td class="fs-7">Remove bullets from an ordered or unordered list</td>
+          </tr>
+          <tr>
+            <td>.fs-7</td>
+            <td><span class="fs-7">Text</span></td>
+            <td><code>class="fs-7"</code></td>
+            <td class="fs-7">Font Size to 14px (continues bootstrap fs-1 - fs-6)</td>
+          </tr>
+          <tr>
+            <td>.fs-8</td>
+            <td><span class="fs-8">Text</span></td>
+            <td><code>class="fs-8"</code></td>
+            <td class="fs-7">Font Size to 12px (continues bootstrap fs-1 - fs-6)</td>
+          </tr>
+          <tr>
+            <td>.cursor-pointer</td>
+            <td class="cursor-pointer">Hover over me</td>
+            <td><code>class="cursor-pointer"</code></td>
+            <td class="fs-7">Cursor changed to pointer on hover</td>
+          </tr>
+          <tr>
+            <td>.bxi-overflow-x-auto</td>
+            <td><div style="max-width: 300px" class="text-nowrap bxi-overflow-x-auto">Lots and lots and lots and lots and lots and lots and lots of text</div></td>
+            <td><code>class="bxi-overflow-x-auto"</code></td>
+            <td class="fs-7">Makes overflow content scrollable horizontally</td>
+          </tr>
+          <tr>
+            <td>.bxi-zi-1</td>
+            <td>N/A</td>
+            <td><code>class="bxi-zi-1"</code></td>
+            <td class="fs-7">Set z-index to 1</td>
+          </tr>
+          <tr>
+            <td>.bxi-zi-2</td>
+            <td>N/A</td>
+            <td><code>class="bxi-zi-2"</code></td>
+            <td class="fs-7">Set z-index to 2</td>
+          </tr>
+          <tr>
+            <td>.bxi-zi-3</td>
+            <td>N/A</td>
+            <td><code>class="bxi-zi-3"</code></td>
+            <td class="fs-7">Set z-index to 3</td>
+          </tr>
+          <tr>
+            <td>.bxi-zi-4</td>
+            <td>N/A</td>
+            <td><code>class="bxi-zi-4"</code></td>
+            <td class="fs-7">Set z-index to 4</td>
+          </tr>
+          <tr>
+            <td>.bxi-zi-5</td>
+            <td>N/A</td>
+            <td><code>class="bxi-zi-5"</code></td>
+            <td class="fs-7">Set z-index to 5</td>
+          </tr>
+          <tr>
+            <td>.bxi-truncate</td>
+            <td><div style="max-width: 300px" class="text-nowrap bxi-truncate">Lots and lots and lots and lots and lots and lots and lots of text</div></td>
+            <td><code>class="bxi-truncate"</code></td>
+            <td class="fs-7">Trancate overflow text and end with ellipsis</td>
+          </tr>
+          <tr>
+            <td>.bxi-ff-primary</td>
+            <td class="bxi-ff-primary">Text</td>
+            <td><code>class="bxi-ff-primary"</code></td>
+            <td class="fs-7">Apply primary font family (defined in branding) to element, note primary font is default but this is necessary to override where secondary is used</td>
+          </tr>
+          <tr>
+            <td>.bxi-ff-secondary</td>
+            <td class="bxi-ff-secondary">Text</td>
+            <td><code>class="bxi-secondary"</code></td>
+            <td class="fs-7">Apply secondary font family (defined in branding) to element</td>
+          </tr>
+          <tr>
+            <td>.pe-lg-none</td>
+            <td class="pe-lg-none"><button class="bxi-button">Click</button></td>
+            <td><code>class="pe-lg-none"</code></td>
+            <td class="fs-7">Disable pointer events on large + screens</td>
+          </tr>
+          <tr>
+            <td>.bxi-footer</td>
+            <td class="bxi-footer">Text</td>
+            <td><code>class="bxi-footer"</code></td>
+            <td class="fs-7">Apply color and bg color from associated branding vars</td>
+          </tr>
+          <tr>
+            <td>.bxi-copyright-color</td>
+            <td class="bxi-copyright-color">Text</td>
+            <td><code>class="bxi-copyright-color"</code></td>
+            <td class="fs-7">Apply color from --bxi-copyright-color var</td>
+          </tr>
+          <tr>
+            <td>.bxi-color-dark</td>
+            <td class="bxi-color-dark">Text</td>
+            <td><code>class="bxi-color-dark"</code></td>
+            <td class="fs-7">This cannot be branded, do not use in a vertical, it was intented for dialogs</td>
+          </tr>
+          <tr>
+            <td>.bxi-color-light</td>
+            <td class="bxi-color-light">Text</td>
+            <td><code>class="bxi-color-light"</code></td>
+            <td class="fs-7">This cannot be branded, do not use in a vertical, it was intented for dialogs</td>
+          </tr>
+          <tr>
+            <td>.bxi-color-primary</td>
+            <td class="bxi-color-primary">Text</td>
+            <td><code>class="bxi-color-primary"</code></td>
+            <td class="fs-7">Set element text color to --bxi-primary-color</td>
+          </tr>
+          <tr>
+            <td>.bxi-color-secondary</td>
+            <td class="bxi-color-secondary">Text</td>
+            <td><code>class="bxi-color-secondary"</code></td>
+            <td class="fs-7">Set element text color to --bxi-secondary-color</td>
+          </tr>
+          <tr>
+            <td>.bxi-bg-primary</td>
+            <td class="bxi-bg-primary"></td>
+            <td><code>class="bxi-bg-primary"</code></td>
+            <td class="fs-7">Set element background color to --bxi-primary-color</td>
+          </tr>
+          <tr>
+            <td>.bxi-bg-secondary</td>
+            <td class="bxi-bg-secondary"></td>
+            <td><code>class="bxi-bg-secondary"</code></td>
+            <td class="fs-7">Set element background color to --bxi-secondary-color</td>
+          </tr>
+          <tr>
+            <td>.bxi-bg-transparent</td>
+            <td>N/A</td>
+            <td><code>class="bxi-bg-transparent"</code></td>
+            <td class="fs-7">Set element background color to transparent</td>
+          </tr>
+          <tr>
+            <td>.bxi-bg-lg-transparent</td>
+            <td>N/A</td>
+            <td><code>class="bxi-bg-lg-transparent"</code></td>
+            <td class="fs-7">Set element background color to transparent at large + sizes</td>
+          </tr>
+          <tr>
+            <td>.bxi-bg-image</td>
+            <td>N/A</td>
+            <td><code>class="bxi-bg-image"</code></td>
+            <td class="fs-7">Use this along with style="background-image: xxx" sets background size position and repeat</td>
+          </tr>
+          <tr>
+            <td>.bxi-img-cover</td>
+            <td>N/A</td>
+            <td><code>class="bxi-img-cover"</code></td>
+            <td class="fs-7">Use this on an abosulte positioned img that needs to behave like background-size: cover</td>
+          </tr>
+          <tr>
+            <td>.bxi-main-header</td>
+            <td class="bxi-main-header">Text</td>
+            <td><code>class="bxi-main-header"</code></td>
+            <td class="fs-7">Common class for large headers that are bigger than Bootstrap h1 or fs-1</td>
+          </tr>
+          <tr>
+            <td>.bxi-main-header-xl</td>
+            <td class="bxi-main-header-xl">Text</td>
+            <td><code>class="bxi-main-header-xl"</code></td>
+            <td class="fs-7">Common class for large headers that are bigger than .bxi-main-header</td>
+          </tr>
+          <tr>
+            <td>.bxi-icon-color-primary</td>
+            <td class="bxi-icon-color-primary">{{> foodIcon}}</td>
+            <td><code>&lt;div class="bxi-icon-color-primary"&gt;\{{>foodIcon}}&lt;/div&gt;</code></td>
+            <td class="fs-7">Color child svgs with --bxi-primary-color</td>
+          </tr>
+          <tr>
+            <td>.bxi-icon-color-secondary</td>
+            <td class="bxi-icon-color-secondary">{{> foodIcon}}</td>
+            <td><code>&lt;div class="bxi-icon-color-secondary"&gt;\{{>foodIcon}}&lt;/div&gt;</code></td>
+            <td class="fs-7">Color child svgs with --bxi-secondary-color</td>
+          </tr>
+          <tr>
+            <td>.bxi-stretch-third-md</td>
+            <td>N/A</td>
+            <td><code>&lt;div class="row bxi-stretch-third-md"&gt;...&lt;/div&gt;</code></td>
+            <td class="fs-7">Occassionally it has been necessary to stretch the third column when it wraps and is all alone (e.g. airlines home), use this utility for that</td>
+          </tr>
+        </tbody>
+      </table>
+      <h3>SCSS Mixins</h3>
+      <p class="my-3">
+        These are a collection of SCSS mixins that can be used within SCSS files (make sure to add @import "./mixins"; to the top
+        of your scss file to use them).
+      </p>
+      <table class="table mb-5">
+        <thead>
+          <tr>
+            <td>Name</td>
+            <td>Usage</td>
+            <td>Description</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>breakpoint-sm</td>
+            <td><code>@include breakpoint-sm { ... }</code></td>
+            <td>Styles that will apply on sm (576px) + screen sizes</td>
+          </tr>
+          <tr>
+            <td>breakpoint-md</td>
+            <td><code>@include breakpoint-md { ... }</code></td>
+            <td>Styles that will apply on md (768px) + screen sizes</td>
+          </tr>
+          <tr>
+            <td>breakpoint-lg</td>
+            <td><code>@include breakpoint-lg { ... }</code></td>
+            <td>Styles that will apply on lg (992px) + screen sizes</td>
+          </tr>
+          <tr>
+            <td>breakpoint-xl</td>
+            <td><code>@include breakpoint-xl { ... }</code></td>
+            <td>Styles that will apply on xl (1200px) + screen sizes</td>
+          </tr>
+          <tr>
+            <td>breakpoint-lt-sm</td>
+            <td><code>@include breakpoint-sm { ... }</code></td>
+            <td>Styles that will apply on smaller than sm (575px) screen sizes</td>
+          </tr>
+          <tr>
+            <td>breakpoint-lt-md</td>
+            <td><code>@include breakpoint-md { ... }</code></td>
+            <td>Styles that will apply on smaller than md (767px) screen sizes</td>
+          </tr>
+          <tr>
+            <td>breakpoint-lt-lg</td>
+            <td><code>@include breakpoint-lg { ... }</code></td>
+            <td>Styles that will apply on smaller than lg (991px) screen sizes</td>
+          </tr>
+          <tr>
+            <td>breakpoint-lt-xl</td>
+            <td><code>@include breakpoint-xl { ... }</code></td>
+            <td>Styles that will apply on smaller than xl (1199px) screen sizes</td>
+          </tr>
+          <tr>
+            <td>color-icon($color)</td>
+            <td><code>.some-element { @include color-icon(var(--bxi-some-color-car)); }</code></td>
+            <td>Used to color child SVGs that are used via an icon partial</td>
+          </tr>
+          <tr>
+            <td>triangle($size, $color, $direction)</td>
+            <td><code>@include triangle(4px, var(--bxi-some-color), 'down') { top: 10px; left: 10px }</code></td>
+            <td>Used to add an absolute positioned triangle to an element, ensure element has position relative. You can pass down, up left or right as direction parameter.</td>
+          </tr>
+        </tbody>
+      </table>
+      <h3>Icons</h3>
+      <p class="my-3">
+        To add a new icon, first create a new .hbs file for it in the src/partials/icons folder. Then copy the svg into the new file.
+        After the file has been created change the class on the svg element to <code>class="\{{class}}"</code> so that classes can be 
+        passed as parameters. Also make sure to find fill and stroke attribute on all path elements and change them to #fff (white). 
+        Any path element that has a fill attributes also needs class="fill-target" added to it, and all path elements that have a 
+        stroke attribute need to have class="stroke-target" added. This ensures our color-icon SCSS mixin will work with it. After you
+        are done you will need to restart <code>npm run start</code> before the new icon partial will be picked up in server.js.
+      </p>
+      <table class="table mb-5">
+        <thead>
+          <tr>
+            <td>Description</td>
+            <td>Example</td>
+            <td>Usage</td>
+          </tr>
+        </thead>
+        <tbody>
+          {{#each icons}}
+          <tr>
+            <td class="text-capitalize">{{icon}}</td>
+            <td class="icon-color">{{> (lookup. 'partial')}}</td>
+            <td><code>\{{> {{partial}} }}</code></td>
+          </tr>
+          {{/each}}
+        </tbody>
+      </table>
+      <h3>Trials</h3>
+      <p class="my-3">
+        When a new vertical is added and complete it must be configured in the trials export as well. To do this 
+        ensure all of your changes are checked in and pushed (preferably merged into qa as well). And merge qa 
+        into the trials branch, then push it to origin. Before you can run the trials build, you need to add a 
+        settings override file (trials/settings/&lt;vertical&gt;.json) and a scss file (trials/scss/&lt;vertical&gt;.scss).
+        The scss file is typically only needed for background-image style properties because webpack on the P1 side
+        doesn't handle those inline properties (you'll notice these inline styles are removed in html-manipulations as well). 
+        The settings override file is merged into the main settings vertical file when a trials build occurs. This allows
+        us to remove CTA buttons and override image locations (P1 needs ./&lt;image-location&gt;.(png|svg|jpg) instead
+        of /&lt;vertical&gt;/&lt;image-location&gt;.(png|svg|jpg). Please note if you need to update images within an array
+        whole array (including text values and all) must be preserved because they are overridden in their entirety.
+        <br /><br />
+        You can test out changes in a "trials like" build by navigating to the trials folder in a terminal and running
+        <code>npm run test-build</code> then <code>cd dist</code> and <code>http-server</code> in that dist folder. Run
+        <code>npm install -g http-server</code> if you receive a package not found error. After you have verified changes
+        and made any tweaks run <code>npm run build</code> to generate the files we merge into the trials repository in gitlab.
+        <div class="fw-bold">**IMPORTANT**</div> All changes in the trials/ folder should be checked into the trials branch, 
+        and any modifications in the BXI source code should go back into your branch, eventually qa and then merged back into trials.
+      </p>
+    </div>
+  </div>
+  <script type="text/javascript">
+    (() => {
+      const selectVerticalDropdown = document.getElementById('select-vertical');
+      selectVerticalDropdown.value = '{{selectedVertical}}';
+      selectVerticalDropdown.addEventListener('change', (e) => {
+        location.assign('/docs?vertical=' + e.target.value);
+      });
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+{{#eq type "string"}}
+<div class="mb-3">
+  <label for="{{jsonPath}}" class="form-label">{{friendlyName}}</label>
+  <input type="text" class="form-control" data-editor-type="string" id="{{jsonPath}}"
+    data-affected-element-selector="{{elementSelector}}" value="{{lookupPath jsonPath}}" />
+</div>
+{{/eq}}
+{{#eq type "image"}}
+<div class="mb-3 position-relative">
+  <label for="{{jsonPath}}" class="form-label">{{friendlyName}}</label>
+  <span class="image-tooltip position-absolute cursor-pointer" data-bs-toggle="tooltip" data-bs-placement="right" title="Image URLs must be saved by clicking the green check before changes will be reflected">{{> alertIcon }}</span>
+  <input type="text" class="form-control pe-5" data-editor-type="image" id="{{jsonPath}}"
+    data-affected-element-selector="{{elementSelector}}" value="{{lookupPath jsonPath}}" />
+  <button class="d-none confirm-change-button position-absolute">
+    {{> checkmarkIcon }}
+  </button>
+  <button class="d-none cancel-change-button position-absolute">&times;</button>
+</div>
+{{/eq}}

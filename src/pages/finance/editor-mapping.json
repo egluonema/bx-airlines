@@ -1,0 +1,270 @@
+{
+  "theme": {
+    "global": [
+      {
+        "type": "font",
+        "friendlyName": "Primary Font",
+        "jsonPath": "theme.primaryFont",
+        "cssVariable": "--bxi-primary-font"
+      },
+      {
+        "type": "font", 
+        "friendlyName": "Secondary Font",
+        "jsonPath": "theme.secondaryFont",
+        "cssVariable": "--bxi-secondary-font"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Primary Color",
+        "jsonPath": "theme.primaryColor",
+        "cssVariable": "--bxi-primary-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Secondary Color",
+        "jsonPath": "theme.secondaryColor",
+        "cssVariable": "--bxi-secondary-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Button Color",
+        "jsonPath": "theme.buttonColor",
+        "cssVariable": "--bxi-button-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Button Background Color",
+        "jsonPath": "theme.buttonBgColor",
+        "cssVariable": "--bxi-button-bg-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Button Background Hover Color",
+        "jsonPath": "theme.buttonBgHoverColor",
+        "cssVariable": "--bxi-button-bg-hover-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Link Button Color",
+        "jsonPath": "theme.linkButtonColor",
+        "cssVariable": "--bxi-link-button-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Link Button Hover Color",
+        "jsonPath": "theme.linkButtonHoverColor",
+        "cssVariable": "--bxi-link-button-hover-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Footer Color",
+        "jsonPath": "theme.footerColor",
+        "cssVariable": "--bxi-footer-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Footer Background Color",
+        "jsonPath": "theme.footerBgColor",
+        "cssVariable": "--bxi-footer-bg-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Copyright Color",
+        "jsonPath": "theme.copyrightColor",
+        "cssVariable": "--bxi-copyright-color"
+      }
+    ],
+    "home": [
+      {
+        "type": "color",
+        "friendlyName": "Banner Color",
+        "jsonPath": "theme.bannerColor",
+        "cssVariable": "--bxi-finance-banner-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Rewards Color",
+        "jsonPath": "theme.rewardsColor",
+        "cssVariable": "--bxi-finance-rewards-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Header Color",
+        "jsonPath": "theme.headerColor",
+        "cssVariable": "--bxi-finance-header-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Icon First Gradient",
+        "jsonPath": "theme.iconBgColorFirstGradient",
+        "cssVariable": "--bxi-finance-icon-bg-first-gradient"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Icon Second Gradient",
+        "jsonPath": "theme.iconBgColorSecondGradient",
+        "cssVariable": "--bxi-finance-icon-bg-second-gradient"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Banner Background Color",
+        "jsonPath": "theme.bannerBgColor",
+        "cssVariable": "--bxi-finance-banner-bg-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Banner Circles Color",
+        "jsonPath": "theme.bannerCirclesColor",
+        "cssVariable": "--bxi-finance-banner-cirles-color"
+      }
+    ],
+    "dashboard": [
+      {
+        "type": "color",
+        "friendlyName": "Page Background Color",
+        "jsonPath": "theme.dashboardBgColor",
+        "cssVariable": "--bxi-dashboard-bg-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Component Background Color",
+        "jsonPath": "theme.componentBgColor",
+        "cssVariable": "--bxi-component-bg-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Header Dropdown Color",
+        "jsonPath": "theme.headerDropdownColor",
+        "cssVariable": "--bxi-header-dropdown-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Header Dropdown Border Color",
+        "jsonPath": "theme.headerDropdownBorderColor",
+        "cssVariable": "--bxi-header-dropdown-border-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Dashboard Rewards Color",
+        "jsonPath": "theme.dashboardRewardsColor",
+        "cssVariable": "--bxi-finance-dashboard-rewards-color"
+      }
+    ]
+  },
+  "content": {
+    "global": [
+      {
+        "type": "string",
+        "friendlyName": "Title",
+        "jsonPath": "settings.title",
+        "elementSelector": "head > title"
+      }, 
+      {
+        "type": "image",
+        "friendlyName": "Favicon",
+        "jsonPath": "settings.images.favicon",
+        "elementSelector": "#favicon"
+      },
+      {
+        "type": "image",
+        "friendlyName": "Apple Touch Icon",
+        "jsonPath": "settings.images.apple_touch_icon",
+        "elementSelector": "#apple-touch-icon"
+      },
+      {
+        "type": "image",
+        "friendlyName": "Logo",
+        "jsonPath": "settings.images.logo",
+        "elementSelector": "#bxi-logo img"
+      },
+      {
+        "type": "image",
+        "friendlyName": "Dialog Logo",
+        "jsonPath": "settings.images.dialog_logo",
+        "elementSelector": "#dialog-logo"
+      },
+      {
+        "type": "string",
+        "friendlyName": "Rewards Card Title",
+        "jsonPath": "settings.rewards_card.title",
+        "elementSelector": "h4.shine-rewards-card-color"
+      },
+      {
+        "type": "string",
+        "friendlyName": "Rewards Card Subtitle",
+        "jsonPath": "settings.rewards_card.sub_title",
+        "elementSelector": "p.shine-rewards-card-color"
+      },
+      {
+        "type": "image",
+        "friendlyName": "Rewards Card Image",
+        "jsonPath": "settings.rewards_card.image",
+        "elementSelector": ".shine-rewards-card-image"
+      },
+      {
+        "type": "string",
+        "friendlyName": "Footer Phone Number",
+        "jsonPath": "settings.footer.phone_number",
+        "elementSelector": ".footer-phone-number"
+      },
+      {
+        "type": "string",
+        "friendlyName": "Footer Email",
+        "jsonPath": "settings.footer.email",
+        "elementSelector": ".footer-email"
+      },
+      {
+        "type": "string",
+        "friendlyName": "Footer Chat",
+        "jsonPath": "settings.footer.chat",
+        "elementSelector": ".footer-chat"
+      }
+    ],
+    "home": [
+      {
+        "type": "string",
+        "friendlyName": "Banner Title",
+        "jsonPath": "settings.home_page.banner.title",
+        "elementSelector": ".bxi-banner h1"
+      },
+      {
+        "type": "string",
+        "friendlyName": "Banner Subtitle",
+        "jsonPath": "settings.home_page.banner.sub_title",
+        "elementSelector": ".bxi-banner p"
+      },
+      {
+        "type": "string",
+        "friendlyName": "Banner Button",
+        "jsonPath": "settings.home_page.banner.button",
+        "elementSelector": ".bxi-banner .bxi-button"
+      },
+      {
+        "type": "string",
+        "friendlyName": "Alert Banner Message",
+        "jsonPath": "settings.home_page.alert_banner.message",
+        "elementSelector": ".bxi-alert-banner-msg"
+      },
+      {
+        "type": "string",
+        "friendlyName": "Alert Banner Link",
+        "jsonPath": "settings.home_page.alert_banner.link",
+        "elementSelector": ".bxi-alert-banner-link"
+      }
+    ],
+    "dashboard": [
+      {
+        "type": "string",
+        "friendlyName": "Page Heading",
+        "jsonPath": "settings.dashboard.welcome",
+        "elementSelector": ".bxi-welcome-bar h2"
+      },
+      {
+        "type": "string",
+        "friendlyName": "Dashboard Title",
+        "jsonPath": "settings.dashboard.portal.title",
+        "elementSelector": ".portal-title"
+      }
+    ]
+  }
+}

@@ -1,0 +1,234 @@
+{
+  "theme": {
+    "global": [
+      {
+        "type": "font",
+        "friendlyName": "Primary Font",
+        "jsonPath": "theme.primaryFont",
+        "cssVariable": "--bxi-primary-font"
+      },
+      {
+        "type": "font", 
+        "friendlyName": "Secondary Font",
+        "jsonPath": "theme.secondaryFont",
+        "cssVariable": "--bxi-secondary-font"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Primary Color",
+        "jsonPath": "theme.primaryColor",
+        "cssVariable": "--bxi-primary-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Secondary Color",
+        "jsonPath": "theme.secondaryColor",
+        "cssVariable": "--bxi-secondary-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Button Color",
+        "jsonPath": "theme.buttonColor",
+        "cssVariable": "--bxi-button-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Button Background Color",
+        "jsonPath": "theme.buttonBgColor",
+        "cssVariable": "--bxi-button-bg-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Button Background Hover Color",
+        "jsonPath": "theme.buttonBgHoverColor",
+        "cssVariable": "--bxi-button-bg-hover-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Link Button Color",
+        "jsonPath": "theme.linkButtonColor",
+        "cssVariable": "--bxi-link-button-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Link Button Hover Color",
+        "jsonPath": "theme.linkButtonHoverColor",
+        "cssVariable": "--bxi-link-button-hover-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Footer Color",
+        "jsonPath": "theme.footerColor",
+        "cssVariable": "--bxi-footer-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Footer Background Color",
+        "jsonPath": "theme.footerBgColor",
+        "cssVariable": "--bxi-footer-bg-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Copyright Color",
+        "jsonPath": "theme.copyrightColor",
+        "cssVariable": "--bxi-copyright-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Showcase Color",
+        "jsonPath": "theme.showcaseColor",
+        "cssVariable": "--bxi-realty-showcase-color"
+      }
+    ],
+    "home": [
+      {
+        "type": "color",
+        "friendlyName": "Banner Color",
+        "jsonPath": "theme.bannerColor",
+        "cssVariable": "--bxi-realty-banner-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Milestone Background Color",
+        "jsonPath": "theme.bannerMilestoneBgColor",
+        "cssVariable": "--bxi-realty-banner-milestone-bg-color"
+      }
+    ],
+    "dashboard": [
+      {
+        "type": "color",
+        "friendlyName": "Header Background Color",
+        "jsonPath": "theme.dashboardHeaderBgColor",
+        "cssVariable": "--bxi-realty-dashboard-header-bg-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Username Color",
+        "jsonPath": "theme.dashboardUsernameColor",
+        "cssVariable": "--bxi-realty-dashboard-username-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Placeholder Icon Color",
+        "jsonPath": "theme.dashboardPlaceholderIconColor",
+        "cssVariable": "--bxi-realty-dashboard-placeholder-icon-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Unit Border Color",
+        "jsonPath": "theme.dashboardUnitBorderColor",
+        "cssVariable": "--bxi-realty-dashboard-unit-border-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Unit Color",
+        "jsonPath": "theme.dashboardUnitColor",
+        "cssVariable": "--bxi-realty-dashboard-unit-color"
+      }
+    ]
+  },
+  "content": {
+    "global": [
+      {
+        "type": "string",
+        "friendlyName": "Title",
+        "jsonPath": "settings.title",
+        "elementSelector": "head > title"
+      },
+      {
+        "type": "string",
+        "friendlyName": "Title",
+        "jsonPath": "settings.title",
+        "elementSelector": "head > title"
+      },
+      {
+        "type": "image",
+        "friendlyName": "Favicon",
+        "jsonPath": "settings.images.favicon",
+        "elementSelector": "#favicon"
+      },
+      {
+        "type": "image",
+        "friendlyName": "Apple Touch Icon",
+        "jsonPath": "settings.images.apple_touch_icon",
+        "elementSelector": "#apple-touch-icon"
+      },
+      {
+        "type": "image",
+        "friendlyName": "Logo",
+        "jsonPath": "settings.images.logo",
+        "elementSelector": "#bxi-logo img"
+      },
+      {
+        "type": "image",
+        "friendlyName": "Dialog Logo",
+        "jsonPath": "settings.images.dialog_logo",
+        "elementSelector": "#dialog-logo"
+      },
+      {
+        "type": "string",
+        "friendlyName": "Footer Phone Number",
+        "jsonPath": "settings.footer.phone_number",
+        "elementSelector": ".footer-phone-number"
+      }
+    ],
+    "home": [
+      {
+        "type": "image",
+        "friendlyName": "Banner Background Image",
+        "jsonPath": "settings.home_page.banner.background_image",
+        "elementSelector": ".bxi-banner__image.bxi-bg-image"
+      },
+      {
+        "type": "string",
+        "friendlyName": "Banner Title",
+        "jsonPath": "settings.home_page.banner.title",
+        "elementSelector": ".bxi-main-header-xl"
+      },
+      {
+        "type": "string",
+        "friendlyName": "Showcase Title",
+        "jsonPath": "settings.home_page.showcase.title",
+        "elementSelector": ".bxi-showcase-header h1"
+      },
+      {
+        "type": "string",
+        "friendlyName": "Showcase Button",
+        "jsonPath": "settings.home_page.showcase.button",
+        "elementSelector": ".bxi-showcase-header button"
+      }
+    ],
+    "dashboard": [
+      {
+        "type": "string",
+        "friendlyName": "Dashboard Header",
+        "jsonPath": "settings.dashboard.header",
+        "elementSelector": ".bxi-main-header"
+      },
+      {
+        "type": "string",
+        "friendlyName": "Location Search Placeholder",
+        "jsonPath": "settings.dashboard.properties.search.location_placeholder",
+        "elementSelector": ".location-search"
+      },
+      {
+        "type": "string",
+        "friendlyName": "Name Search Placeholder",
+        "jsonPath": "settings.dashboard.properties.search.name_placeholder",
+        "elementSelector": ".name-search"
+      },
+      {
+        "type": "string",
+        "friendlyName": "Showcase Title",
+        "jsonPath": "settings.dashboard.properties.showcase.title",
+        "elementSelector": ".showcase-title"
+      },
+      {
+        "type": "string",
+        "friendlyName": "Properties Action",
+        "jsonPath": "settings.dashboard.properties.action",
+        "elementSelector": ".properties-action"
+      }
+    ]
+  }
+}

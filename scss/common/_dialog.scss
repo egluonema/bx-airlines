@@ -1,0 +1,40 @@
+@mixin dialog-styles {
+  .dialog {
+    padding: 30px 0;
+
+    &.modal .modal-dialog {
+      max-width: 735px;
+    }
+
+    .card {
+      border: none;
+    }
+
+    &-logo {
+      img {
+        height: 45px;
+        width: auto;
+      }
+    }
+
+    .dialog-header {
+      font-size: 42px;
+      color: #182237;
+    }
+
+    .dialog-container {
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    &.hide-vertical-logo {
+      .dialog-logo img {
+        display: none;
+      }
+    }
+
+    .form-check-input {
+      margin-right: 0.5rem;
+    }
+  }
+}

@@ -1,0 +1,211 @@
+@use '../common/mixins';
+
+.bxi.finance {
+  overflow-x: hidden;
+
+  @include mixins.breakpoint-lg {
+    .bxi-auth-buttons .bxi-button {
+      border-radius: 0;
+      padding-right: 1rem;
+      border-right: 1px solid #68747f;
+
+      &:last-child {
+        border-right: none;
+        padding-right: 0;
+      }
+    }
+  }
+
+  .navbar {
+    background-color: #fff;
+  }
+
+  &.home {
+    .bxi-programs {
+      background-color: #fff;
+    }
+
+    .bxi-header {
+      &-color {
+        color: var(--bxi-finance-header-color);
+      }
+    }
+
+    .bxi-banner {
+      color: var(--bxi-finance-banner-color);
+      background-color: var(--bxi-finance-banner-bg-color);
+
+      &-circle {
+        background: var(--bxi-finance-banner-cirles-color);
+        box-shadow: 0px 4px 200px rgba(0, 0, 0, 0.15);
+
+        &:first-child {
+          width: 441px;
+          height: 441px;
+          top: -200px;
+          left: -200px;
+        }
+
+        &:nth-child(2) {
+          width: 300px;
+          height: 300px;
+          bottom: -160px;
+          right: 200px;
+        }
+
+        &:nth-child(3) {
+          width: 400px;
+          height: 400px;
+          top: 20px;
+          right: -217px;
+        }
+      }
+
+      @include mixins.breakpoint-lt-md {
+        overflow: hidden;
+      }
+    }
+
+    .shine-rewards-card {
+      &-color {
+        color: var(--bxi-finance-rewards-color);
+      }
+
+      &-image {
+        margin-top: -1.5rem;
+        width: 282px;
+        top: -52px;
+        left: 40px;
+
+        @include mixins.breakpoint-sm {
+          left: 100px;
+        }
+      }
+
+      &-subtitle {
+        width: 300px;
+      }
+
+      &-pill {
+        &-lg,
+        &-sm {
+          background-color: #fff;
+        }
+
+        &-lg {
+          padding-left: 70px;
+          padding-top: 140px;
+          width: calc(100vw + 300px);
+          margin-top: 100px;
+        }
+
+        &-sm {
+          width: calc(100vw + 300px);
+          height: 30px;
+          margin-left: 200px;
+        }
+      }
+    }
+
+    .bxi-icon-bg {
+      width: 92px;
+      height: 92px;
+      background: linear-gradient(
+        135deg,
+        var(--bxi-finance-icon-bg-first-gradient) 0%,
+        var(--bxi-finance-icon-bg-second-gradient) 113.59%
+      );
+    }
+  }
+
+  &.dashboard {
+    .bxi-header {
+      border-bottom: 1px solid #caced3;
+    }
+
+    .bxi-auth-buttons svg {
+      margin-top: 2px;
+    }
+
+    .portal-sidebar-dropdown {
+      box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .shine-rewards-card {
+      &-pill {
+        height: 342px;
+        width: 427px;
+        right: 0px;
+        top: 22px;
+
+        @include mixins.breakpoint-lg {
+          top: 8px;
+          width: 400px;
+          right: -106px;
+          height: 290px;
+        }
+
+        @include mixins.breakpoint-xl {
+          top: 22px;
+          height: 270px;
+          width: 400px;
+          right: -80px;
+        }
+
+        @include mixins.breakpoint-xxl {
+          width: 400px;
+          height: 300px;
+          right: -14px;
+        }
+      }
+
+      &-container {
+        width: 100%;
+        max-width: 350px;
+        color: var(--bxi-finance-dashboard-rewards-color);
+
+        @include mixins.breakpoint-lg {
+          max-width: 248px;
+        }
+
+        @include mixins.breakpoint-xxl {
+          max-width: 300px;
+        }
+      }
+
+      &-image {
+        width: 100%;
+      }
+
+      .bxi-button--outline {
+        background-color: #fff;
+
+        &:hover {
+          background-color: var(--bxi-primary-color);
+        }
+      }
+    }
+
+    .account-details {
+      border-left: 3px solid var(--bxi-primary-color);
+      box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.1);
+
+      .account-row {
+        padding-bottom: 0.5rem;
+        margin-bottom: 0.5rem;
+        border-bottom: 1px solid #e4e6e9;
+
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+
+      &::before {
+        @include mixins.triangle(5px, var(--bxi-primary-color), 'down') {
+          top: 1.7rem;
+          left: 1.25rem;
+        }
+      }
+    }
+  }
+}

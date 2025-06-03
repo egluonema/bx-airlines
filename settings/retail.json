@@ -1,0 +1,206 @@
+{
+  "theme": {
+    "primaryFont": "'Arimo', sans-serif",
+    "secondaryFont": "'Montserrat', sans-serif",
+    "primaryColor": "#177de7",
+    "secondaryColor": "#262626",
+    "buttonColor": "#ffffff",
+    "buttonBgColor": "var(--bxi-primary-color)",
+    "buttonBgHoverColor": "#146ac4",
+    "linkButtonColor": "var(--bxi-primary-color)",
+    "linkButtonHoverColor": "#146ac4",
+    "dashboardBgColor": "#f3f3f3",
+    "componentBgColor": "#ffffff",
+    "footerBgColor": "var(--bxi-secondary-color)",
+    "footerColor": "#ffffff",
+    "copyrightColor": "#ffffff",
+    "navBorderColor": "#caced3",
+    "heroBorderColor": "#f3b900",
+    "bannerColor": "#ffffff",
+    "bannerBgColor": "var(--bxi-primary-color)",
+    "featuresIconBgGradient1": "#0068d6",
+    "featuresIconBgGradient2": "#004287",
+    "dashboardWelcomeColor": "#ffffff"
+  },
+  "settings": {
+    "title": "BXRetail",
+    "images": {
+      "favicon": "/retail/favicon.png",
+      "apple_touch_icon": "/retail/apple-touch-icon-192.png",
+      "logo": "/retail/logo.svg",
+      "dialog_logo": "/retail/logo.svg"
+    },
+    "header": {
+      "links": [
+        "My Account",
+        "Weekly Deals",
+        "Extraordinary Club",
+        "Departments",
+        "The BXCard"
+      ]
+    },
+    "home_page": {
+      "sale_tile": {
+        "badge": "20-40% OFF",
+        "title": "Electronics Sale",
+        "description": "Major savings on favorite brands",
+        "button": "Browse Deals",
+        "image": "/retail/headphones.png"
+      },
+      "shop_tile": {
+        "title": "Shop the Latest Trends",
+        "subtitle": "Jimmy Choo, Gucci, Miu Miu and more",
+        "description": "Swap something new for the season",
+        "button": "What's New",
+        "image": "/retail/trends.png"
+      },
+      "banner": {
+        "text": "Shop at our Extraordinary Club Partners",
+        "logos": [
+          "/retail/logo-bxclothes.svg",
+          "/retail/logo-bxhome.svg",
+          "/retail/logo-bxoffice.svg",
+          "/retail/logo-bxtech.svg"
+        ]
+      },
+      "features_section": {
+        "items": [
+          {
+            "title": "The BXRetail App",
+            "description": "Shop, browse and manage your account.",
+            "link": "Coming Soon",
+            "icon": "/retail/apps-icon.svg"
+          },
+          {
+            "title": "Join the Extraordinary Club",
+            "description": "Exclusive savings and services across all our BXRetail partners.",
+            "link": "Meet Our People",
+            "icon": "/retail/account-icon.svg"
+          },
+          {
+            "title": "We Install Anything",
+            "description": "Choose professional partner services for any product we sell.",
+            "link": "Learn More",
+            "icon": "/retail/wrench-icon.svg"
+          }
+        ]
+      }
+    },
+    "dashboard": {
+      "username": "",
+      "welcome": "Welcome",
+      "sidebar": {
+        "links": [
+          "Clothing",
+          "Home Decor",
+          "Entertainment",
+          "Electronics",
+          "Personal Care & Pharmacy",
+          "Accessories"
+        ],
+        "text": "Shop at our Extraordinary Club Partners",
+        "logos": [
+          "/retail/logo-bxclothes.svg",
+          "/retail/logo-bxhome.svg",
+          "/retail/logo-bxoffice.svg",
+          "/retail/logo-bxtech.svg"
+        ]
+      },
+      "portal": {
+        "title": "Electronics",
+        "search_placeholder": "Search",
+        "products": [
+          {
+            "badge": "Best Value",
+            "image": "bxmanufacturing-clera.jpg",
+            "rating_image": "stars-4.svg",
+            "title": "BXManufacturing Clera 65\" 4K UHD LED TV",
+            "price": "$1,270.00",
+            "price_subtext": "(excl. tax)",
+            "delivery_options": [
+              "2-day Delivery",
+              "Free pickup"
+            ]
+          },
+          {
+            "image": "streamstick.jpg",
+            "rating_image": "stars-5.svg",
+            "title": "Streamstick Video Streaming Player with 4K, Full HD",
+            "price": "$99.99",
+            "price_subtext": "(excl. tax)",
+            "delivery_options": [
+              "2-day Delivery",
+              "Free pickup"
+            ]
+          },
+          {
+            "image": "adventex.jpg",
+            "rating_image": "stars-5.svg",
+            "title": "Adventex 27\" LED PC Monitor with HDMI",
+            "price": "$253.00",
+            "price_subtext": "(excl. tax)",
+            "delivery_options": [
+              "2-day Delivery",
+              "Free pickup"
+            ]
+          },
+          {
+            "image": "touchpad.jpg",
+            "rating_image": "stars-5.svg",
+            "title": "TouchPad 16-inch tablet with cellular, WiFi, 64GB storage",
+            "price": "$256.99",
+            "price_subtext": "(excl. tax)",
+            "delivery_options": [
+              "2-day Delivery",
+              "Free pickup"
+            ]
+          },
+          {
+            "image": "bxmanufacturing-silva.jpg",
+            "rating_image": "stars-5.svg",
+            "title": "BXManufacturing Silva Laptop",
+            "price": "$959.99",
+            "price_subtext": "(excl. tax)",
+            "delivery_options": [
+              "2-day Delivery",
+              "Free pickup"
+            ]
+          },
+          {
+            "badge": "Best Value",
+            "rating_image": "stars-4.svg",
+            "image": "widera.jpg",
+            "title": "Widera Tri-Band Mesh WiFi Router",
+            "price": "$152.99",
+            "price_subtext": "(excl. tax)",
+            "delivery_options": [
+              "2-day Delivery",
+              "Free pickup"
+            ]
+          }
+        ]
+      }
+    },
+    "footer": {
+      "navigation": {
+        "links_left": [
+          "Our Company",
+          "Investor Relations",
+          "Corporate Citizenship",
+          "News",
+          "Locations"
+        ],
+        "links_right": [
+          "Privacy & Security",
+          "Terms of Use",
+          "Disclosures",
+          "Accessibility"
+        ]
+      },
+      "phone_number": "800.543.2276",
+      "email": "help@bxretail.com",
+      "chat": "Chat with Us",
+      "copyright": "© BXRetail, {{currentYear}}"
+    }
+  }
+}

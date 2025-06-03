@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  {{#> head }}
+  {{> healthBranding }}
+  {{/head}}
+  <body onload="bxi.pageLoad()" class="bxi health dashboard">
+    {{> variables}}
+    <header class="bxi-header bxi-banner">
+      <nav class="navbar navbar-expand-lg pt-lg-4 flex-wrap navbar-dark">
+        <div class="container">
+          <div class="bxi-nav">
+            <a class="bxi-nav-toggle d-lg-none" role="button">
+              {{> hamburgerIcon }}
+            </a>
+            <ul class="bxi-nav-links bxi-bg-secondary">
+              {{#each settings.header.links}}
+              <li>
+                <a class="bxi-link bxi-link--white-bold">{{this}}</a>
+              </li>
+              {{/each}}
+            </ul>
+            <a id="bxi-logo" class="navbar-brand py-0 ms-3 ms-lg-0">
+              <img src="{{settings.images.dashboard_logo}}" alt="Logo" />
+            </a>
+          </div>
+          <div class="d-flex flex-row position-relative">
+            {{> messageIcon class="mt-2 me-3 d-none d-lg-block" }}
+            <div class="bxi-user-icon bxi-bg-primary">
+              {{> userIcon }}
+            </div>
+            <div
+              class="bxi-auth-buttons bxi-auth-buttons--link-bold bxi-bg-secondary bxi-bg-lg-transparent p-2 p-lg-3 py-lg-1">
+              {{> userIcon class="d-none d-lg-inline mt-1 me-3"}}
+              <button id="oidc-logout" onclick="bxi.logout()"
+                class="bxi-button mb-0">Log Out</button>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="bxi-navbar bxi-bg-transparent mt-2 d-none d-lg-block"
+            id="navbarNav">
+            <ul class="navbar-nav p-3 p-lg-0 py-lg-4">
+              {{#each settings.header.links}}
+              <li class="nav-item pb-2">
+                <a
+                  class="bxi-link bxi-link--white-bold fs-6 ps-0 pe-lg-4">{{this}}</a>
+              </li>
+              {{/each}}
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <section class="bxi-component-bg-color">
+      <div class="container py-3">
+        <div
+          class="d-flex flex-column flex-md-row justify-content-center justify-content-md-between align-items-center">
+          <h2 class="fw-bold"><span
+              class="bxi-welcome-text">{{settings.dashboard.welcome}}</span>
+            <span class="fw-bold"
+              id="username-container">{{settings.dashboard.username}}</span></h2>
+          <div class="d-flex flex-column flex-md-row justify-content-end">
+            {{!-- See src/dashboard-buttons.hbs to update dashboard buttons --}}
+            {{> dashboardButtons}}
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="container">
+      <div class="portal">
+        <div class="row mt-4">
+          <div class="col-lg-4 order-2 order-lg-1">
+            <ul class="ls-none ps-0 mb-3">
+              {{#each settings.dashboard.sidebar.links}}
+              <li
+                class="mb-2 ps-5 p-3 bxi-component-bg-color rounded-3 position-relative portal-sidebar-dropdown cursor-pointer bxi-ff-secondary fw-lighter">
+                {{this}}
+              </li>
+              {{/each}}
+            </ul>
+            <div
+              class="events-hero rounded-4 overflow-hidden mx-auto pb-4 mb-4 bxi-component-bg-color">
+              <img class="events-hero-image d-block w-100"
+                src="{{settings.dashboard.events_hero.banner_image}}" />
+              <h3
+                class="p-4 events-hero-header fw-bold">{{settings.dashboard.events_hero.title}}</h3>
+              <p
+                class="ps-4 fs-6 fw-light bxi-ff-secondary">{{settings.dashboard.events_hero.description}}</p>
+              <a
+                class="ps-4 bxi-button bxi-button--link-bold">{{settings.dashboard.events_hero.link}}</a>
+            </div>
+          </div>
+          <div class="col-lg-8 order-1 order-lg-2">
+            <div class="row mb-3">
+              <div class="col-sm-7 text-center text-sm-start">
+                <h4
+                  class="mb-3 mb-sm-0 mt-1 fw-boldish portal-title">{{settings.dashboard.portal.title}}</h4>
+              </div>
+              <div
+                class="col-sm-5 d-flex justify-content-center justify-content-sm-end">
+                <div
+                  class="portal-header-dropdown bxi-component-bg-color py-2 ps-3 pe-5 rounded-1 position-relative cursor-pointer bxi-ff-secondary fw-light">
+                  {{settings.dashboard.portal.dropdown_placeholder}}
+                </div>
+              </div>
+            </div>
+            <div class="bxi-component-bg-color p-3 mb-4">
+              <div class="row mb-3">
+                <div class="col-lg-6 mb-3 mb-lg-0">
+                  <h6
+                    class="bxi-ff-secondary fw-bold mb-3 portal-component-header">{{settings.dashboard.portal.component_header}}</h6>
+                  <h6 class="bxi-ff-secondary fw-light mb-0 text-nowrap"><span
+                      class="patient-number-label">{{settings.dashboard.portal.patient_number_label}}</span>
+                    <span
+                      class="bxi-ff-secondary fw-light text-decoration-underline patient-number">{{settings.dashboard.portal.patient_number}}</span></h6>
+                </div>
+                <div
+                  class="patient-links col-lg-6 d-flex align-items-end justify-content-start justify-content-lg-end">
+                  {{#each settings.dashboard.portal.patient_links}}
+                  <a class="bxi-button bxi-button--link-bold">{{this}}</a>
+                  {{/each}}
+                </div>
+              </div>
+              <div class="row g-3">
+                {{#each settings.dashboard.portal.actions}}
+                <div class="col-lg-4">
+                  <div
+                    class="action-tile d-flex flex-column align-items-center text-center p-3 h-100">
+                    <img class="mb-4" src="{{icon}}" />
+                    <h3 class="mb-4 fw-bold">{{header}}</h3>
+                    <p class="bxi-ff-secondary fw-light">{{description}}</p>
+                    <button
+                      class="bxi-button bxi-button--md mt-auto">{{button_text}}</button>
+                  </div>
+                </div>
+                {{/each}}
+              </div>
+              <h6
+                class="bxi-ff-secondary fw-bold my-3 portal-links-header">{{settings.dashboard.portal.links_header}}</h6>
+              <div class="quick-links d-flex flex-wrap">
+                {{#each settings.dashboard.portal.quick_links}}
+                <a class="bxi-button bxi-button--link-bold text-nowrap me-4">
+                  <img class="me-1" src="{{icon}}" />
+                  {{text}}
+                </a>
+                {{/each}}
+              </div>
+            </div>
+            {{#if env.BXI_DASHBOARD_POLICY_ID}}
+            <div class="mb-3 bxi-component-bg-color" data-dv-flow="static"
+              data-policy-id="{{env.BXI_DASHBOARD_POLICY_ID}}"></div>
+            {{/if}}
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="bxi-footer py-5">
+      <div class="container text-center text-lg-start">
+        <div class="row">
+          <div class="col-lg-3 mb-3">
+            <ul
+              class="d-flex justify-content-center justify-content-lg-start ls-none ps-0 mb-3">
+              <li>
+                <button
+                  class="bxi-button bxi-button--outline bxi-button--icon me-lg-3 me-5">
+                  {{> facebookIcon }}
+                </button>
+              </li>
+              <li>
+                <button
+                  class="bxi-button bxi-button--outline bxi-button--icon me-lg-3 me-5">
+                  {{> twitterIcon }}
+                </button>
+              </li>
+              <li>
+                <button class="bxi-button bxi-button--outline bxi-button--icon">
+                  {{> instagramIcon }}
+                </button>
+              </li>
+            </ul>
+            <p
+              class="mb-3 mb-md-0 fs-8 bxi-copyright-color bxi-ff-secondary">{{settings.footer.copyright}}</p>
+          </div>
+          <div class="col-lg-3 mb-3">
+            {{#each settings.footer.links_left}}
+            <a class="bxi-link bxi-link--white mb-2 d-block fs-6">{{this}}</a>
+            {{/each}}
+          </div>
+          <div class="col-lg-3 mb-3">
+            <a
+              class="bxi-link bxi-link--white mb-2 d-block fs-6 fw-bold footer-phone-number">{{settings.footer.phone_number}}</a>
+            <a
+              class="bxi-link bxi-link--white mb-2 d-block fs-6 fw-bold footer-email">{{settings.footer.email}}</a>
+            <a
+              class="bxi-link bxi-link--white mb-2 d-block fs-6 fw-bold footer-chat">{{settings.footer.chat}}</a>
+          </div>
+          <div class="col-lg-3 mb-3">
+            {{#each settings.footer.links_right}}
+            <a class="bxi-link bxi-link--white mb-2 d-block fs-6">{{this}}</a>
+            {{/each}}
+          </div>
+        </div>
+      </div>
+      {{> remix }}
+    </footer>
+    {{> modal}}
+  </body>
+</html>

@@ -1,0 +1,116 @@
+@use '../common/mixins';
+
+.bxi.insurance {
+  background-color: var(--bxi-page-bg-color);
+
+  .navbar {
+    background-color: var(--bxi-navbar-bg-color);
+  }
+
+  .bxi-button {
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: var(--bxi-primary-font);
+  }
+
+  .bxi-link {
+    font-size: 14px;
+    text-transform: uppercase;
+  }
+
+  .bxi-auth-buttons {
+    .bxi-button {
+      font-size: 12px !important;
+      padding: 0.5rem 1rem !important;
+      border-radius: 2px;
+
+      @include mixins.breakpoint-lt-lg {
+        padding: 0;
+      }
+    }
+  }
+
+  .bxi-service {
+    &:hover {
+      box-shadow: 4px 6px 29px rgba(0, 0, 0, 0.1);
+    }
+
+    &-color {
+      color: var(--bxi-service-color);
+    }
+  }
+
+  &.home {
+    .bxi-banner {
+      min-height: 700px;
+
+      @include mixins.breakpoint-lt-lg {
+        &::before {
+          content: '';
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(255, 255, 255, 0.41);
+        }
+      }
+    }
+  }
+
+  &.dashboard {
+    #username-container {
+      margin-top: 4px;
+
+      @include mixins.breakpoint-lg {
+        margin-top: 2px;
+      }
+    }
+
+    .bxi-auth-buttons .bxi-button {
+      padding-right: 0 !important;
+    }
+
+    .bxi-dashboard-sidebar {
+      a,
+      button {
+        width: 100%;
+        margin-bottom: 1rem !important;
+        padding: 0.75rem 0;
+        font-size: 13px;
+        line-height: normal;
+      }
+    }
+
+    .bxi-coverage-header {
+      border-bottom: 1px solid black;
+    }
+
+    .bxi-agent-pic img {
+      height: 85px;
+      width: 85px;
+    }
+
+    .bxi-claim-status {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background-color: yellow;
+    }
+
+    .bxi-shield-icon {
+      width: 24px;
+      height: 24px;
+
+      @include mixins.color-icon(var(--bxi-claims-shield-color));
+    }
+
+    .bxi-coverage-summary {
+      .border-bottom:last-child {
+        border-bottom: none !important;
+      }
+    }
+  }
+}

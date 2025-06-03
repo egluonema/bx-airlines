@@ -1,0 +1,24 @@
+{{#if env.BXI_PROFILE_MANAGEMENT_POLICY_ID}}
+  <button
+    class="bxi-button me-md-3 mb-3 mb-md-0"
+    data-dv-flow="modal"
+    data-policy-id="{{env.BXI_PROFILE_MANAGEMENT_POLICY_ID}}"
+    data-error-callback="logout"
+  >Update Profile</button>
+{{/if}}
+{{#if env.BXI_PASSWORD_RESET_POLICY_ID}}
+  <button
+    class="bxi-button me-md-3 mb-3 mb-md-0"
+    data-dv-flow="modal"
+    data-policy-id="{{env.BXI_PASSWORD_RESET_POLICY_ID}}"
+    data-error-callback="logout"
+  >Reset Password</button>
+{{/if}}
+{{#if env.BXI_DEVICE_MANAGEMENT_POLICY_ID}}
+  <button
+    class="bxi-button me-md-3 mb-3 mb-md-0"
+    data-dv-flow="modal"
+    data-policy-id="{{env.BXI_DEVICE_MANAGEMENT_POLICY_ID}}"
+    data-error-callback="logout"
+  >Manage Devices</button>
+{{/if}}

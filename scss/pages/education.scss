@@ -1,0 +1,173 @@
+@use '../common/mixins';
+
+.bxi.education {
+  .bxi-button {
+    border-radius: 2rem;
+  }
+
+  .bxi-auth-buttons {
+    .bxi-button {
+      margin-bottom: 0.25rem;
+    }
+  }
+
+  .notification-icon {
+    width: 25px;
+    height: 25px;
+    margin-bottom: 2px;
+  }
+
+  .bxi-copyright-bg-color {
+    background-color: var(--bxi-education-copyright-bg-color);
+  }
+
+  .bxi-program {
+    height: 250px;
+    padding-top: 50px;
+
+    &:hover {
+      padding-top: 0;
+    }
+
+    &-color {
+      color: var(--bxi-education-program-color);
+    }
+
+    &-overlay {
+      background: linear-gradient(
+        0.59deg,
+        rgba(12, 35, 68, 0.8) 9.94%,
+        rgba(10, 29, 57, 0) 94.52%
+      );
+    }
+  }
+
+  &.home {
+    .bxi-auth-buttons {
+      .bxi-button {
+        @include mixins.breakpoint-lg {
+          font-size: 14px;
+          border-radius: 0;
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .bxi-banner {
+      min-height: 710px;
+
+      &-color {
+        color: var(--bxi-education-banner-color);
+      }
+
+      &-bg-color {
+        background-color: var(--bxi-education-banner-bg-color);
+      }
+
+      @include mixins.breakpoint-lg {
+        &-image {
+          margin-left: -50px;
+        }
+      }
+
+      &-circle {
+        width: 329px;
+        height: 329px;
+        right: -72px;
+        bottom: -96px;
+        background-color: var(--bxi-banner-cirles-color);
+      }
+
+      .bxi-banner-image-container {
+        position: relative;
+
+        @include mixins.breakpoint-lt-md {
+          max-width: 300px;
+        }
+
+        .bxi-banner-image {
+          &-first-circle {
+            width: 29%;
+            height: 29%;
+          }
+
+          &-second-circle {
+            border: 7px solid var(--bxi-primary-color);
+            width: 23%;
+            height: 23%;
+            bottom: 13%;
+            right: 9%;
+
+            @include mixins.breakpoint-lt-lg {
+              bottom: 13%;
+              right: 0;
+            }
+          }
+
+          &-third-circle {
+            background-color: var(--bxi-banner-cirles-color);
+            width: 18%;
+            height: 18%;
+            bottom: 1%;
+            right: 16%;
+
+            @include mixins.breakpoint-lt-lg {
+              bottom: 4%;
+              right: 5%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.dashboard {
+    .bxi-education-dashboard--color {
+      color: var(--bxi-education-portal-color);
+    }
+
+    .bxi-education-portal {
+      background-color: var(--bxi-education-portal-bg-color);
+      border: 1px solid var(--bxi-education-portal-border-color);
+
+      .bxi-checklist-item {
+        border-top: 1px solid
+          var(--bxi-education-portal-checklist-item-border-color);
+
+        .bxi-checkmark {
+          width: 25px;
+          min-width: 25px;
+          height: 25px;
+          border: 1px solid var(--bxi-education-portal-checkmark-border-color);
+
+          svg {
+            display: none;
+          }
+
+          &--checked {
+            background-color: var(--bxi-education-portal-checkmark-bg-color);
+            border: none;
+
+            svg {
+              display: block;
+            }
+          }
+        }
+
+        .bxi-checklist-time {
+          @include mixins.color-icon(
+            var(--bxi-education-portal-checklist-item-border-color)
+          );
+
+          &--color {
+            color: var(--bxi-education-portal-checkmark-border-color);
+          }
+
+          & > span {
+            width: 60px;
+          }
+        }
+      }
+    }
+  }
+}

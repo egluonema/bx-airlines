@@ -1,0 +1,68 @@
+@use './common/fonts';
+@use './common/button';
+@use './common/dialog';
+@use './common/edit-drawer';
+@use './common/form';
+@use './common/link';
+@use './common/navbar';
+@use './common/pwa-banner';
+@use './common/utilities';
+
+@use './common/shared';
+@use './pages/airlines';
+@use './pages/company';
+@use './pages/eats';
+@use './pages/education';
+@use './pages/finance';
+@use './pages/generic';
+@use './pages/government';
+@use './pages/health';
+@use './pages/hotels';
+@use './pages/insurance';
+@use './pages/manufacturing';
+@use './pages/pharmacy';
+@use './pages/realty';
+@use './pages/retail';
+@use './pages/sports';
+@use './pages/volunteer';
+
+.bxi {
+  // Make the footer stick to the bottom or below content
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  overflow-x: hidden;
+
+  // Resets for ui-library_style.css (trials)
+  .bxi-button {
+    all: revert;
+    box-sizing: border-box;
+    font-family: var(--bxi-primary-font);
+    position: relative;
+  }
+
+  * {
+    color: inherit;
+    font-weight: 400;
+    font-family: var(--bxi-primary-font);
+  }
+  // End resets
+
+  .form-control::placeholder {
+    opacity: 0.4;
+  }
+
+  footer {
+    margin-top: auto;
+  }
+
+  @include button.button-styles;
+  @include dialog.dialog-styles;
+  @include edit-drawer.edit-drawer-styles;
+  @include form.form-styles;
+  @include link.link-styles;
+  @include navbar.navbar-styles;
+  @include pwa-banner.pwa-tooltip-styles;
+  @include utilities.utility-styles;
+}

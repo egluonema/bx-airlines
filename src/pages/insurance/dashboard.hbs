@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  {{#> head }}
+  {{> insuranceBranding }}
+  {{/head}}
+  <body onload="bxi.pageLoad()" class="bxi insurance dashboard">
+    {{> variables}}
+    <header class="bxi-header">
+      <nav class="navbar navbar-expand-lg flex-wrap p-0">
+        <div class="container py-2">
+          <div class="bxi-nav">
+            <a class="bxi-nav-toggle d-block d-lg-none" role="button">
+              {{> hamburgerIcon }}
+            </a>
+            <ul class="bxi-nav-links bxi-bg-secondary">
+              {{#each settings.header.links}}
+              <li>
+                <a class="bxi-link bxi-link-light--primary">{{this}}</a>
+              </li>
+              {{/each}}
+            </ul>
+            <a id="bxi-logo" class="navbar-brand py-0 ms-3 ms-lg-0">
+              <img src="{{settings.images.logo}}" alt="Logo" />
+            </a>
+          </div>
+          <div class="d-flex flex-row position-relative">
+            <p id="username-container"
+              class="bxi-color-primary fw-bold d-none d-sm-flex mb-0 me-2">{{settings.dashboard.username}}</p>
+            <div class="bxi-user-icon d-flex d-lg-none bxi-bg-primary">
+              {{> userIcon }}
+            </div>
+            <div class="d-none d-lg-flex static-user-icon">
+              {{> userIcon }}
+            </div>
+            <div
+              class="bxi-auth-buttons bxi-auth-buttons--secondary-link bxi-bg-primary pb-2 pb-lg-0 bxi-bg-lg-transparent">
+              <button id="oidc-logout" onclick="bxi.logout()"
+                class="bxi-button mb-1 mb-lg-0 fw-bold">Log Out</button>
+            </div>
+          </div>
+        </div>
+        <div class="bxi-bg-secondary w-100">
+          <div class="container">
+            <div class="bxi-navbar bxi-bg-secondary d-none d-lg-block bxi-zi-3">
+              <ul
+                class="navbar-nav p-2 pb-0 py-lg-3 px-lg-0 d-flex justify-content-between w-100">
+                {{#each settings.header.links}}
+                <li class="nav-item mb-2 mb-lg-0">
+                  <a
+                    class="bxi-link bxi-link-light--primary text-uppercase fs-7">{{this}}</a>
+                </li>
+                {{/each}}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <section class="container my-3">
+      <div class="row">
+        <div
+          class="col-12 col-md-3 col-xl-2 bxi-dashboard-sidebar mt-2 order-2 order-md-1">
+          {{#each verticalAuthenticatedEndpoints }}
+          <a class="bxi-button d-block text-center" href="{{this}}">{{@key}}</a>
+          {{/each}}
+          {{!-- See src/dashboard-buttons.hbs to update dashboard buttons --}}
+          {{> dashboardButtons}}
+        </div>
+        <div class="col-12 col-md-9 col-xl-10 order-1 order-md-2">
+          <div class="row mb-3">
+            <h1
+              class="bxi-color-secondary bxi-ff-secondary mt-4 mt-sm-0 fw-bold dashboard-header">{{settings.dashboard.header}}</h1>
+          </div>
+          <div class="row">
+            {{#if env.BXI_DASHBOARD_POLICY_ID}}
+            <div class="col-12 col-md-6">
+              <div class="mb-3 bxi-component-bg-color p-3 h-100"
+                data-dv-flow="static"
+                data-policy-id="{{env.BXI_DASHBOARD_POLICY_ID}}"></div>
+            </div>
+            {{/if}}
+            <div
+              class="col-12{{#if env.BXI_DASHBOARD_POLICY_ID}} col-md-6{{/if}} bxi-advertisement">
+              <div
+                class="bxi-component-bg-color text-center p-3 d-flex flex-column h-100 justify-content-center align-items-center">
+                <h5
+                  class="fw-bold mb-4">{{settings.dashboard.advertisement.title}}</h5>
+                <p
+                  class="mb-4 fs-7">{{settings.dashboard.advertisement.description}}</p>
+                <h6
+                  class="fw-boldish">{{settings.dashboard.advertisement.alert}}</h6>
+                {{#if settings.dashboard.advertisement.button}}
+                <button
+                  class="bxi-button bxi-button--md">{{settings.dashboard.advertisement.button}}</button>
+                {{/if}}
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <div class="my-4">
+                <h1
+                  class="bxi-color-secondary bxi-ff-secondary mt-4 mt-sm-0 fw-bold portal-header">{{settings.dashboard.portal.header}}</h1>
+              </div>
+            </div>
+            {{#each settings.dashboard.portal.services}}
+            <div class="col-md-4 d-flex mb-4">
+              <div
+                class="bxi-service bxi-component-bg-color w-100 cursor-pointer p-4 text-center">
+                <div class="mb-3">{{{inlineSvg logo}}}</div>
+                <p class="bxi-service-color mb-0 fw-bold">{{description}}</p>
+              </div>
+            </div>
+            {{/each}}
+          </div>
+          <div class="row">
+            {{#each settings.dashboard.coverage}}
+            <div class="col-12 col-md-6 col-xl-3 mb-4">
+              <div class="bxi-component-bg-color h-100">
+                <h4
+                  class="bxi-coverage-header d-flex align-items-center p-3"><span>{{{inlineSvg
+                    icon}}}</span><div
+                    class="text-center flex-grow-1">{{title}}</div></h4>
+                <div class="p-3">
+                  {{#each bullets}}
+                  <div class="mb-3">
+                    <div>{{text}}</div>
+                    {{#if subtext}}
+                    <div class="fs-8 fw-light text-end">{{subtext}}</div>
+                    {{/if}}
+                  </div>
+                  {{/each}}
+                  {{#each links}}
+                  <a
+                    class="bxi-link bxi-link--secondary mb-2 d-block">{{this}}</a>
+                  {{/each}}
+                </div>
+              </div>
+            </div>
+            {{/each}}
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="bxi-footer pt-5">
+      <div class="container">
+        <div class="d-block d-lg-flex justify-content-between mb-sm-3 mb-4">
+          <ul class="d-none d-md-flex mb-4 p-0 ls-none">
+            {{#each settings.footer.links }}
+            <li class="me-4"><a
+                class="bxi-link bxi-link-light--primary text-nowrap">{{this}}</a></li>
+            {{/each}}
+          </ul>
+          <div
+            class="footer-contacts d-flex flex-column-reverse flex-md-row justify-content-start align-items-center align-items-md-start justify-content-md-between justify-content-lg-end">
+            <div class="footer-support me-0 me-lg-4">
+              <div
+                class="text-center text-md-start mb-3 fw-bold fs-5 footer-phone-number">{{settings.footer.phone_number}}</div>
+              <button
+                class="bxi-button bxi-button--outline fs-8 bxi-button--lg text-nowrap">Online
+                support</button>
+            </div>
+            <div class="ms-0 ms-md-3">
+              <div
+                class="ms-0 mb-3 text-center text-md-start fw-bold fs-5">Follow
+                us:</div>
+              <ul class="d-flex align-items-center ls-none ps-0">
+                <li>
+                  <button
+                    class="bxi-button bxi-button--outline bxi-button--icon bxi-button--md me-md-3 me-5">
+                    {{> facebookIcon }}
+                  </button>
+                </li>
+                <li>
+                  <button
+                    class="bxi-button bxi-button--outline bxi-button--icon bxi-button--md me-md-3 me-5">
+                    {{> twitterIcon }}
+                  </button>
+                </li>
+                <li>
+                  <button
+                    class="bxi-button bxi-button--outline bxi-button--icon bxi-button--md">
+                    {{> instagramIcon }}
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <section class="bxi-footer bxi-bg-secondary pb-4">
+      <div class="container">
+        <p
+          class="fs-8 m-0 text-center text-md-start bxi-copyright-color">{{settings.footer.copyright}}</p>
+        {{> remix }}
+      </div>
+    </section>
+    {{> modal}}
+  </body>
+</html>

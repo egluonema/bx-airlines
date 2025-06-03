@@ -1,0 +1,145 @@
+@use '../common/mixins';
+
+.bxi.airlines {
+  .bxi-button {
+    text-transform: uppercase;
+    border-radius: 2px;
+  }
+
+  .bxi-link {
+    font-size: 14px;
+  }
+
+  .bxi-offers-section {
+    &-offer {
+      height: 270px;
+
+      &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 50%;
+        background: linear-gradient(
+          180deg,
+          rgba(24, 34, 55, 0.8) 9.94%,
+          rgba(10, 29, 57, 0) 94.52%
+        );
+        z-index: 1;
+      }
+    }
+
+    &--text {
+      color: var(--bxi-airlines-offers-color);
+    }
+  }
+
+  &.home {
+    .bxi-banner {
+      & > div {
+        min-height: 550px;
+      }
+
+      &--text {
+        color: var(--bxi-airlines-banner-color);
+      }
+
+      &-input-container {
+        background-color: var(--bxi-airlines-banner-input-bg-color);
+        flex-basis: 31%;
+        border-radius: 2px;
+
+        input {
+          border-radius: 2px;
+          background-color: var(--bxi-airlines-banner-input-bg-color);
+        }
+      }
+
+      &-input-button {
+        flex-basis: 7%;
+      }
+    }
+
+    .additional-links {
+      & > div {
+        border: 1px solid #dbdbdb;
+
+        &:not(:last-child) {
+          border-bottom: none;
+        }
+
+        @include mixins.breakpoint-lg {
+          &:not(:last-child) {
+            border-bottom: 1px solid #dbdbdb;
+          }
+
+          &:not(:first-child) {
+            border-left: none;
+          }
+        }
+      }
+    }
+  }
+
+  &.dashboard {
+    #username-container {
+      padding-top: 2px;
+    }
+
+    .static-user-icon {
+      border: 1px solid var(--bxi-dashboard-bg-color);
+      width: 38px;
+      height: 38px;
+      background-color: var(--bxi-primary-color);
+
+      svg {
+        @include mixins.color-icon(var(--bxi-dashboard-bg-color));
+      }
+    }
+
+    .bxi-header-color {
+      color: var(--bxi-airlines-dashboard-header-color);
+    }
+
+    .bxi-overview {
+      border: 1px solid var(--bxi-airlines-dashboard-header-color);
+    }
+
+    .bxi-profile-tabs {
+      & > div:first-child {
+        color: var(--bxi-secondary-color);
+        background-color: var(--bxi-dashboard-bg-color);
+      }
+    }
+
+    .bxi-flights {
+      .bxi-flight-info {
+        svg {
+          margin-top: -2px;
+          @include mixins.color-icon(
+            var(--bxi-airlines-dashboard-flights-info-color)
+          );
+        }
+
+        &--color {
+          color: var(--bxi-airlines-dashboard-flights-info-color);
+        }
+
+        &:not(:last-child) {
+          border-bottom: 1px solid
+            var(--bxi-airlines-dashboard-flights-border-color);
+        }
+      }
+
+      &--title-color {
+        color: var(--bxi-airlines-dashboard-flights-color);
+      }
+
+      &--bg-color {
+        background-color: var(--bxi-airlines-dashboard-flights-bg-color);
+      }
+    }
+  }
+}

@@ -1,0 +1,257 @@
+{
+  "theme": {
+    "global": [
+      {
+        "type": "font",
+        "friendlyName": "Primary Font",
+        "jsonPath": "theme.primaryFont",
+        "cssVariable": "--bxi-primary-font"
+      },
+      {
+        "type": "font", 
+        "friendlyName": "Secondary Font",
+        "jsonPath": "theme.secondaryFont",
+        "cssVariable": "--bxi-secondary-font"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Primary Color",
+        "jsonPath": "theme.primaryColor",
+        "cssVariable": "--bxi-primary-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Secondary Color",
+        "jsonPath": "theme.secondaryColor",
+        "cssVariable": "--bxi-secondary-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Button Color",
+        "jsonPath": "theme.buttonColor",
+        "cssVariable": "--bxi-button-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Button Background Gradient 1",
+        "jsonPath": "theme.buttonBgColorGradient1",
+        "cssVariable": "--bxi-button-bg-color-gradient1"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Button Background Gradient 2",
+        "jsonPath": "theme.buttonBgColorGradient2",
+        "cssVariable": "--bxi-button-bg-color-gradient2"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Link Button Color",
+        "jsonPath": "theme.linkButtonColor",
+        "cssVariable": "--bxi-link-button-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Link Button Hover Color",
+        "jsonPath": "theme.linkButtonHoverColor",
+        "cssVariable": "--bxi-link-button-hover-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Footer Color",
+        "jsonPath": "theme.footerColor",
+        "cssVariable": "--bxi-footer-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Footer Background Color",
+        "jsonPath": "theme.footerBgColor",
+        "cssVariable": "--bxi-footer-bg-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Copyright Color",
+        "jsonPath": "theme.copyrightColor",
+        "cssVariable": "--bxi-copyright-color"
+      }
+    ],
+    "home": [],
+    "dashboard": [
+      {
+        "type": "color",
+        "friendlyName": "Nav Background Color",
+        "jsonPath": "theme.dashboardNavbarBgColor",
+        "cssVariable": "--bxi-dashboard-navbar-bg-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Dashboard Background Color",
+        "jsonPath": "theme.dashboardBgColor",
+        "cssVariable": "--bxi-dashboard-bg-color"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Basic Gradient 1",
+        "jsonPath": "theme.basicGradient1",
+        "cssVariable": "--bxi-basic-gradient1"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Basic Gradient 1",
+        "jsonPath": "theme.basicGradient2",
+        "cssVariable": "--bxi-basic-gradient2"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Standard Gradient 1",
+        "jsonPath": "theme.standardGradient1",
+        "cssVariable": "--bxi-standard-gradient1"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Standard Gradient 2",
+        "jsonPath": "theme.standardGradient2",
+        "cssVariable": "--bxi-standard-gradient2"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Premium Gradient 1",
+        "jsonPath": "theme.premiumGradient1",
+        "cssVariable": "--bxi-premium-gradient1"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Premium Gradient 2",
+        "jsonPath": "theme.premiumGradient2",
+        "cssVariable": "--bxi-premium-gradient2"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Premium Gradient 3",
+        "jsonPath": "theme.premiumGradient3",
+        "cssVariable": "--bxi-premium-gradient3"
+      },
+      {
+        "type": "color",
+        "friendlyName": "Dot Color",
+        "jsonPath": "theme.dotColor",
+        "cssVariable": "--bxi-sports-dot-color"
+      }
+    ]
+  },
+  "content": {
+    "global": [
+      {
+        "type": "string",
+        "friendlyName": "Title",
+        "jsonPath": "settings.title",
+        "elementSelector": "head > title"
+      }, 
+      {
+        "type": "image",
+        "friendlyName": "Favicon",
+        "jsonPath": "settings.images.favicon",
+        "elementSelector": "#favicon"
+      },
+      {
+        "type": "image",
+        "friendlyName": "Apple Touch Icon",
+        "jsonPath": "settings.images.apple_touch_icon",
+        "elementSelector": "#apple-touch-icon"
+      },
+      {
+        "type": "image",
+        "friendlyName": "Logo",
+        "jsonPath": "settings.images.logo",
+        "elementSelector": "#bxi-logo img"
+      },
+      {
+        "type": "image",
+        "friendlyName": "Dialog Logo",
+        "jsonPath": "settings.images.dialog_logo",
+        "elementSelector": "#dialog-logo"
+      },
+      {
+        "type": "string",
+        "friendlyName": "Footer Phone Number",
+        "jsonPath": "settings.footer.phone_number",
+        "elementSelector": ".footer-phone-number"
+      }
+    ],
+    "home": [
+      {
+        "type": "image",
+        "friendlyName": "Banner Background Image",
+        "jsonPath": "settings.home_page.banner.background_image",
+        "elementSelector": ".bxi-banner.bxi-bg-image"
+      },
+      {
+        "type": "string",
+        "friendlyName": "Banner Title",
+        "jsonPath": "settings.home_page.banner.title",
+        "elementSelector": ".bxi-banner h1"
+      },
+      {
+        "type": "string",
+        "friendlyName": "Banner Subtitle",
+        "jsonPath": "settings.home_page.banner.subtitle",
+        "elementSelector": ".bxi-banner h4"
+      },
+      {
+        "type": "string",
+        "friendlyName": "Banner Button",
+        "jsonPath": "settings.home_page.banner.button",
+        "elementSelector": ".bxi-banner button"
+      },
+      {
+        "type": "string",
+        "friendlyName": "News Title",
+        "jsonPath": "settings.home_page.news_section.title",
+        "elementSelector": ".news-section h1"
+      },
+      {
+        "type": "string",
+        "friendlyName": "News Button",
+        "jsonPath": "settings.home_page.news_section.button",
+        "elementSelector": ".news-section button"
+      }
+    ],
+    "dashboard": [
+      {
+        "type": "image",
+        "friendlyName": "Banner Background Image",
+        "jsonPath": "settings.dashboard.banner.background_image",
+        "elementSelector": ".bxi-dashboard-banner.bxi-bg-image"
+      },
+      {
+        "type": "string",
+        "friendlyName": "Banner Title",
+        "jsonPath": "settings.dashboard.banner.title",
+        "elementSelector": ".bxi-dashboard-banner h1"
+      },
+      {
+        "type": "string",
+        "friendlyName": "Banner Subtitle",
+        "jsonPath": "settings.dashboard.banner.subtitle",
+        "elementSelector": ".bxi-dashboard-banner h4"
+      },
+      {
+        "type": "string",
+        "friendlyName": "Banner Button",
+        "jsonPath": "settings.dashboard.banner.button",
+        "elementSelector": ".bxi-dashboard-banner button"
+      },
+      {
+        "type": "string",
+        "friendlyName": "Subscription Section Title",
+        "jsonPath": "settings.dashboard.subscriptions_section.title",
+        "elementSelector": ".subscription-section h1"
+      },
+      {
+        "type": "string",
+        "friendlyName": "Streaming Section Title",
+        "jsonPath": "settings.dashboard.streaming_section.title",
+        "elementSelector": ".streaming-section h1"
+      }
+    ]
+  }
+}

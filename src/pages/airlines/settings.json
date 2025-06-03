@@ -1,0 +1,198 @@
+{
+  "theme": {
+    "primaryFont": "'Noto Sans', sans-serif",
+    "secondaryFont": "'Mohave', sans-serif",
+    "primaryColor": "#C83E7D",
+    "secondaryColor": "#182237",
+    "buttonColor": "#ffffff",
+    "buttonBgColor": "var(--bxi-primary-color)",
+    "buttonBgHoverColor": "#902958",
+    "linkButtonColor": "#0E2742",
+    "linkButtonHoverColor": "var(--bxi-primary-color)",
+    "dashboardBgColor": "#ffffff",
+    "footerColor": "#ffffff",
+    "footerBgColor": "var(--bxi-secondary-color)",
+    "copyrightColor": "#ffffff",
+    "homeBannerColor": "#ffffff",
+    "homeBannerInputBgColor": "#ffffff",
+    "homeOffersColor": "#ffffff",
+    "dashboardHeaderColor": "#ffffff",
+    "dashboardFlightsColor": "var(--bxi-secondary-color)",
+    "dashboardFlightsBgColor": "#f4f1f1",
+    "dashboardFlightsBorderColor": "#b6c3ce",
+    "dashboardFlightsInfoColor": "#76818b"
+  },
+  "settings": {
+    "title": "BXAirlines",
+    "images": {
+      "favicon": "/airlines/favicon.png",
+      "apple_touch_icon": "/airlines/apple-touch-icon-192.svg",
+      "logo": "/airlines/logo.svg",
+      "dialog_logo": "/airlines/logo.svg"
+    },
+    "header": {
+      "links": [
+        "Plan & Book",
+        "Discover Destinations",
+        "Miles & More",
+        "Help Center"
+      ]
+    },
+    "home_page": {
+      "banner": {
+        "background_image": "/airlines/banner.jpg",
+        "title": "Fly Like a Dream",
+        "subtitle": "Travel comfortably and safely to thousands of destinations around the globe",
+        "search": {
+          "inputs": [
+            {
+              "label": "From",
+              "placeholder": "Departure"
+            },
+            {
+              "label": "To",
+              "placeholder": "Destination"
+            },
+            {
+              "label": "Dates",
+              "placeholder": "Choose the date"
+            }
+          ],
+          "button": "Show"
+        }
+      },
+      "additional_links": [
+        {
+          "icon": "/airlines/check-in-icon.svg",
+          "text": "Check In"
+        },
+        {
+          "icon": "/airlines/aircraft-icon.svg",
+          "text": "Flight Status"
+        },
+        {
+          "icon": "/airlines/check-icon.svg",
+          "text": "Your Bookings"
+        },
+        {
+          "icon": "/airlines/bordered-aircraft-icon.svg",
+          "text": "Priority Pass"
+        }
+      ],
+      "offers_section": {
+        "title": "Hot offers for popular destinations",
+        "offers": [
+          {
+            "background_image": "/airlines/offer-1.jpg",
+            "location": "New York — London",
+            "price": "$300.99",
+            "button": "Book a Ticket"
+          },
+          {
+            "background_image": "/airlines/offer-2.jpg",
+            "location": "New York — Paris",
+            "price": "$379.99",
+            "button": "Book a Ticket"
+          },
+          {
+            "background_image": "/airlines/offer-3.jpg",
+            "location": "London — Berlin",
+            "price": "$45.99",
+            "button": "Book a Ticket"
+          }
+        ]
+      }
+    },
+    "dashboard": {
+      "header": "Welcome on Board",
+      "profile_tabs": [
+        "My Account",
+        "Timetable",
+        "Personal Offers",
+        "Settings"
+      ],
+      "overview": {
+        "icon": "/airlines/bordered-aircraft-icon.svg",
+        "description": "Your Miles:",
+        "value": "3458"
+      },
+      "booked_flights": [
+        {
+          "title": "Flights you can check in for",
+          "flights": [
+            {
+              "title": "FG4567 New York — London",
+              "date": "12/14/{{currentYear}}",
+              "time": "15:25",
+              "button": "Check In"
+            },
+            {
+              "title": "DF2398 London — Berlin",
+              "date": "12/15/{{currentYear}}",
+              "time": "01:15",
+              "button": "Check In"
+            }
+          ]
+        },
+        {
+          "title": "All flights",
+          "flights": [
+            {
+              "title": "MK5677 Berlin — New York",
+              "date": "12.22.{{currentYear}}",
+              "time": "14:30",
+              "button": ""
+            },
+            {
+              "title": "DS5233 New-York — Seattle",
+              "date": "01/22/{{currentYear}}",
+              "time": "13:10",
+              "button": ""
+            },
+            {
+              "title": "DS5233 Seattle — New York",
+              "date": "01/26/{{currentYear}}",
+              "time": "18:00",
+              "button": ""
+            },
+            {
+              "title": "FG4567 New York — London",
+              "date": "02/06/{{currentYear}}",
+              "time": "17:20",
+              "button": ""
+            }
+          ]
+        }
+      ],
+      "personal_offers": {
+        "title": "Personal Offers",
+        "offers": [
+          {
+            "background_image": "/airlines/offer-1.jpg",
+            "location": "New York — Toronto",
+            "price": "$109.99",
+            "button": "Book a Ticket"
+          },
+          {
+            "background_image": "/airlines/offer-2.jpg",
+            "location": "New York — Paris",
+            "price": "$279.99",
+            "button": "Book a Ticket"
+          }
+        ]
+      }
+    },
+    "footer": {
+      "links": [
+        "Passenger Rights",
+        "Cargo Shipments",
+        "Customer Services",
+        "Corporate Customers",
+        "Privacy & Cookie Policy",
+        "Accessibility"
+      ],
+      "phone_number": "800 568 9678",
+      "copyright": "© BXAirlines, {{currentYear}}. All rights reserved."
+    }
+  }
+}
